@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+
+
+
+<link rel="shortcut icon" href="./assets/img/aciddecember.png" type="image/png" />
+<link rel="stylesheet" href="./assets/css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="alternate" type="application/rss+xml" href="https://acid.datapop.se/rss.xml" title="#AcidDecember Overdrive" />
+  
+  <!-- BEGIN rendered SEO MetaHEAD -->
+
+  <title>TimeWarp | #AcidDecember Overdrive</title>
+
+  <!-- Standard SEO -->
+  <meta name="title" content="TimeWarp, #AcidDecember Overdrive">
+  <meta name="dc.date.modified" scheme="ISO8601" content="2019-07-09T11:04:37+00:00" />
+  <meta name='robots' content='index'/>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="description" content="" />
+  <meta name="generator" content="Jekyll" />
+  <link rel="canonical" href="https://acid.datapop.se/" />
+  <link rel="alternate" href="https://acid.datapop.se/" hreflang="x-default" />
+  <meta name="keywords" content="">
+
+
+  <!-- Dublin Core basic info -->
+
+  <meta name="dcterms.Identifier" content="https://acid.datapop.se" />
+  <meta name="dcterms.Format" content="text/html" />
+  <meta name="dcterms.Relation" content="#AcidDecember Overdrive" />
+  <meta name="dcterms.Language" content="en" />
+  <meta name="dcterms.Publisher" content="#AcidDecember Overdrive" />
+  <meta name="dcterms.Type" content="text/html" />
+  <meta name="dcterms.Coverage" content="https://acid.datapop.se/" />
+  <meta name="dcterms.Rights" content="Copyleft &copy;2019 #AcidDecember Overdrive." />
+  <meta name="dcterms.Title" content="TimeWarp | #AcidDecember Overdrive" />
+  <meta name="dcterms.Subject" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+  <meta name="dcterms.Contributor" content="#AcidDecember Overdrive" />
+  <meta name="dcterms.Date" content="2019-07-09" />
+  <meta name="dcterms.Description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+
+  <!-- Facebook OpenGraph -->
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://acid.datapop.se" />
+  <meta property="og:locale" content="en_us" />
+  <meta property="og:title" content="TimeWarp | #AcidDecember Overdrive" />
+  <meta property="og:description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+  <meta property="og:image" content="https://cdn-acid.datapop.se/2018/assets/img/aciddecember.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="630" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="#AcidDecember Overdrive" />
+
+  <!-- Twitter Card -->
+
+  <meta name="twitter:card" content="#AcidDecember Overdrive" />
+  <meta name="twitter:title" content="TimeWarp | #AcidDecember Overdrive" />
+  <meta name="twitter:description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+  <meta name="twitter:image" content="https://cdn-acid.datapop.se/2018/assets/img/aciddecember.png" />
+
+
+  <!-- Humans.txt authorship http://humanstxt.org -->
+
+  <link type="text/plain" rel="author" href="https://acid.datapop.se/humans.txt" />
+
+  <!-- Domain verification -->
+
+
+  <!-- Identity -->
+
+  <script type='application/ld+json'>
+  {
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "name": "#AcidDecember Overdrive",
+    "url": "https://acid.datapop.se",
+    "logo": "https://cdn-acid.datapop.se/2018/assets/img/aciddecember.png",
+    "image": "https://cdn-acid.datapop.se/2018/assets/img/aciddecember.png",
+    "description": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!"
+  }
+   </script>
+
+  <!-- WebSite -->
+
+  <script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "#AcidDecember Overdrive",
+      "url": "https://acid.datapop.se"
+  }
+  </script>
+
+  <!-- Main Entity of Page -->
+
+  <script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "name": "TimeWarp | #AcidDecember Overdrive",
+      "description": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!",
+      "image": {
+          "@type": "ImageObject", 
+          "url": "https://cdn-acid.datapop.se/2018/assets/img/aciddecember.png",
+          "width": "630",
+          "height": "630"
+      },
+      "url": "https://acid.datapop.se/",
+      "mainEntityOfPage": "https://acid.datapop.se",
+      "inLanguage": "en_us",
+      "headline": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!",
+      "dateCreated": "",
+      "dateModified": "2019-07-09T11:04:37+00:00",
+      "datePublished": "",
+      "copyrightYear": "2019",
+      
+  }
+  </script>
+  <script src="./assets/js/jquery-3.4.1.min.js"></script>
+
+  <script type="text/javascript">
+    function generateRandomPosts()
+    {
+        $.getJSON("/posts.json", function(data) {
+            console.log("[posts.json loaded for random posts]");
+            var postsCount = data.length;
+            var posts = data;
+            var randomIndexUsed = [];
+            var counter = 0;
+            var numberOfPosts = 1;
+            var divRandomPosts = $("#random_posts");
+
+            while (counter < numberOfPosts)
+            {
+                var randomIndex = Math.floor(Math.random() * postsCount);
+                if (randomIndexUsed.indexOf(randomIndex) == "-1")
+                {
+                    var postTitle = posts[randomIndex].title;
+                    if (counter == (numberOfPosts - 1))
+                    {
+                        divRandomPosts.append('<p>' + postTitle + '</p>');
+                    }
+                    else
+                    {
+                        divRandomPosts.append('<p>' + postTitle + '</p>');
+                    }
+                    randomIndexUsed.push(randomIndex);
+                    counter++;
+                }
+            }
+        });
+    }
+    $(document).ready(function() {
+        generateRandomPosts();
+    });
+  </script>
+
+
+  </head>
+  <body>
+  <nav id="navigation">
+    <div class="navflex"><a href="./"><img class="rotate" src="./assets/img/aciddecember.png" width="70px" height="70px" style="float: left; margin: 0 10 10 0;"/></a>
+      <a href="./"><h1>#AcidDecember Overdrive</h1></a>
+      
+    </div>
+  </nav>
+
+
+
+
+
+
+<div id="content">
+
+  <div class="indexflex rotate">
+    <a href="2018/">
+      <img src="./assets/img/aciddecember.png" width="100%" />
+      <h5>2018</h5>
+    </a>
+  </div>
+  <div class="indexflex rotate">
+    <a href="2015/">
+      <img src="./assets/img/aciddecember.png" width="100%" />
+      <h5>2015</h5>
+    </a>
+  </div>
+
+
+
+  <div class="indexflex">
+      <p>Greetings Acid People! 
+        <br /><br />For thousands of years an intergalactic tradition happens occasionally on very special winters. What makes those winter special is that Acid December takes place IN OUR DIMENSION! 
+        <br /><br />It was originally initiated by the amazing people at <a target="_blank" rel="noopener noreferrer nofollow" href="http://devsound.se/">DevSound</a> while they were inventing Lemon Trees. Incidentally, a seed fell into the internet and roots spread all over the globe calling contributors to compulsively send acid tracks to be released one by one during December and beyond, depending on the amount of summoned contributors. 
+        <br /><br />As we enter the bonus round of Acid December, leaving the actual month of December behind. We boldy kick off into our own parallel universe were months go on for exactly as long as there are Acid tracks to dance to! Sadly one side effect of taking the party into another dimension is that it is no longer possible to submit contributions.  
+        <br /><br />(PS. The 2015 <a href="/2015" >edition can be found here,</a> last couple of years it was taking place in a parallel universe)</p>
+  </div>
+</div>
+
+  <div id="random_posts">  </div>
+
+
+
+  </body>
+</html>

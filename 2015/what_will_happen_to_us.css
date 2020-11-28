@@ -1,0 +1,58 @@
+body {
+	
+color: white;
+			 background-color:black;
+			 background-image: url("img/space.jpg");
+			 font-family: "League-Gothic", Courier
+			 
+}
+
+a {
+	color: white;
+  text-decoration:none;
+}
+
+h1 {
+	text-align: center;
+	font-size:250%;
+	color: rgba(0, 168, 255, 0.5)
+	text-shadow: 8px 8px 0 rgba(255,0,180,0.5);
+	font-family: "League-Gothic", Courier
+}
+
+.talking_text {
+color: red;
+ font-size: 170%;
+ font-family: "League-Gothic", Courier
+ 
+}
+
+.happy_talking_text {
+color: green;
+font-size: 170%;
+font-family: "League-Gothic", Courier
+}
+
+.will_there_still_be_eggnog {
+  background: url("img/acid.jpg"); 
+  background-repeat: no-repeat;
+  align-items: center; 
+  justify-content: center; 
+  width: 100%; height: 400px;
+  -webkit-box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+  
+     -moz-box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+  
+          box-shadow:
+     inset 0 0 50px #000,
+                inset 0 0 50px #000,
+                inset 0 0 50px #000;
+}
+
+ 
