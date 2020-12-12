@@ -208,8 +208,8 @@ html[data-useragent*="OS 9"] #audiowrap { background-color:#d5d5d5; }
 html[data-useragent*="OS 9"] #tracks { min-height:75px; top:23px; }
 html[data-useragent*="OS 9"] a[id^="btn"] { background-color:#d5d5d5; color:#373837; }
 html[data-useragent*="OS 9"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="OS 9"] #plList li { background-color:#d5d5d5; }
-html[data-useragent*="OS 9"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 9"] #plList li {opacity: 0.5; background-color: #eee; }
+html[data-useragent*="OS 9"] #plList li:hover { opacity: 1; background-color:#eee; }
 html[data-useragent*="OS 9"] .plSel,
 html[data-useragent*="OS 9"] .plSel:hover { background-color:#eee!important; }
 
@@ -220,8 +220,8 @@ html[data-useragent*="Chrome"] #audiowrap { background-color:#fafafa; }
 html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
 html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#fafafa; color:#5a5a5a; }
 html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="Chrome"] #plList li { background-color:#fafafa; }
-html[data-useragent*="Chrome"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="Chrome"] #plList li { opacity: 0.5; background-color: #eee; }
+html[data-useragent*="Chrome"] #plList li:hover {opacity: 1; background-color:#eee; }
 html[data-useragent*="Chrome"] .plSel,
 html[data-useragent*="Chrome"] .plSel:hover { background-color:#eee!important; }
 
