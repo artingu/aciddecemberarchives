@@ -1,7 +1,7 @@
 /* Font Family
 ================================================== */
 
-@import url("//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400");
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 
 
 /* Desktop
@@ -58,11 +58,12 @@ html,body {
 -webkit-font-smoothing:antialiased;
 -webkit-text-size-adjust:100%;
 background-color:#111;
-background-image: url("Hillview_Farms_white_potatoes.jpg");
+background-size: cover;
+background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+url("1549922944.gif");
 color:rgb(14, 190, 29);
 
-font-family: 'Indie Flower', cursive;
-/* font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;  */
+font-family: 'Notable', sans-serif;
 font-weight:300;
 padding:5px 0;
 }
@@ -76,7 +77,7 @@ padding:5px 0;
 /* Typography
 ================================================== */
 
-h1,h6,p { color:#ecf029; font-weight:200; }
+h1,h6,p { color:hsl(60, 25%, 72%); font-weight:200; }
 h1 { font-size:42px; line-height:44px; margin:20px 0 0; }
 h6 { font-size:18px; line-height:20px; margin:4px 0 20px; }
 p { font-size:18px; line-height:20px; margin:0 0 2px; }
@@ -207,8 +208,8 @@ html[data-useragent*="OS 9"] #audiowrap { background-color:#d5d5d5; }
 html[data-useragent*="OS 9"] #tracks { min-height:75px; top:23px; }
 html[data-useragent*="OS 9"] a[id^="btn"] { background-color:#d5d5d5; color:#373837; }
 html[data-useragent*="OS 9"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="OS 9"] #plList li { background-color:#d5d5d5; }
-html[data-useragent*="OS 9"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="OS 9"] #plList li {opacity: 0.5; background-color: #eee; }
+html[data-useragent*="OS 9"] #plList li:hover { opacity: 1; background-color:#eee; }
 html[data-useragent*="OS 9"] .plSel,
 html[data-useragent*="OS 9"] .plSel:hover { background-color:#eee!important; }
 
@@ -219,8 +220,8 @@ html[data-useragent*="Chrome"] #audiowrap { background-color:#fafafa; }
 html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
 html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#fafafa; color:#5a5a5a; }
 html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="Chrome"] #plList li { background-color:#fafafa; }
-html[data-useragent*="Chrome"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="Chrome"] #plList li { opacity: 0.5; background-color: #eee; }
+html[data-useragent*="Chrome"] #plList li:hover {opacity: 1; background-color:#eee; }
 html[data-useragent*="Chrome"] .plSel,
 html[data-useragent*="Chrome"] .plSel:hover { background-color:#eee!important; }
 
