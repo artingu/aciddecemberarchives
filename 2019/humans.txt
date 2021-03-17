@@ -1,0 +1,14 @@
+/* TEAM */
+	Leads: reSet, rwq, friendly looking robots
+
+/* THANKS */
+	ISP: datapop.se
+	
+
+/* SITE */
+	Last update: 2020/03/15
+	Language: English
+	Doctype: HTML5
+	Standards: HTML5, CSS3
+	Components: jQuery
+	Software: FOSS, vim, gimp, inkscape, blender, jekyll, GNU+Linux, imagemagick,

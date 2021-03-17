@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- 2019 -->
+<html>
+  <head>
+
+<link rel="shortcut icon" href="/2019/assets/img/aciddecember.png" type="image/png" />
+<link rel="stylesheet" href="/2019/assets/css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="alternate" type="application/rss+xml" href="https://acid.datapop.se//rss.xml" title="#AcidDecember" />
+
+<!-- BEGIN rendered SEO MetaHEAD -->
+
+<title>#aciddecember | #AcidDecember</title>
+
+<!-- Standard SEO -->
+<meta name="title" content="#aciddecember, #AcidDecember">
+<meta name="dc.date.modified" scheme="ISO8601" content="2020-03-15T03:10:23+00:00" />
+<meta name='robots' content='index' />
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+<meta name="description" content="" />
+<meta name="generator" content="Jekyll" />
+<link rel="canonical" href="https://acid.datapop.se//" />
+<link rel="alternate" href="https://acid.datapop.se//" hreflang="x-default" />
+<meta name="keywords" content="">
+
+
+<!-- Dublin Core basic info -->
+
+<meta name="dcterms.Identifier" content="https://acid.datapop.se/" />
+<meta name="dcterms.Format" content="text/html" />
+<meta name="dcterms.Relation" content="#AcidDecember" />
+<meta name="dcterms.Language" content="en" />
+<meta name="dcterms.Publisher" content="#AcidDecember" />
+<meta name="dcterms.Type" content="text/html" />
+<meta name="dcterms.Coverage" content="https://acid.datapop.se//" />
+<meta name="dcterms.Rights" content="Copyleft &copy;2020 #AcidDecember." />
+<meta name="dcterms.Title" content="#aciddecember | #AcidDecember" />
+<meta name="dcterms.Subject" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+<meta name="dcterms.Contributor" content="#AcidDecember" />
+<meta name="dcterms.Date" content="2020-03-15" />
+<meta name="dcterms.Description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+
+<!-- Facebook OpenGraph -->
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://acid.datapop.se/" />
+<meta property="og:locale" content="en_us" />
+<meta property="og:title" content="#aciddecember | #AcidDecember" />
+<meta property="og:description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+<meta property="og:image" content="https://acid.datapop.se//assets/img/aciddecember.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="630" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="#AcidDecember" />
+
+<!-- Twitter Card -->
+
+<meta name="twitter:card" content="#AcidDecember" />
+<meta name="twitter:title" content="#aciddecember | #AcidDecember" />
+<meta name="twitter:description" content="Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!" />
+<meta name="twitter:image" content="https://acid.datapop.se//assets/img/aciddecember.png" />
+
+
+<!-- Humans.txt authorship http://humanstxt.org -->
+
+<link type="text/plain" rel="author" href="https://acid.datapop.se/humans.txt" />
+
+<!-- Domain verification -->
+
+
+<!-- Identity -->
+
+<script type='application/ld+json'>
+  {
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "name": "#AcidDecember",
+    "url": "https://acid.datapop.se/",
+    "logo": "https://acid.datapop.se//assets/img/aciddecember.png",
+    "image": "https://acid.datapop.se//assets/img/aciddecember.png",
+    "description": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!"
+  }
+   </script>
+
+<!-- WebSite -->
+
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "#AcidDecember",
+      "url": "https://acid.datapop.se/"
+  }
+  </script>
+
+<!-- Main Entity of Page -->
+
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "name": "#aciddecember | #AcidDecember",
+      "description": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!",
+      "image": {
+          "@type": "ImageObject", 
+          "url": "https://acid.datapop.se//assets/img/aciddecember.png",
+          "width": "630",
+          "height": "630"
+      },
+      "url": "https://acid.datapop.se//",
+      "mainEntityOfPage": "https://acid.datapop.se/",
+      "inLanguage": "en_us",
+      "headline": "Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!",
+      "dateCreated": "",
+      "dateModified": "2020-03-15T03:10:23+00:00",
+      "datePublished": "",
+      "copyrightYear": "2020",
+      
+  }
+  </script>
+<script src="/2019/assets/js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+  function generateRandomPosts() {
+    $.getJSON("/2019/posts.json", function (data) {
+      console.log("[posts.json loaded for random posts]");
+      var postsCount = data.length;
+      var posts = data;
+      var randomIndexUsed = [];
+      var counter = 0;
+      var numberOfPosts = 1;
+      var divRandomPosts = $("#random_posts");
+
+      while (counter < numberOfPosts) {
+        var randomIndex = Math.floor(Math.random() * postsCount);
+        if (randomIndexUsed.indexOf(randomIndex) == "-1") {
+          var postTitle = posts[randomIndex].title;
+          if (counter == (numberOfPosts - 1)) {
+            divRandomPosts.append('<p>' + postTitle + '</p>');
+          }
+          else {
+            divRandomPosts.append('<p>' + postTitle + '</p>');
+          }
+          randomIndexUsed.push(randomIndex);
+          counter++;
+        }
+      }
+    });
+  }
+  $(document).ready(function () {
+    generateRandomPosts();
+  });
+</script>
+
+  </head>
+  <body>
+<nav>
+  <a href="/">
+    <img class="rotate" src="/2019/assets/img/logo.svg" />
+  </a>
+  <a href="/2019/">
+    <h1>2019 #AcidDecember</h1>
+  </a>
+</nav>
+
+<div style="padding:10px;">
+<h1>Greetings Acid People!</h1>
+
+
+<h2><a href="/2019/12/26/">
+  26 - Boxing Day
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/25/">
+  25 - Im on the outside looking good
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/23/">
+  23 - Sura klappar
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/22/">
+  22 - Winter Solstice
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/21/">
+  21 - Mönster Y
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/20/">
+  20 - Electrip
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/19/">
+  19 - Paragraf 303
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/18/">
+  18 - Ninja moves
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/17/">
+  17 - storytime by the fire
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/16/">
+  16 - This sensation will pass
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/15/">
+  15 - No ho hoes
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/14/">
+  14 - Jagad av en skäggig man
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/13/">
+  13 - Fraktalupplevelse
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/12/">
+  12 - Pyntat med reklamslantar
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/11/">
+  11 - Grandma got the ssh keys
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/10/">
+  10 - We watch while you sleep
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/09/">
+  09 - Fulsyra
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/08/">
+  08 - Mönster X
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/07/">
+  07 - neoiufh4wgfh4h984
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/06/">
+  06 - Trillingnut
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/05/">
+  05 - Fragile
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/04/">
+  04 - Acid Advent
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/03/">
+  03 - 25i
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/02/">
+  02 - Dancing Bear
+</a></h2>
+<br />
+
+<h2><a href="/2019/12/01/">
+  01 - Flying High
+</a></h2>
+<br />
+
+<h2>Join us!  Send your acid tracks to  acid@datapop.se</h2>
+<br/> Want more?  There was a <a href="https://acid.datapop.se/2015/">2015 edition</a> <br/> And also a <a href="https://acid.datapop.se/2018/">2018 edition</a>
+<br/>
+<br/>Rss:<a href="https://acid.datapop.se/2019/rss.xml">we speak it!</a>
+
+  <div id="random_posts">  </div>
+
+
+</div>
+
+  </body>
+</html>

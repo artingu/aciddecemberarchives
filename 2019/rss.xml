@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+
+  <channel>
+    <title>#AcidDecember</title>
+    <atom:link href="https://acid.datapop.se//2019/rss.xml" rel="self" type="application/rss+xml" />
+    <link>https://acid.datapop.se/</link>
+    <description>Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!</description>
+    <lastBuildDate>Sun, 15 Mar 2020 03:10:23 +0000</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>https://jekyllrb.com/</generator>
+
+    <image>
+      <url>https://acid.datapop.se//2019/assets/img/aciddecember.png</url>
+      <title>#AcidDecember</title>
+      <link>https://acid.datapop.se//2019</link>
+      <width>1024</width>
+      <height>1024</height>
+    </image> 
+    <itunes:summary><![CDATA[Who Lee Fuq Acid December Special Price Is Suing Santa over free labour!]]></itunes:summary>
+    <itunes:author>#AcidDecember</itunes:author>
+    <itunes:explicit>yes</itunes:explicit>
+    <itunes:image href="https://acid.datapop.se//2019/assets/img/aciddecember.png" />
+    <itunes:owner>
+      <itunes:name>#AcidDecember</itunes:name>
+      <itunes:email>acid@datapop.se</itunes:email>
+    </itunes:owner>
+    <managingEditor>acid@datapop.se</managingEditor>
+    <copyright>Anti-Copyright 2019 #AcidDecember</copyright>
+    <itunes:subtitle>#AcidDecember</itunes:subtitle>
+    <itunes:category text="Music">
+    </itunes:category>
+    <rawvoice:rating>TV-14</rawvoice:rating>
+    <rawvoice:frequency>Daily</rawvoice:frequency>
+  
+      <item>
+        <title>Boxing Day</title>
+        <link>https://acid.datapop.se//2019/12/26/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/26/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/boxing.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>SIP 303</author>
+        <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>SIP 303</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/boxing.gif"/>
+      </item>
+  
+      <item>
+        <title>Im on the outside looking good</title>
+        <link>https://acid.datapop.se//2019/12/25/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/25/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/1c50426f887b1a32f8d1ca554c2a174b.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Mango Drive</author>
+        <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Mango Drive</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/1c50426f887b1a32f8d1ca554c2a174b.gif"/>
+      </item>
+  
+      <item>
+        <title>Sura klappar</title>
+        <link>https://acid.datapop.se//2019/12/23/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/23/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/dancedance.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Sodersten</author>
+        <pubDate>Mon, 23 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Sodersten</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/dancedance.gif"/>
+      </item>
+  
+      <item>
+        <title>Winter Solstice</title>
+        <link>https://acid.datapop.se//2019/12/22/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/22/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/fractal-koch-snowflake-animation.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Sip303</author>
+        <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Sip303</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/fractal-koch-snowflake-animation.gif"/>
+      </item>
+  
+      <item>
+        <title>Mönster Y</title>
+        <link>https://acid.datapop.se//2019/12/21/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/21/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/tumblr_ody0crHaoN1qdxg1vo2_500.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>erko</author>
+        <pubDate>Sat, 21 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>erko</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/tumblr_ody0crHaoN1qdxg1vo2_500.gif"/>
+      </item>
+  
+      <item>
+        <title>Electrip</title>
+        <link>https://acid.datapop.se//2019/12/20/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/20/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/aciddecember.png&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Sip303</author>
+        <pubDate>Fri, 20 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Sip303</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/aciddecember.png"/>
+      </item>
+  
+      <item>
+        <title>Paragraf 303</title>
+        <link>https://acid.datapop.se//2019/12/19/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/19/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/Dhf12670-800x529.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Föreningsbanken</author>
+        <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Föreningsbanken</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/Dhf12670-800x529.jpg"/>
+      </item>
+  
+      <item>
+        <title>Ninja moves</title>
+        <link>https://acid.datapop.se//2019/12/18/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/18/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/tumblr_inline_mo9hygkKQZ1qz4rgp540.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Linusolinus</author>
+        <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Linusolinus</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/tumblr_inline_mo9hygkKQZ1qz4rgp540.gif"/>
+      </item>
+  
+      <item>
+        <title>storytime by the fire</title>
+        <link>https://acid.datapop.se//2019/12/17/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/17/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/stars.png&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>perseid</author>
+        <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>perseid</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/stars.png"/>
+      </item>
+  
+      <item>
+        <title>This sensation will pass</title>
+        <link>https://acid.datapop.se//2019/12/16/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/16/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/index_clip_image021.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>afterheathdeath</author>
+        <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>afterheathdeath</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/index_clip_image021.gif"/>
+      </item>
+  
+      <item>
+        <title>No ho hoes</title>
+        <link>https://acid.datapop.se//2019/12/15/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/15/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/No_Santa.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>JGB</author>
+        <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>JGB</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/No_Santa.jpg"/>
+      </item>
+  
+      <item>
+        <title>Jagad av en skäggig man</title>
+        <link>https://acid.datapop.se//2019/12/14/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/14/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/santa.png&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Videnskaben</author>
+        <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Videnskaben</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/santa.png"/>
+      </item>
+  
+      <item>
+        <title>Fraktalupplevelse</title>
+        <link>https://acid.datapop.se//2019/12/13/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/13/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/acid2.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Särkvark</author>
+        <pubDate>Fri, 13 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Särkvark</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/acid2.jpg"/>
+      </item>
+  
+      <item>
+        <title>Pyntat med reklamslantar</title>
+        <link>https://acid.datapop.se//2019/12/12/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/12/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/tehdancey.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Dannes</author>
+        <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Dannes</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/tehdancey.gif"/>
+      </item>
+  
+      <item>
+        <title>Grandma got the ssh keys</title>
+        <link>https://acid.datapop.se//2019/12/11/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/11/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/20191208_farmorsemail186.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>To Setto setto</author>
+        <pubDate>Wed, 11 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>To Setto setto</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/20191208_farmorsemail186.jpg"/>
+      </item>
+  
+      <item>
+        <title>We watch while you sleep</title>
+        <link>https://acid.datapop.se//2019/12/10/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/10/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/we_watch_you.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>JGB</author>
+        <pubDate>Tue, 10 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>JGB</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/we_watch_you.jpg"/>
+      </item>
+  
+      <item>
+        <title>Fulsyra</title>
+        <link>https://acid.datapop.se//2019/12/09/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/09/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/piffpuff.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Sodersten</author>
+        <pubDate>Mon, 09 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Sodersten</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/piffpuff.gif"/>
+      </item>
+  
+      <item>
+        <title>Mönster X</title>
+        <link>https://acid.datapop.se//2019/12/08/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/08/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/monster.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>erko</author>
+        <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>erko</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/monster.jpg"/>
+      </item>
+  
+      <item>
+        <title>neoiufh4wgfh4h984</title>
+        <link>https://acid.datapop.se//2019/12/07/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/07/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/tumblr_o4rfq5w0WG1qztc42o1_500.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>kung bongo</author>
+        <pubDate>Sat, 07 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>kung bongo</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/tumblr_o4rfq5w0WG1qztc42o1_500.gif"/>
+      </item>
+  
+      <item>
+        <title>Trillingnut</title>
+        <link>https://acid.datapop.se//2019/12/06/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/06/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/trillingnut.png&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>CCCV</author>
+        <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>CCCV</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/trillingnut.png"/>
+      </item>
+  
+      <item>
+        <title>Fragile</title>
+        <link>https://acid.datapop.se//2019/12/05/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/05/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/CSbhc3eL.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>BOSDS</author>
+        <pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>BOSDS</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/CSbhc3eL.jpg"/>
+      </item>
+  
+      <item>
+        <title>Acid Advent</title>
+        <link>https://acid.datapop.se//2019/12/04/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/04/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/jacidcolor2.jpg&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>jAcid</author>
+        <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>jAcid</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/jacidcolor2.jpg"/>
+      </item>
+  
+      <item>
+        <title>25i</title>
+        <link>https://acid.datapop.se//2019/12/03/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/03/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/mandel.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>mono acid</author>
+        <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>mono acid</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/mandel.gif"/>
+      </item>
+  
+      <item>
+        <title>Dancing Bear</title>
+        <link>https://acid.datapop.se//2019/12/02/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/02/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/dancingbear.png&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>chiptraxxx</author>
+        <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>chiptraxxx</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/dancingbear.png"/>
+      </item>
+  
+      <item>
+        <title>Flying High</title>
+        <link>https://acid.datapop.se//2019/12/01/</link>
+        <guid isPermaLink="true">https://acid.datapop.se//2019/12/01/</guid>
+        <description> &lt;img src=&quot;https://acid.datapop.se//2019/assets/img/tenor.gif&quot; /&gt; &lt;br /&gt;</description>
+        <category>Podcasts</category>
+        <author>Valdo</author>
+        <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+        <itunes:author>Valdo</itunes:author>
+        <itunes:explicit>No</itunes:explicit>
+        <itunes:subtitle></itunes:subtitle>
+        <itunes:summary></itunes:summary>
+        <itunes:keywords>Acid</itunes:keywords>
+        <itunes:image href="https://acid.datapop.se//2019/assets/img/tenor.gif"/>
+      </item>
+  
+  </channel>
+</rss>
