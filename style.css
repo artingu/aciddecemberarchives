@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 body {
-    background-image: url("car.gif");
+    font-family: monospace;
+    background-color: #ccc;
     background-size: cover;
 }
 
@@ -101,14 +102,16 @@ label {
 /* Style the submit button */
 
 img {
-    background-image: url("stripes.gif");
+    background-image: url("fractal.gif");
     color: white;
     padding: 12px 20px;
-    border: none;
+    border: 30px;
     border-radius: 40px;
     cursor: pointer;
-    float: right;
+    float: left;
     border-top: 6px;
+    max-width: 230;
+    max-height: 130;
 }
 
 
