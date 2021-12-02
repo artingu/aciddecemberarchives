@@ -24,6 +24,11 @@ jQuery(function($) {
                     "name": "Kotten - Acid my ass",
                     "length": "05:17",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten_-_Acid_my_ass"
+                }, {
+                    "track": 2,
+                    "name": "Jerzz - LAB31",
+                    "length": "07:39",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/JERZZ-LAB31"
                 },
 
 
@@ -33,12 +38,12 @@ jQuery(function($) {
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
                 playing = true;
-                npAction.text('Now Playing...');
+                npAction.text('playing');
             }).bind('pause', function() {
                 playing = false;
-                npAction.text('Paused...');
+                npAction.text('paused');
             }).bind('ended', function() {
-                npAction.text('Paused...');
+                npAction.text('stopped');
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
