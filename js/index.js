@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 0,
+        var index = 2,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -29,8 +29,12 @@ jQuery(function($) {
                     "name": "Jerzz - LAB31",
                     "length": "07:39",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/JERZZ-LAB31"
-                },
-
+                }, {
+                    "track": 3,
+                    "name": "Jazzdoktorn - Entartete Kunst",
+                    "length": "08:42",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Jazzdoktorn-Entartete-kunst-11"
+                }
 
             ],
             trackCount = tracks.length,

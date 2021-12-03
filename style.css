@@ -253,7 +253,7 @@ ul li {
     text-size-adjust: 200px;
     left: 50px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     right: 65px;
     text-overflow: ellipsis;
     top: 0;
