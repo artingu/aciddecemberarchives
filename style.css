@@ -220,6 +220,7 @@ ul li {
     margin: 0;
     /* padding: 21px; */
     font-size: 51;
+    font-family: monospace;
     text-align: right;
 }
 

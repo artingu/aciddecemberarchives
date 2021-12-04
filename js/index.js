@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 2,
+        var index = 3,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -34,6 +34,11 @@ jQuery(function($) {
                     "name": "Jazzdoktorn - Entartete Kunst",
                     "length": "08:42",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Jazzdoktorn-Entartete-kunst-11"
+                }, {
+                    "track": 4,
+                    "name": "Shadow Traxx - Get Sorted",
+                    "length": "05:50",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Shadow_Traxx-Get_Sorted!"
                 }
 
             ],
