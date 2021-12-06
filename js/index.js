@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 4,
+        var index = 5,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -44,6 +44,11 @@ jQuery(function($) {
                     "name": "MOTHER JOONAS - Bumbulum",
                     "length": "04:13",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/MOTHER_JOONAS-Bumbulum"
+                }, {
+                    "track": 5,
+                    "name": "Sebsongs - Acid Radio Santa",
+                    "length": "05:44",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/sebsongs-acid_radio_santa"
                 }
 
             ],
