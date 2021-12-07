@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 5,
+        var index = 6,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -49,7 +49,12 @@ jQuery(function($) {
                     "name": "Sebsongs - Acid Radio Santa",
                     "length": "05:44",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/sebsongs-acid_radio_santa"
-                }
+                }, {
+                    "track": 7,
+                    "name": "Chimar - Kolbotn Acid Session I",
+                    "length": "04:42",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_I"
+                },
 
             ],
             trackCount = tracks.length,
