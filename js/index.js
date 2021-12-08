@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 6,
+        var index = 7,
             playing = false,
             mediaPath = '',
             extension = '',
