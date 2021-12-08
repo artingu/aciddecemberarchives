@@ -190,7 +190,7 @@ ul li {
 }
 
 #audiowrap {
-    /*   background-color: #231F20; */
+    background-color: yellow;
     margin: 20 auto;
     /* display: table-footer-group; */
 }
@@ -214,6 +214,7 @@ ul li {
     text-align: left;
     /* font-size: 40px; */
     font-family: monospace;
+    background-color: yellow;
 }
 
 #npTitle {

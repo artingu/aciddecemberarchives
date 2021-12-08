@@ -51,7 +51,7 @@ jQuery(function($) {
                     "file": "https://storage.googleapis.com/acid-december2012/2021/sebsongs-acid_radio_santa"
                 }, {
                     "track": 7,
-                    "name": "Chimar - Kolbotn Acid Session I",
+                    "name": "Chimär - Kolbotn Acid Session I",
                     "length": "04:42",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_I"
                 }, {
