@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 7,
+        var index = 8,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -59,6 +59,11 @@ jQuery(function($) {
                     "name": "Shike - Knäcktuggaren",
                     "length": "04:23",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Knacktuggaren"
+                }, {
+                    "track": 9,
+                    "name": "Coop Xtra - Bra produkter till ett lågt pris",
+                    "length": "04:31",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Coop_Xtra-Bra_produkter_till_l%C3%A5gt_pris"
                 },
 
 
