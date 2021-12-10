@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 8,
+        var index = 9,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -64,6 +64,11 @@ jQuery(function($) {
                     "name": "Coop Xtra - Bra produkter till ett lågt pris",
                     "length": "04:31",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Coop_Xtra-Bra_produkter_till_l%C3%A5gt_pris"
+                }, {
+                    "track": 10,
+                    "name": "Lies & Sets - Bra Sill",
+                    "length": "02:58",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/2021-Acid_December_2021-07-Bra_Sill-Lies_%26_Sets"
                 },
 
 
