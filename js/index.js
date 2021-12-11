@@ -15,7 +15,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 9,
+        var index = 10,
             playing = false,
             mediaPath = '',
             extension = '',
@@ -69,6 +69,11 @@ jQuery(function($) {
                     "name": "Lies & Sets - Bra Sill",
                     "length": "02:58",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/2021-Acid_December_2021-07-Bra_Sill-Lies_%26_Sets"
+                }, {
+                    "track": 11,
+                    "name": "TSR - Vaegen svengde men ikke renen",
+                    "length": "03:03",
+                    "file": " https://storage.googleapis.com/acid-december2012/2021/tsr_-_vaegen_svengde_men_ikke_renen"
                 },
 
 
