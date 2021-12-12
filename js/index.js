@@ -74,7 +74,13 @@ jQuery(function($) {
                     "name": "TSR - Vaegen svengde men ikke renen",
                     "length": "03:03",
                     "file": " https://storage.googleapis.com/acid-december2012/2021/tsr_-_vaegen_svengde_men_ikke_renen"
+                }, {
+                    "track": 12,
+                    "name": "nSIx - AC#D",
+                    "length": "05:28",
+                    "file": " https://storage.googleapis.com/acid-december2012/2021/AC%23D"
                 },
+
 
 
             ],
