@@ -8,6 +8,7 @@ var b = document.documentElement;
 b.setAttribute('data-useragent', navigator.userAgent);
 b.setAttribute('data-platform', navigator.platform);
 
+var paket = "Paket ".repeat(12);
 
 // HTML5 audio player + playlist controls...
 // Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
@@ -15,7 +16,7 @@ b.setAttribute('data-platform', navigator.platform);
 jQuery(function($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
-        var index = 11,
+        var
             playing = false,
             mediaPath = '',
             extension = '',
@@ -78,13 +79,19 @@ jQuery(function($) {
                     "track": 12,
                     "name": "nSIx - AC#D",
                     "length": "05:28",
-                    "file": " https://storage.googleapis.com/acid-december2012/2021/AC%23D"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/AC%23D"
+                }, {
+                    "track": 13,
+                    "name": "Moelodin - Toppad",
+                    "length": "05:28",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/moelodin%20toppad"
                 },
 
 
 
             ],
             trackCount = tracks.length,
+            index = 11,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
