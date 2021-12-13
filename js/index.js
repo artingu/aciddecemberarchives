@@ -91,7 +91,7 @@ jQuery(function($) {
 
             ],
             trackCount = tracks.length,
-            index = 11,
+            index = 12,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
