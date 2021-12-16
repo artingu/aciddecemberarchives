@@ -94,14 +94,19 @@ jQuery(function($) {
                 {
                     "track": 15,
                     "name": "Erko - Draperi acid",
-                    "length": "02:40",
+                    "length": "12:40",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/draperi-acid"
+                }, {
+                    "track": 16,
+                    "name": "jAcid - Glöggsyra",
+                    "length": "07:08",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid-Gloggsyra"
                 },
 
 
             ],
             trackCount = tracks.length,
-            index = 14,
+            index = 15,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
