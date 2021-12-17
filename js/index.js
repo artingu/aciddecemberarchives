@@ -101,12 +101,17 @@ jQuery(function($) {
                     "name": "jAcid - Glöggsyra",
                     "length": "07:08",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid-Gloggsyra"
+                }, {
+                    "track": 17,
+                    "name": "Kuvös X - Bronsålderskollapsen (Acid Mix)",
+                    "length": "05:36",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kuvos%20X_Bronsalderskollapsen(Acid%20mix)"
                 },
 
 
             ],
             trackCount = tracks.length,
-            index = 15,
+            index = 16,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
