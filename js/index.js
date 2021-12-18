@@ -106,12 +106,18 @@ jQuery(function($) {
                     "name": "Kuvös X - Bronsålderskollapsen (Acid Mix)",
                     "length": "05:36",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Kuvos%20X_Bronsalderskollapsen(Acid%20mix)"
+                }, {
+                    "track": 18,
+                    "name": "Chimär - Kolbotn Acid Session II",
+                    "length": "05:21",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_II"
                 },
+
 
 
             ],
             trackCount = tracks.length,
-            index = 16,
+            index = 17,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
