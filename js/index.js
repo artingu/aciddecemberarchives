@@ -111,13 +111,18 @@ jQuery(function($) {
                     "name": "Chimär - Kolbotn Acid Session II",
                     "length": "05:21",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_II"
+                }, {
+                    "track": 19,
+                    "name": "Kotten - Apparatkontroll",
+                    "length": "03:48",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten%20-%20Apparatkontroll"
                 },
 
 
 
             ],
             trackCount = tracks.length,
-            index = 17,
+            index = 18,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
