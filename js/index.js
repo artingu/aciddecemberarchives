@@ -24,105 +24,130 @@ jQuery(function($) {
                     "track": 1,
                     "name": "Kotten - Acid my ass",
                     "length": "05:17",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten_-_Acid_my_ass"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten_-_Acid_my_ass",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 2,
                     "name": "Jerzz - LAB31",
                     "length": "07:39",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/JERZZ-LAB31"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/JERZZ-LAB31",
+                    "img": "Jerzz-Logo_3000x3000-geel.jpg"
                 }, {
                     "track": 3,
                     "name": "Jazzdoktorn - Entartete Kunst",
                     "length": "08:42",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Jazzdoktorn-Entartete-kunst-11"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Jazzdoktorn-Entartete-kunst-11",
+                    "img": "pink.jpg"
                 }, {
                     "track": 4,
                     "name": "Shadow Traxx - Get Sorted",
                     "length": "05:50",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Shadow_Traxx-Get_Sorted!"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Shadow_Traxx-Get_Sorted!",
+                    "img": "SHADOW_TRAXX_SOUND_CLOUD_PERFIL.png"
                 }, {
                     "track": 5,
                     "name": "MOTHER JOONAS - Bumbulum",
                     "length": "04:13",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/MOTHER_JOONAS-Bumbulum"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/MOTHER_JOONAS-Bumbulum",
+                    "img": "MOTHER JOONAS Bumbulum Cover.jpeg"
                 }, {
                     "track": 6,
                     "name": "Sebsongs - Acid Radio Santa",
                     "length": "05:44",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/sebsongs-acid_radio_santa"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/sebsongs-acid_radio_santa",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 7,
                     "name": "Chimär - Kolbotn Acid Session I",
                     "length": "04:42",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_I"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_I",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 8,
                     "name": "Shike - Knäcktuggaren",
                     "length": "04:23",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Knacktuggaren"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Knacktuggaren",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 9,
                     "name": "Coop Xtra - Bra produkter till ett lågt pris",
                     "length": "04:31",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Coop_Xtra-Bra_produkter_till_l%C3%A5gt_pris"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Coop_Xtra-Bra_produkter_till_l%C3%A5gt_pris",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 10,
                     "name": "Lies & Sets - Bra Sill",
                     "length": "02:58",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/2021-Acid_December_2021-07-Bra_Sill-Lies_%26_Sets"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/2021-Acid_December_2021-07-Bra_Sill-Lies_%26_Sets",
+                    "img": "redherring.jpg"
                 }, {
                     "track": 11,
                     "name": "TSR - Vaegen svengde men ikke renen",
                     "length": "03:03",
-                    "file": " https://storage.googleapis.com/acid-december2012/2021/tsr_-_vaegen_svengde_men_ikke_renen"
+                    "file": " https://storage.googleapis.com/acid-december2012/2021/tsr_-_vaegen_svengde_men_ikke_renen",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 12,
                     "name": "nSIx - AC#D",
                     "length": "05:28",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/AC%23D"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/AC%23D",
+                    "img": "OIP.jpg"
                 }, {
                     "track": 13,
                     "name": "Moelodin - Toppad",
                     "length": "05:28",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/moelodin%20toppad"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/moelodin%20toppad",
+                    "img": "13.jpg"
                 }, {
                     "track": 14,
                     "name": "Robotbror - WA02",
                     "length": "02:40",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Robotbror_WA-02"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Robotbror_WA-02",
+                    "img": "image0.jpeg"
                 },
                 {
                     "track": 15,
                     "name": "Erko - Draperi acid",
                     "length": "12:40",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/draperi-acid"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/draperi-acid",
+                    "img": "erko.jpg"
                 }, {
                     "track": 16,
                     "name": "jAcid - Glöggsyra",
                     "length": "07:08",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid-Gloggsyra"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid-Gloggsyra",
+                    "img": "jacidcolorbeatport.jpg"
                 }, {
                     "track": 17,
                     "name": "Kuvös X - Bronsålderskollapsen (Acid Mix)",
                     "length": "05:36",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kuvos%20X_Bronsalderskollapsen(Acid%20mix)"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kuvos%20X_Bronsalderskollapsen(Acid%20mix)",
+                    "img": "image1.jpeg"
                 }, {
                     "track": 18,
                     "name": "Chimär - Kolbotn Acid Session II",
                     "length": "05:21",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_II"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kolbotn_Acid_Sessions_II",
+                    "img": "D700A683.jpg"
                 }, {
                     "track": 19,
                     "name": "Kotten - Apparatkontroll",
                     "length": "03:48",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten%20-%20Apparatkontroll"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten%20-%20Apparatkontroll",
+                    "img": "07DE1747.jpg"
+                }, {
+                    "track": 20,
+                    "name": "JGB - Syrliga Julhälningar",
+                    "length": "04:39",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/jgb-syrliga_julhalsningar",
+                    "img": "637219AD.jpg"
                 },
 
 
 
             ],
             trackCount = tracks.length,
-            index = 18,
+            index = 19,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
