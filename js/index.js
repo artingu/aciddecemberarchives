@@ -141,13 +141,19 @@ jQuery(function($) {
                     "length": "04:39",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/jgb-syrliga_julhalsningar",
                     "img": "637219AD.jpg"
+                },{
+                    "track": 21,
+                    "name": "Klabbarparna - Stolpapaera i G dur",
+                    "length": "02.15",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/jgb-syrliga_julhalsningar",
+                    "img": "04A247B7.JPG"
                 },
 
 
 
             ],
             trackCount = tracks.length,
-            index = 19,
+            index = 20,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
