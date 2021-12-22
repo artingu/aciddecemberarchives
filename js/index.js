@@ -147,13 +147,20 @@ jQuery(function($) {
                     "length": "02.15",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Klabbarparna%20-%20Stolpapaera%20i%20G%20dur",
                     "img": "04A247B7.JPG"
+                },{
+                    "track": 22,
+                    "name": "Hjorten - Korgsyra",
+                    "length": "02.13",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/korgsyra",
+                    "img": "04A247B7.JPG"
                 },
+
 
 
 
             ],
             trackCount = tracks.length,
-            index = 20,
+            index = 21,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
