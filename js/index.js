@@ -153,6 +153,12 @@ jQuery(function($) {
                     "length": "02.13",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/korgsyra",
                     "img": "04A247B7.JPG"
+                },{
+                    "track": 23,
+                    "name": "Linusolinus - Tomtemors rengryta",
+                    "length": "05.12",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/linusolinus%20-%20Tomtemors%20rengryta",
+                    "img": "abstract-art-1321419_960_720.jpg"
                 },
 
 
@@ -160,7 +166,7 @@ jQuery(function($) {
 
             ],
             trackCount = tracks.length,
-            index = 21,
+            index = 22,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
