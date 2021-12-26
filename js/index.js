@@ -169,11 +169,16 @@ jQuery(function($) {
                     "name" : "Reefer Sutherland - Ringmod för livet", 
                     "length": "3.33",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Reefer%20Sutherland%20-%20Ringmod%20f%C3%B6r%20livet"
+                }, {
+                    "track": 26,
+                    "name" : "nSix - Improvacadition", 
+                    "length": "3.28",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Improvacadition"
                 }
 
             ],
             trackCount = tracks.length,
-            index = 24,
+            index = 25,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
