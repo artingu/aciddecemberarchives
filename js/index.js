@@ -174,11 +174,21 @@ jQuery(function($) {
                     "name" : "nSix - Improvacadition", 
                     "length": "3.28",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Improvacadition"
-                }
+                }, {
+                    "track": 27,
+                    "name" : "nSix - Improvacadition", 
+                    "length": "3.28",
+                }, {
+                    "track": 28,
+                    "name" : "Patric B - Acid Monotonie", 
+                    "length": "4.53",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/patrick_b-acid_monotonie"
+                    }
+                
 
             ],
             trackCount = tracks.length,
-            index = 25,
+            index = 27,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
