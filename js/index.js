@@ -179,12 +179,17 @@ jQuery(function($) {
                     "name" : "Patric B - Acid Monotonie", 
                     "length": "4.53",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/patrick_b-acid_monotonie"
-                    }
+                }, {
+                    "track": 28,
+                    "name" : "Kotten - Electro my Acid", 
+                    "length": "3.31",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten%20-%20Electro%20my%20acid"
+                }
                 
 
             ],
             trackCount = tracks.length,
-            index = 26,
+            index = 27,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
