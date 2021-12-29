@@ -184,12 +184,17 @@ jQuery(function($) {
                     "name" : "Kotten - Electro my Acid", 
                     "length": "3.31",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Kotten%20-%20Electro%20my%20acid"
+                }, {
+                    "track": 29,
+                    "name" : "jAcid - X-mas tree O three", 
+                    "length": "5.25",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid%20-%20X-mas%20tree%200%20three"
                 }
                 
 
             ],
             trackCount = tracks.length,
-            index = 27,
+            index = 28,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             audio = $('#audio1').bind('play', function() {
@@ -251,6 +256,7 @@ jQuery(function($) {
             },
             playTrack = function(id) {
                 loadTrack(id);
+                document.body.style.backgroundImage = "url('abstract-art-1321419_960_720.jpg')";
                 audio.play();
             };
         extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
