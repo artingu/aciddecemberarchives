@@ -6,7 +6,7 @@
 // Inspiration: http://css-tricks.com/ie-10-specific-styles/
 var b = document.documentElement;
 b.setAttribute('data-useragent', navigator.userAgent);
-b.setAttribute('data-platform', navigator.platform);
+//b.setAttribute('data-platform', navigator.platform);
 
 var paket = "Paket ".repeat(12);
 
@@ -189,14 +189,20 @@ jQuery(function($) {
                     "name" : "jAcid - X-mas tree O three", 
                     "length": "5.25",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid%20-%20X-mas%20tree%200%20three"
+                }, {
+                    "track": 29,
+                    "name" : "Snorkeldata - Astral Falafel 1.3", 
+                    "length": "4.12",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Snorkeldata%20-%20Astral%20Falafel%201.3"
                 }
                 
 
             ],
             trackCount = tracks.length,
-            index = 28,
+            index = 29,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
+            npImage = $('#npImage'),
             audio = $('#audio1').bind('play', function() {
                 playing = true;
                 npAction.text('playing');
@@ -251,6 +257,7 @@ jQuery(function($) {
                 $('.plSel').removeClass('plSel');
                 $('#plList li:eq(' + id + ')').addClass('plSel');
                 npTitle.text(tracks[id].name);
+                npImage.text(tracks[id].img);
                 index = id;
                 audio.src = mediaPath + tracks[id].file + extension;
             },
