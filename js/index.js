@@ -190,16 +190,21 @@ jQuery(function($) {
                     "length": "5.25",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/jAcid%20-%20X-mas%20tree%200%20three"
                 }, {
-                    "track": 29,
+                    "track": 30,
                     "name" : "Snorkeldata - Astral Falafel 1.3", 
                     "length": "4.12",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Snorkeldata%20-%20Astral%20Falafel%201.3"
                 }
-                
+                , {
+                    "track": 31,
+                    "name" : "Knut Källgren - Emac", 
+                    "length": "5.14",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Emac-Knut_Kallgren"
+                }
 
             ],
             trackCount = tracks.length,
-            index = 29,
+            index = 30,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             npImage = $('#npImage'),
