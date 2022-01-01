@@ -194,13 +194,18 @@ jQuery(function($) {
                     "name" : "Snorkeldata - Astral Falafel 1.3", 
                     "length": "4.12",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Snorkeldata%20-%20Astral%20Falafel%201.3"
-                }
-                , {
+                }, {
                     "track": 31,
                     "name" : "Knut Källgren - Emac", 
                     "length": "5.14",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/Emac-Knut_Kallgren"
+                }, {
+                    "track": 32,
+                    "name" : "Gentleman Doctor - Dum fråga", 
+                    "length": "6.19",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/VilkenDumFr%C3%A5ga"
                 }
+
 
             ],
             trackCount = tracks.length,
