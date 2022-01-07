@@ -209,7 +209,7 @@ jQuery(function($) {
 
             ],
             trackCount = tracks.length,
-            index = 30,
+            index = 31,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             npImage = $('#npImage'),
