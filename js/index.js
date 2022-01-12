@@ -204,12 +204,17 @@ jQuery(function($) {
                     "name" : "Gentleman Doctor - Dum fråga", 
                     "length": "6.19",
                     "file": "https://storage.googleapis.com/acid-december2012/2021/VilkenDumFr%C3%A5ga"
+                }, {
+                    "track": 33,
+                    "name" : "Boy Disco - Pink Cowboy Boots", 
+                    "length": "04.08",
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Boy%20Disco%20-%20Pink%20Cowboy%20Boots.mp3"
                 }
 
 
             ],
             trackCount = tracks.length,
-            index = 31,
+            index = 32,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             npImage = $('#npImage'),
