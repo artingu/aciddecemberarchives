@@ -208,7 +208,7 @@ jQuery(function($) {
                     "track": 33,
                     "name" : "Boy Disco - Pink Cowboy Boots", 
                     "length": "04.08",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/Boy%20Disco%20-%20Pink%20Cowboy%20Boots.mp3"
+                    "file": "https://storage.googleapis.com/acid-december2012/2021/Boy%20Disco%20-%20Pink%20Cowboy%20Boots"
                 }
 
 
