@@ -237,6 +237,8 @@ sub {
 
 img {
     border: 0;
+    max-width: 230;
+    max-height: 130;
 }
 
 /**
@@ -415,7 +417,7 @@ table {
 html, body {
   background-repeat: repeat;
   background:#2b0057;
-  background-image: url('../img/giphy.gif');
+  background-image: url('../img/wowstar.gif');
   background-size: cover;
   color: #000;
 
