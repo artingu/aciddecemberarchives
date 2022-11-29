@@ -235,10 +235,17 @@ sub {
  * Remove border when inside `a` element in IE 8/9.
  */
 
-img {
-    border: 0;
-    max-width: 230;
-    max-height: 130;
+ img {
+  background-image: url("/assets/img/wowstar.gif");
+  color: white;
+  padding: 12px 20px;
+  border: 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  float: left;
+  border-top: 6px;
+  max-width: 230;
+  max-height: 130;
 }
 
 /**
