@@ -1,0 +1,1 @@
+curl -F 'text=Setto setto the acid lover' -H 'api-key:quickstart-QUdJIGlzIGNvbWluZy4uLi4K' https://api.deepai.org/api/text-generator > out.html
