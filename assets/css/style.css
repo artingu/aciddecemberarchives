@@ -127,6 +127,12 @@ h1 {
     text-transform: uppercase;
 }
 
+div#plnum {
+  font-size: 2em;
+  margin: 0.67em 0;
+  text-transform: uppercase;
+  text-color: white
+}
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
