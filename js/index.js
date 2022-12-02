@@ -26,15 +26,15 @@ jQuery(function($) {
                     "length": "05:17",
                     "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
                     "img": "jAcid.jpg"
-                }
-                /* {
+                },
+                 {
                     "track": 2,
-                    "name": "Jerzz - LAB31",
+                    "name": "NSKE - Acid Entry",
                     "length": "07:39",
-                    "file": "https://storage.googleapis.com/acid-december2012/2021/JERZZ-LAB31",
-                    "img": "Jerzz-Logo_3000x3000-geel.jpg"
-                }, 
- */
+                    "file": "https://storage.googleapis.com/acid-december2012/2022/NSKE-AcidEntry",
+                    "img": "NSKE-AcidEntry.jpg"
+                } 
+ 
             ],
             trackCount = tracks.length,
             index = 32,
@@ -43,7 +43,7 @@ jQuery(function($) {
             npImage = $('#npImage'),
             audio = $('#audio1').bind('play', function() {
                 playing = true;
-                npAction.text('playing');
+                npAction.text('playing $npTitle');
             }).bind('pause', function() {
                 playing = false;
                 npAction.text('paused');
