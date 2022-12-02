@@ -43,7 +43,7 @@ jQuery(function($) {
             npImage = $('#npImage'),
             audio = $('#audio1').bind('play', function() {
                 playing = true;
-                npAction.text('playing $npTitle');
+                npAction.text('playing');
             }).bind('pause', function() {
                 playing = false;
                 npAction.text('paused');
