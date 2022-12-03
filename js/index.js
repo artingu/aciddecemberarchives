@@ -33,7 +33,15 @@ jQuery(function($) {
                     "length": "07:39",
                     "file": "https://storage.googleapis.com/acid-december2012/2022/NSKE-AcidEntry",
                     "img": "NSKE-AcidEntry.jpg"
-                } 
+                },
+                {
+                    "track": 3,
+                    "name": "NinjaNicke - Crush & Mousse",
+                    "length": "11.58",
+                    "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
+                    "img" : "crushandmousse.png"
+
+                }
  
             ],
             trackCount = tracks.length,
@@ -101,7 +109,6 @@ jQuery(function($) {
             },
             playTrack = function(id) {
                 loadTrack(id);
-                document.body.style.backgroundImage = "url('abstract-art-1321419_960_720.jpg')";
                 audio.play();
             };
         extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
