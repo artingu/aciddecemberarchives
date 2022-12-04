@@ -177,18 +177,15 @@ audio {
     width: 400px;
 }
 
-ul li {
+/* ul li {
     list-style-type: none;
     color: beige;
-}
+} */
 
 #audio0 {
     display: flex;
 }
 
-#mainwrap {
-    /* add box-shadow or other styles here */
-}
 
 #audiowrap {
     background-color: yellow;
@@ -196,9 +193,7 @@ ul li {
     /* display: table-footer-group; */
 }
 
-#plwrap {
-    /* margin: 0 auto; */
-}
+
 
 #tracks {
     /* min-height: 20px; */
@@ -220,7 +215,7 @@ ul li {
 
 #npTitle {
     margin: 0;
-    /* padding: 21px; */
+    padding: 21px; 
     font-size: 51;
     font-family: monospace;
     text-align: right;
@@ -242,9 +237,7 @@ ul li {
     padding: 21px 0;
 }
 
-#plList li:hover {
-    /* background-color: #262223; */
-}
+
 
 .plItem {
     position: relative;
@@ -296,9 +289,7 @@ a[id^="btn"]:last-child {
 }
 
 a[id^="btn"]:hover,
-a[id^="btn"]:active {
-    /* background-color: #262223; */
-}
+
 
 a[id^="btn"]::-moz-focus-inner {
     border: 0;
