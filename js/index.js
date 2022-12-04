@@ -41,6 +41,14 @@ jQuery(function($) {
                     "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
                     "img" : "crushandmousse.png"
 
+                },
+                {
+                    "track": 4,
+                    "name": "Destroy him my robots - To Setto Setto",
+                    "length": "3.59",
+                    "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
+                    "img" : "crushandmousse.png"
+
                 }
  
             ],
