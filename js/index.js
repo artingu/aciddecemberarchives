@@ -21,37 +21,58 @@ jQuery(function($) {
             mediaPath = '',
             extension = '',
             tracks = [{
-                    "track": 1,
-                    "name": "jAcid - WWJD",
-                    "length": "05:17",
-                    "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
-                    "img": "jAcid.jpg"
-                },
-                 {
-                    "track": 2,
-                    "name": "NSKE - Acid Entry",
-                    "length": "07:39",
-                    "file": "https://storage.googleapis.com/acid-december2012/2022/NSKE-AcidEntry",
-                    "img": "NSKE-AcidEntry.jpg"
-                },
-                {
-                    "track": 3,
-                    "name": "NinjaNicke - Crush & Mousse",
-                    "length": "11.58",
-                    "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
-                    "img" : "crushandmousse.png"
-
-                },
-                {
-                    "track": 4,
-                    "name": "Destroy him my robots - To Setto Setto",
-                    "length": "3.59",
-                    "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
-                    "img" : "crushandmousse.png"
-
-                }
- 
-            ],
+                "track": 1,
+                "name": "jAcid - WWJD",
+                "length": "05:17",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
+                "img": "jAcid.jpg"
+            },
+             {
+                "track": 2,
+                "name": "NSKE - Acid Entry",
+                "length": "07:39",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/NSKE-AcidEntry",
+                "img": "NSKE-AcidEntry.jpg"
+            },
+            {
+                "track": 3,
+                "name": "NinjaNicke - Crush & Mousse",
+                "length": "11.58",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
+                "img" : "crushandmousse.png"
+            
+            },
+            {
+                "track": 4,
+                "name": "To Setto Setto- Destroy Him My Robots",
+                "length": "3.59",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
+                "img" : "watercolorofarobot.png"
+            
+            },
+            {
+                "track": 5,
+                "name": "Kotten - Flacid",
+                "length": "4.29",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
+                "img" : "flacid.png"
+            
+            }
+            
+            ]
+   /*          tracks = $.getJSON("tracks.json" , function() {
+                console.log( "success" );
+              })
+                .done(function() {
+                  console.log( "great success" );
+                })
+                .fail(function() {
+                  console.log( "error" );
+                })
+                .always(function() {
+                  console.log( "complete" );
+                }), */
+            
             trackCount = tracks.length,
             index = 32,
             npAction = $('#npAction'),
@@ -121,5 +142,6 @@ jQuery(function($) {
             };
         extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
         loadTrack(index);
+        console.log (tracks.length);
     }
 });
