@@ -245,7 +245,7 @@ audio {
     font-weight: bold;
 }
 
-.plTitle {
+/* .plTitle {
     text-size-adjust: 200px;
     left: 50px;
     overflow: hidden;
@@ -254,12 +254,12 @@ audio {
     text-overflow: ellipsis;
     top: 0;
     white-space: nowrap;
-}
+} */
 
-.plNum {
+/* .plNum {
     padding-left: 21px;
     width: 25px;
-}
+} */
 
 .plLength {
     padding-left: 21px;

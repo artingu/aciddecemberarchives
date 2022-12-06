@@ -57,6 +57,14 @@ jQuery(function($) {
                 "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
                 "img" : "flacid.png"
             
+            },
+            {
+                "track": 6,
+                "name": "Per K - SlamAcid Ozone Master 2",
+                "length": "8.05",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/SlamAcid-master2",
+                "img" : "sludgeacidcartoonstyle.png"
+            
             }
             
             ]
