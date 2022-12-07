@@ -13,13 +13,16 @@ var paket = "Paket ".repeat(12);
 // HTML5 audio player + playlist controls...
 // Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
 // Mythium Archive: https://archive.org/details/mythium/
-jQuery(function($) {
+jQuery(function ($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
         var
             playing = false,
             mediaPath = '',
             extension = '',
+            /*         tracks = $.getJSON("tracks.json", function (data) {
+                        return data;
+                    }); */
             tracks = [{
                 "track": 1,
                 "name": "jAcid - WWJD",
@@ -27,7 +30,7 @@ jQuery(function($) {
                 "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
                 "img": "jAcid.jpg"
             },
-             {
+            {
                 "track": 2,
                 "name": "NSKE - Acid Entry",
                 "length": "07:39",
@@ -39,60 +42,55 @@ jQuery(function($) {
                 "name": "NinjaNicke - Crush & Mousse",
                 "length": "11.58",
                 "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
-                "img" : "crushandmousse.png"
-            
+                "img": "crushandmousse.png"
+
             },
             {
                 "track": 4,
                 "name": "To Setto Setto- Destroy Him My Robots",
                 "length": "3.59",
                 "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
-                "img" : "watercolorofarobot.png"
-            
+                "img": "watercolorofarobot.png"
+
             },
             {
                 "track": 5,
                 "name": "Kotten - Flacid",
                 "length": "4.29",
                 "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
-                "img" : "flacid.png"
-            
+                "img": "flacid.png"
+
             },
             {
                 "track": 6,
                 "name": "Per K - SlamAcid Ozone Master 2",
                 "length": "8.05",
                 "file": "https://storage.googleapis.com/acid-december2012/2022/SlamAcid-master2",
-                "img" : "sludgeacidcartoonstyle.png"
-            
+                "img": "sludgeacidcartoonstyle.png"
+
+            },
+            {
+                "track": 7,
+                "name": "Nödsignal - Det lider mot Jul",
+                "length": "4.02",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/Det_lider_mot_jul",
+                "img": "noodsignal.jpg"
+
             }
-            
+
             ]
-   /*          tracks = $.getJSON("tracks.json" , function() {
-                console.log( "success" );
-              })
-                .done(function() {
-                  console.log( "great success" );
-                })
-                .fail(function() {
-                  console.log( "error" );
-                })
-                .always(function() {
-                  console.log( "complete" );
-                }), */
-            
-            trackCount = tracks.length,
+        trackCount = tracks.length,
             index = 32,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
             npImage = $('#npImage'),
-            audio = $('#audio1').bind('play', function() {
+            audio = $('#audio1').bind('play', function () {
                 playing = true;
                 npAction.text('playing');
-            }).bind('pause', function() {
+            }).bind('pause', function () {
                 playing = false;
                 npAction.text('paused');
-            }).bind('ended', function() {
+            }).bind('ended', function () {
                 npAction.text('stopped');
                 if ((index + 1) < trackCount) {
                     index++;
@@ -104,7 +102,7 @@ jQuery(function($) {
                     loadTrack(index);
                 }
             }).get(0),
-            btnPrev = $('#btnPrev').click(function() {
+            btnPrev = $('#btnPrev').click(function () {
                 if ((index - 1) > -1) {
                     index--;
                     loadTrack(index);
@@ -117,7 +115,7 @@ jQuery(function($) {
                     loadTrack(index);
                 }
             }),
-            btnNext = $('#btnNext').click(function() {
+            btnNext = $('#btnNext').click(function () {
                 if ((index + 1) < trackCount) {
                     index++;
                     loadTrack(index);
@@ -130,13 +128,13 @@ jQuery(function($) {
                     loadTrack(index);
                 }
             }),
-            li = $('#plList li').click(function() {
+            li = $('#plList li').click(function () {
                 var id = parseInt($(this).index());
                 if (id !== index) {
                     playTrack(id);
                 }
             }),
-            loadTrack = function(id) {
+            loadTrack = function (id) {
                 $('.plSel').removeClass('plSel');
                 $('#plList li:eq(' + id + ')').addClass('plSel');
                 npTitle.text(tracks[id].name);
@@ -144,12 +142,12 @@ jQuery(function($) {
                 index = id;
                 audio.src = mediaPath + tracks[id].file + extension;
             },
-            playTrack = function(id) {
+            playTrack = function (id) {
                 loadTrack(id);
                 audio.play();
             };
         extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
         loadTrack(index);
-        console.log (tracks.length);
+        console.log(tracks.length);
     }
 });

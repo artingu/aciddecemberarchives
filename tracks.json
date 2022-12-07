@@ -1,11 +1,11 @@
-[{
+ [{
     "track": 1,
     "name": "jAcid - WWJD",
     "length": "05:17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
     "img": "jAcid.jpg"
 },
- {
+{
     "track": 2,
     "name": "NSKE - Acid Entry",
     "length": "07:39",
@@ -17,15 +17,31 @@
     "name": "NinjaNicke - Crush & Mousse",
     "length": "11.58",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
-    "img" : "crushandmousse.png"
+    "img": "crushandmousse.png"
 
 },
 {
     "track": 4,
-    "name": "Destroy him my robots - To Setto Setto",
+    "name": "To Setto Setto- Destroy Him My Robots",
     "length": "3.59",
     "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
-    "img" : "crushandmousse.png"
+    "img": "watercolorofarobot.png"
+
+},
+{
+    "track": 5,
+    "name": "Kotten - Flacid",
+    "length": "4.29",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
+    "img": "flacid.png"
+
+},
+{
+    "track": 6,
+    "name": "Per K - SlamAcid Ozone Master 2",
+    "length": "8.05",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/SlamAcid-master2",
+    "img": "sludgeacidcartoonstyle.png"
 
 }
 
