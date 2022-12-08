@@ -76,7 +76,17 @@ jQuery(function ($) {
                 "file": "https://storage.googleapis.com/acid-december2012/2022/Det_lider_mot_jul",
                 "img": "noodsignal.jpg"
 
+            },
+            {
+                "track": 8,
+                "name": "Readyletsgo - Ursäkta vad är klockan",
+                "length": "4.14",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/0076_ursaktavadarklockan",
+                "img": "the-grinch-how-the-grinch-stole-christmas.gif"
+
             }
+
+            
 
             ]
         trackCount = tracks.length,
