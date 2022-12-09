@@ -84,6 +84,13 @@ jQuery(function ($) {
                 "file": "https://storage.googleapis.com/acid-december2012/2022/0076_ursaktavadarklockan",
                 "img": "the-grinch-how-the-grinch-stole-christmas.gif"
 
+            },
+            {
+                "track": 9,
+                "name": "X Cooptra - C99",
+                "length": "5.56",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/X_Cooptra-C99",
+                "img": "xcooptra.jpg"
             }
 
             
