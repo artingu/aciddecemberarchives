@@ -91,7 +91,15 @@ jQuery(function ($) {
                 "length": "5.56",
                 "file": "https://storage.googleapis.com/acid-december2012/2022/X_Cooptra-C99",
                 "img": "xcooptra.jpg"
+            },
+            {
+                "track": 10,
+                "name": "Räksmugglar'n - havsutsikt",
+                "length": "7.17",
+                "file": "https://storage.googleapis.com/acid-december2012/2022/raksmugglarn-havsutsikt",
+                "img": "acidshrimp.jpg"
             }
+
 
             
 
