@@ -1,9 +1,9 @@
- [{
+{"tracks": [{
     "track": 1,
     "name": "jAcid - WWJD",
     "length": "05:17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
-    "img": "jAcid.jpg"
+    "img": "jAcidlogo.png"
 },
 {
     "track": 2,
@@ -33,7 +33,7 @@
     "name": "Kotten - Flacid",
     "length": "4.29",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
-    "img": "flacid.png"
+    "img": "flacid.jpg"
 
 },
 {
@@ -43,6 +43,42 @@
     "file": "https://storage.googleapis.com/acid-december2012/2022/SlamAcid-master2",
     "img": "sludgeacidcartoonstyle.png"
 
-}
+},
+{
+    "track": 7,
+    "name": "Nödsignal - Det lider mot Jul",
+    "length": "4.02",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/Det_lider_mot_jul",
+    "img": "noodsignal.jpg"
 
-]
+},
+{
+    "track": 8,
+    "name": "Readyletsgo - Ursäkta vad är klockan",
+    "length": "4.14",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/0076_ursaktavadarklockan",
+    "img": "the-grinch-how-the-grinch-stole-christmas.gif"
+
+},
+{
+    "track": 9,
+    "name": "X Cooptra - C99",
+    "length": "5.56",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/X_Cooptra-C99",
+    "img": "xcooptra.jpg"
+},
+{
+    "track": 10,
+    "name": "Räksmugglar'n - havsutsikt",
+    "length": "7.17",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/raksmugglarn-havsutsikt",
+    "img": "acidshrimp.jpg"
+},
+{
+    "track": 11,
+    "name": "Abstract Assasinator - Acidpumla",
+    "length": "7.17",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/acidpumla",
+    "img": "acidpumla.jpg"
+}
+]}
