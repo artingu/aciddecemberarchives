@@ -137,14 +137,12 @@ h1 {
 }
 
 div#plnum {
-  font-size: 20em;
   margin: 0.67em 0;
   text-transform: uppercase;
 
 }
 
 div#plTitle {
-  font-size: 40em;
   margin: 0.67em 0;
   text-transform: uppercase;
 
@@ -298,8 +296,8 @@ img {
   cursor: pointer;
   float: none;
   border-top: 6px;
-  max-width: 230;
-  max-height: 130;
+  max-width: 400;
+  max-height: 400;
 }
 
 /**
@@ -497,6 +495,7 @@ body {
   background-size: cover;
   color: #000;
   box-sizing: border-box;
+  font-size: 40px;
 }
 
 *,
