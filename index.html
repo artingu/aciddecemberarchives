@@ -34,9 +34,10 @@
                         $(document).ready(function () {
                             $.getJSON("/tracks.json", function (i, data) {
                                 var tracks = i.tracks;
+                               
                                 $.each(tracks, function (key, val) {
 
-                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + val.track + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Download</div></div></div></li>'));
+                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + val.track + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Listen</div></div></div></li>'));
 
 
 

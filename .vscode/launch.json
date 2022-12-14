@@ -5,7 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "pwa-chrome",
+            "name": "Attach to Edge",
+            "port": 80,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        §
+        {
+            "type": "msedge",
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:8080",
