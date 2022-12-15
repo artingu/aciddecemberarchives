@@ -14,18 +14,7 @@
                 <p>
                     a c i d d e c e m b e r <br> ~~~~~~~~~~~~~~~~~~~~~~~~~~ <br>
                     <br><br>
-                    CALLING ALL STATIONSSS
-                    <br>
-                    We are open for submissions for the 2022 version of Acid december! Please to send your awesome
-                    tracks to acid@datapop.se along with:
-                    <br> - A name. yours. or one that you wish were yours
-                    <br>- The name of the track
-                    <br>- Maybe a picture?
-                    <br>- A link to where we can hear more of your stuff (if you want)
-                    <br>
-                    <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
-                    <br>
-                    <br>
+             
                     <!-- 
 
     Import tracks.json and iterate over it and create a list of tracks
@@ -34,8 +23,9 @@
                         $(document).ready(function () {
                             $.getJSON("/tracks.json", function (i, data) {
                                 var tracks = i.tracks;
+                                var reversedTracks = $(tracks).get().reverse();
                                
-                                $.each(tracks, function (key, val) {
+                                $.each(reversedTracks, function (key, val) {
 
                                     $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + val.track + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Listen</div></div></div></li>'));
 
@@ -54,6 +44,17 @@
                 <ul id="plList">
                 </ul>
 
+                CALLING ALL STATIONSSS
+                <br>
+                We are open for submissions for the 2022 version of Acid december! Please to send your awesome
+                tracks to acid@datapop.se along with:
+                <br> - A name. yours. or one that you wish were yours
+                <br>- The name of the track
+                <br>- Maybe a picture?
+                <br>- A link to where we can hear more of your stuff (if you want)
+                <br>
+                <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
+        
                 <br>
                 <div id="nowPlay">
 
