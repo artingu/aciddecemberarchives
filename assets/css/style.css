@@ -131,8 +131,8 @@ a:hover {
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+/*   font-size: 2em;
+ */  margin: 0.67em 0;
   text-transform: uppercase;
 }
 
@@ -491,11 +491,11 @@ html,
 body {
   background-repeat: repeat;
   background: #2b0057;
-  background-image: url('../img/winter.gif');
-  background-size: cover;
-  color: #000;
+  background-image: url('/surface-3d-projection-black-and-white.gif');
+  background-size:  100% 50%;
+  color: rgb(194, 189, 189);
   box-sizing: border-box;
-  font-size: 40px;
+  font-size: large;
 }
 
 *,

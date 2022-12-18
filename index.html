@@ -13,8 +13,27 @@
             <div id="mainwrap">
                 <p>
                     a c i d d e c e m b e r <br> ~~~~~~~~~~~~~~~~~~~~~~~~~~ <br>
-                    <br><br>
-             
+                    <div id="nowPlay">
+
+                        
+                      <p>  Now playing: <span class="right" id="npTitle"></span></p>
+                    </div>
+                    <div id="audiowrap">
+                        <div id="audio0">
+                        
+                                <a id="btnPrev">
+                                    previous track
+                                </a>
+                                <a id="btnNext">
+                                    next track
+                                </a><span class="left" id="npAction">Press an image to play</span>
+                                <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
+                                    Audio!</audio>
+                        </div>
+                        
+                            
+                        
+                        
                     <!-- 
 
     Import tracks.json and iterate over it and create a list of tracks
@@ -24,23 +43,95 @@
                             $.getJSON("/tracks.json", function (i, data) {
                                 var tracks = i.tracks;
                                 var reversedTracks = $(tracks).get().reverse();
-                               
                                 $.each(reversedTracks, function (key, val) {
 
                                     $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + val.track + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Listen</div></div></div></li>'));
 
-
-
                                 });
 
+                                var supportsAudio = !!document.createElement('audio').canPlayType;
+                                if (supportsAudio) {
+                                    var
+                                        playing = true,
+                                        mediaPath = '',
+                                        extension = '',
+                                        trackCount = tracks.length,
+                                        index = 32,
+                                        npAction = $('#npAction'),
+                                        npTitle = $('#npTitle'),
+                                        npImage = $('#npImage'),
+                                        audio = $('#audio1').bind('play', function () {
+                                            playing = true;
+                                            npAction.text('playing');
+                                        }).bind('pause', function () {
+                                            playing = false;
+                                            npAction.text('paused');
+                                        }).bind('ended', function () {
+                                            npAction.text('stopped');
+                                            if ((index + 1) < trackCount) {
+                                                index++;
+                                                loadTrack(index);
+                                                audio.play();
+                                            } else {
+                                                audio.pause();
+                                                index = 0;
+                                                loadTrack(index);
+                                            }
+                                        }).get(0),
+                                        btnPrev = $('#btnPrev').click(function () {
+                                            if ((index - 1) > -1) {
+                                                index--;
+                                                loadTrack(index);
+                                                if (playing) {
+                                                    audio.play();
+                                                }
+                                            } else {
+                                                audio.pause();
+                                                index = 0;
+                                                loadTrack(index);
+                                            }
+                                        }),
+                                        btnNext = $('#btnNext').click(function () {
+                                            if ((index + 1) < trackCount) {
+                                                index++;
+                                                loadTrack(index);
+                                                if (playing) {
+                                                    audio.play();
+                                                }
+                                            } else {
+                                                audio.pause();
+                                                index = 0;
+                                                loadTrack(index);
+                                            }
+                                        }),
+                                        li = $('#plList li').click(function () {
+                                            var id = parseInt($(this).index());
+                                            if (id !== index) {
+                                                playTrack(id);
+                                            }
+                                        }),
+                                        loadTrack = function (id) {
+                                            $('.plSel').removeClass('plSel');
+                                            $('#plList li:eq(' + id + ')').addClass('plSel');
+                                            npTitle.text(reversedTracks[id].name);
+                                            npImage.text(reversedTracks[id].img);
+                                            index = id;
+                                            audio.src = mediaPath + reversedTracks[id].file + extension;
+                                        },
+                                        playTrack = function (id) {
+                                            loadTrack(id);
+                                            audio.play();
+                                        };
+                                    extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
+                                    loadTrack(index);
+                                    console.log(tracks.length);
+                                }
+
                             });
+
                         });
 
                     </script>
-
-
-
-
                 <ul id="plList">
                 </ul>
 
@@ -54,29 +145,10 @@
                 <br>- A link to where we can hear more of your stuff (if you want)
                 <br>
                 <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
-        
+
                 <br>
-                <div id="nowPlay">
-
-                    <p><span class="left" id="npAction">Player is broken, hit the download link next to the tracks!</span></p>
-                    <p>Now playing: <span class="right" id="npTitle"></span></p>
-
-
-
-                </div>
-                <div id="audiowrap">
-                    <div id="audio0">
-                        <audio preload id="audio1" controls="controls">Your browser does not support HTML5
-                            Audio!</audio>
-                    </div>
-                    <div id="tracks">
-                        <a id="btnPrev">
-                            <p>previous track</p>
-                        </a>
-                        <a id="btnNext">
-                            <p>next track</p>
-                        </a>
-                    </div>
+                
+                
                 </div>
 
 
@@ -146,83 +218,7 @@
     // Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
     // Mythium Archive: https://archive.org/details/mythium/
     jQuery(function ($) {
-        var supportsAudio = !!document.createElement('audio').canPlayType;
-        if (supportsAudio) {
-            var
-                playing = true,
-                mediaPath = '',
-                extension = '',
-                trackCount = tracks.length,
-                index = 32,
-                npAction = $('#npAction'),
-                npTitle = $('#npTitle'),
-                npImage = $('#npImage'),
-                audio = $('#audio1').bind('play', function () {
-                    playing = true;
-                    npAction.text('playing');
-                }).bind('pause', function () {
-                    playing = false;
-                    npAction.text('paused');
-                }).bind('ended', function () {
-                    npAction.text('stopped');
-                    if ((index + 1) < trackCount) {
-                        index++;
-                        loadTrack(index);
-                        audio.play();
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }).get(0),
-                btnPrev = $('#btnPrev').click(function () {
-                    if ((index - 1) > -1) {
-                        index--;
-                        loadTrack(index);
-                        if (playing) {
-                            audio.play();
-                        }
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }),
-                btnNext = $('#btnNext').click(function () {
-                    if ((index + 1) < trackCount) {
-                        index++;
-                        loadTrack(index);
-                        if (playing) {
-                            audio.play();
-                        }
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }),
-                li = $('#plList li').click(function () {
-                    var id = parseInt($(this).index());
-                    if (id !== index) {
-                        playTrack(id);
-                    }
-                }),
-                loadTrack = function (id) {
-                    $('.plSel').removeClass('plSel');
-                    $('#plList li:eq(' + id + ')').addClass('plSel');
-                    npTitle.text(tracks[id].name);
-                    npImage.text(tracks[id].img);
-                    index = id;
-                    audio.src = mediaPath + tracks[id].file + extension;
-                },
-                playTrack = function (id) {
-                    loadTrack(id);
-                    audio.play();
-                };
-            extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
-            loadTrack(index);
-            console.log(tracks.length);
-        }
+
     });
 
     // html5media enables <video> and <audio> tags in all major browsers
@@ -240,85 +236,7 @@
     // HTML5 audio player + playlist controls...
     // Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
     // Mythium Archive: https://archive.org/details/mythium/
-    jQuery(function ($) {
-        var supportsAudio = !!document.createElement('audio').canPlayType;
-        if (supportsAudio) {
-            var
-                playing = false,
-                mediaPath = '',
-                extension = '',
-                trackCount = tracks.length,
-                index = 0,
-                npAction = $('#npAction'),
-                npTitle = $('#npTitle'),
-                npImage = $('#npImage'),
-                audio = $('#audio1').bind('play', function () {
-                    playing = true;
-                    npAction.text('playing');
-                }).bind('pause', function () {
-                    playing = false;
-                    npAction.text('paused');
-                }).bind('ended', function () {
-                    npAction.text('stopped');
-                    if ((index + 1) < trackCount) {
-                        index++;
-                        loadTrack(index);
-                        audio.play();
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }).get(0),
-                btnPrev = $('#btnPrev').click(function () {
-                    if ((index - 1) > -1) {
-                        index--;
-                        loadTrack(index);
-                        if (playing) {
-                            audio.play();
-                        }
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }),
-                btnNext = $('#btnNext').click(function () {
-                    if ((index + 1) < trackCount) {
-                        index++;
-                        loadTrack(index);
-                        if (playing) {
-                            audio.play();
-                        }
-                    } else {
-                        audio.pause();
-                        index = 0;
-                        loadTrack(index);
-                    }
-                }),
-                li = $('#plList li').click(function () {
-                    var id = parseInt($(this).index());
-                    if (id !== index) {
-                        playTrack(id);
-                    }
-                }),
-                loadTrack = function (id) {
-                    $('.plSel').removeClass('plSel');
-                    $('#plList li:eq(' + id + ')').addClass('plSel');
-                    npTitle.text(tracks[id].name);
-                    npImage.text(tracks[id].img);
-                    index = id;
-                    audio.src = mediaPath + tracks[id].file + extension;
-                },
-                playTrack = function (id) {
-                    loadTrack(id);
-                    audio.play();
-                };
-            extension = audio.canPlayType('audio/mpeg') ? '.mp3' : audio.canPlayType('audio/ogg') ? '.ogg' : '';
-            loadTrack(index);
-            console.log(tracks.length);
-        }
-    });
+    
 </script>
 
 </html>
