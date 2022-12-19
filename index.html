@@ -13,27 +13,32 @@
             <div id="mainwrap">
                 <p>
                     a c i d d e c e m b e r <br> ~~~~~~~~~~~~~~~~~~~~~~~~~~ <br>
-                    <div id="nowPlay">
+                <div id="nowPlay">
 
-                        
-                      <p>  Now playing: <span class="right" id="npTitle"></span></p>
+
+                    <p> Now playing: <span class="right" id="npTitle"></span></p>
+                </div>
+                <div id="audiowrap">
+                    <div id="audio0">
+
+                        <a id="btnPrev">
+                            previous track
+                        </a>
+                        <a id="btnNext">
+                            next track
+                        </a>
+                        <a id="btnRnd">
+                            random track
+                        </a>
+
+                        <span class="left" id="npAction">Press an image to play</span>
+                        <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
+                            Audio!</audio>
                     </div>
-                    <div id="audiowrap">
-                        <div id="audio0">
-                        
-                                <a id="btnPrev">
-                                    previous track
-                                </a>
-                                <a id="btnNext">
-                                    next track
-                                </a><span class="left" id="npAction">Press an image to play</span>
-                                <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
-                                    Audio!</audio>
-                        </div>
-                        
-                            
-                        
-                        
+
+
+
+
                     <!-- 
 
     Import tracks.json and iterate over it and create a list of tracks
@@ -45,7 +50,7 @@
                                 var reversedTracks = $(tracks).get().reverse();
                                 $.each(reversedTracks, function (key, val) {
 
-                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">'  + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Download</div></div></div></li>'));
+                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Download</div></div></div></li>'));
 
                                 });
 
@@ -104,6 +109,11 @@
                                                 loadTrack(index);
                                             }
                                         }),
+                                        rndTrack = $('#btnRnd').click(function () {
+                                            index = Math.floor(Math.random() * trackCount);
+                                            loadTrack(index);
+                                            audio.play();
+                                        }),
                                         li = $('#plList li').click(function () {
                                             var id = parseInt($(this).index());
                                             if (id !== index) {
@@ -132,23 +142,23 @@
                         });
 
                     </script>
-                <ul id="plList">
-                </ul>
+                    <ul id="plList">
+                    </ul>
 
-                CALLING ALL STATIONSSS
-                <br>
-                We are open for submissions for the 2022 version of Acid december! Please to send your awesome
-                tracks to acid@datapop.se along with:
-                <br> - A name. yours. or one that you wish were yours
-                <br>- The name of the track
-                <br>- Maybe a picture?
-                <br>- A link to where we can hear more of your stuff (if you want)
-                <br>
-                <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
+                    CALLING ALL STATIONSSS
+                    <br>
+                    We are open for submissions for the 2022 version of Acid december! Please to send your awesome
+                    tracks to acid@datapop.se along with:
+                    <br> - A name. yours. or one that you wish were yours
+                    <br>- The name of the track
+                    <br>- Maybe a picture?
+                    <br>- A link to where we can hear more of your stuff (if you want)
+                    <br>
+                    <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
 
-                <br>
-                
-                
+                    <br>
+
+
                 </div>
 
 
@@ -236,7 +246,7 @@
     // HTML5 audio player + playlist controls...
     // Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
     // Mythium Archive: https://archive.org/details/mythium/
-    
+
 </script>
 
 </html>
