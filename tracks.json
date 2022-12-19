@@ -3,21 +3,29 @@
     "name": "jAcid - WWJD",
     "length": "05:17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-WWJD",
-    "img": "jAcidlogo.png"
+    "img": "jAcidlogo.png",
+    "link": "",
+    "linktext": ""
+
+    
 },
 {
     "track": 2,
     "name": "NSKE - Acid Entry",
     "length": "07:39",
     "file": "https://storage.googleapis.com/acid-december2012/2022/NSKE-AcidEntry",
-    "img": "NSKE-AcidEntry.jpg"
+    "img": "NSKE-AcidEntry.jpg",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 3,
     "name": "NinjaNicke - Crush & Mousse",
     "length": "11.58",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Ninjanicke-CrushnMousse",
-    "img": "crushandmousse.png"
+    "img": "crushandmousse.png",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -25,7 +33,9 @@
     "name": "To Setto Setto- Destroy Him My Robots",
     "length": "3.59",
     "file": "https://storage.googleapis.com/acid-december2012/2022/destroy_him_my_robots-to_setto_setto",
-    "img": "watercolorofarobot.png"
+    "img": "watercolorofarobot.png",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -33,7 +43,9 @@
     "name": "Kotten - Flacid",
     "length": "4.29",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Flacid",
-    "img": "flacid.jpg"
+    "img": "flacid.jpg",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -41,7 +53,9 @@
     "name": "Per K - SlamAcid Ozone Master 2",
     "length": "8.05",
     "file": "https://storage.googleapis.com/acid-december2012/2022/SlamAcid-master2",
-    "img": "sludgeacidcartoonstyle.png"
+    "img": "sludgeacidcartoonstyle.png",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -49,7 +63,9 @@
     "name": "Nödsignal - Det lider mot Jul",
     "length": "4.02",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Det_lider_mot_jul",
-    "img": "noodsignal.jpg"
+    "img": "noodsignal.jpg",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -57,7 +73,9 @@
     "name": "Readyletsgo - Ursäkta vad är klockan",
     "length": "4.14",
     "file": "https://storage.googleapis.com/acid-december2012/2022/0076_ursaktavadarklockan",
-    "img": "the-grinch-how-the-grinch-stole-christmas.gif"
+    "img": "the-grinch-how-the-grinch-stole-christmas.gif",
+    "link": "",
+    "linktext": ""
 
 },
 {
@@ -65,49 +83,63 @@
     "name": "X Cooptra - C99",
     "length": "5.56",
     "file": "https://storage.googleapis.com/acid-december2012/2022/X_Cooptra-C99",
-    "img": "xcooptra.jpg"
+    "img": "xcooptra.jpg",
+    "link": "https://github.com/boomlinde/c99acid",
+    "linktext": "Source code for this track"
 },
 {
     "track": 10,
     "name": "Räksmugglar'n - havsutsikt",
     "length": "7.17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/raksmugglarn-havsutsikt",
-    "img": "acidshrimp.jpg"
+    "img": "acidshrimp.jpg",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 11,
     "name": "Abstract Assasinator - Acidpumla",
     "length": "7.17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/acidpumla",
-    "img": "acidpumla.jpg"
+    "img": "acidpumla.jpg",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 12,
     "name": "jAcid - Raiden",
     "length": "4.43",
     "file": "https://storage.googleapis.com/acid-december2012/2022/jAcid-Raiden",
-    "img": "jAcidlogo.png"
+    "img": "jAcidlogo.png",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 13,
     "name": "Shike - Sankta LSDia",
     "length": "9.17",
     "file": "https://storage.googleapis.com/acid-december2012/2022/SanktaLSDia_AcidDecember2022_C",
-    "img": "saintlucy.jpg"
+    "img": "saintlucy.jpg",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 14,
     "name": "Kotten - Videodrome",
     "length": "6.23",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Kotten-Videodrome",
-    "img": "dr_brian_oblivion.gif"
+    "img": "dr_brian_oblivion.gif",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 15,
     "name": "Kombatsanta - Vitaminer 2003 mix",
     "length": "3.19",
     "file": "https://storage.googleapis.com/acid-december2012/2022/Vitaminer2023mix.wav",
-    "img": "vitaminer.png"
+    "img": "vitaminer.png",
+    "link": "",
+    "linktext": ""
 },
 {
     "track": 16,
@@ -123,7 +155,9 @@
     "name": "Abstract Assasinator - Julekris",
     "length": "2.57",
     "file": "https://storage.googleapis.com/acid-december2012/2022/julekris.aif",
-    "img": "julekris.jpg"
+    "img": "julekris.jpg",
+    "link": "",
+    "linktext": ""
 }
 ]}
 

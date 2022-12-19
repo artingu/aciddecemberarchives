@@ -20,7 +20,7 @@
                 </div>
                 <div id="audiowrap">
                     <div id="audio0">
-
+<p>
                         <a id="btnPrev">
                             previous track
                         </a>
@@ -30,11 +30,15 @@
                         <a id="btnRnd">
                             random track
                         </a>
+                        <a id="btnPause">
+                            pause  
+                        </a>
 
                         <span class="left" id="npAction">Press an image to play</span>
                         <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
                             Audio!</audio>
-                    </div>
+                        </p>
+                        </div>
 
 
 
@@ -49,8 +53,8 @@
                                 var tracks = i.tracks;
                                 var reversedTracks = $(tracks).get().reverse();
                                 $.each(reversedTracks, function (key, val) {
-
-                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/>' + val.name + '' + '<a href="' + val.file + '.mp3">   Download</div></div></div></li>'));
+var html = 
+                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/><p>' + val.name + '' + '</p>' +'<a href="' + val.file + '.mp3">   Download<br><a href="'+ val.link +'">'+ val.linktext + '</a>'+'</div></div></div></li>'));
 
                                 });
 
@@ -114,6 +118,9 @@
                                             loadTrack(index);
                                             audio.play();
                                         }),
+                                        btnPause = $('#btnPause').click(function () {
+                                            audio.pause();
+                                        }),
                                         li = $('#plList li').click(function () {
                                             var id = parseInt($(this).index());
                                             if (id !== index) {
@@ -144,7 +151,7 @@
                     </script>
                     <ul id="plList">
                     </ul>
-
+<p>
                     CALLING ALL STATIONSSS
                     <br>
                     We are open for submissions for the 2022 version of Acid december! Please to send your awesome
@@ -155,7 +162,7 @@
                     <br>- A link to where we can hear more of your stuff (if you want)
                     <br>
                     <br> It's dark, it's cold. What we need is monotonous machine music! LETS GO
-
+                </p>
                     <br>
 
 

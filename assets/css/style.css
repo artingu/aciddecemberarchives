@@ -71,6 +71,7 @@ li {
   margin-right: 5%;
   display: inline-block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -136,8 +137,9 @@ a:hover {
  */
 
 h1 {
-/*   font-size: 2em;
- */  margin: 0.67em 0;
+  /*   font-size: 2em;
+ */
+  margin: 0.67em 0;
   text-transform: uppercase;
 }
 
@@ -497,10 +499,14 @@ body {
   background-repeat: repeat;
   background: #2b0057;
   background-image: url('/surface-3d-projection-black-and-white.gif');
-  background-size:  100% 50%;
+  background-size: 100% 50%;
   color: rgb(194, 189, 189);
-  box-sizing: border-box;
-  font-size: large;
+  /* box-sizing: border-box;
+   */@media(min-width:60em) {
+    html {  
+      font-size: 130%;
+    }
+  }
 }
 
 *,
