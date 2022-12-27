@@ -1,3 +1,3 @@
-FROM nginx:1.23.2-alpine
+FROM nginx:latest
 COPY . /usr/share/nginx/html
 EXPOSE 80
