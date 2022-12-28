@@ -496,10 +496,10 @@ table {
 
 html,
 body {
-  background-repeat: repeat;
-  background: #2b0057;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url('/surface-3d-projection-black-and-white.gif');
-  background-size: 100% 50%;
+  background-size: 100% 100%;
   color: rgb(194, 189, 189);
   /* box-sizing: border-box;
    */@media(min-width:60em) {
