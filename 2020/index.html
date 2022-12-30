@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>ACID DECEMBER 2020</title>
+<style>
+body {
+	background: url('party.png');
+	font-family: sans-serif;
+	margin: 0;
+	margin-bottom: 2em;
+}
+h1 {
+	text-align: center;
+	background-color: black;
+	font-size: 40pt;
+	color: yellow;
+	padding-top: 0;
+	margin-top: 0;
+}
+h2, h3 {
+	color: yellow;
+	text-align: center;
+	background-color: black;
+}
+h3 {
+	color: cyan;
+	text-align: left;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+a {
+	color: magenta;
+}
+
+.track {
+	margin: auto;
+	margin-top: 1em;
+	max-width: 40em;
+}
+
+.track p {
+	padding-top: 0;
+	margin-top: 0;
+}
+p {
+	margin: auto;
+	margin-top: 1em;
+	max-width: 50em;
+	color: yellow;
+	background-color: black;
+}
+
+audio {
+	display: block;
+	margin-top: 0;
+	padding-top 0;
+	margin-bottom: 8em;
+}
+</style>
+<script>
+const INCREMENT = 10;
+let wobbled;
+const wobble = () => {
+	for (var i = 0; i < wobbled.length; i++) {
+		const add = Date.now() / 10
+		wobbled[i].style.color = 'hsl(' + ((add + i * INCREMENT) % 360) + ', 100%, 50%)'
+	}
+}
+const wrapWobble = () => {
+	const els = document.getElementsByClassName("wobbling")
+	for (let i = 0; i < els.length; i++) {
+		const el = els[i];
+		const rpl = el.innerHTML.split('').map(ch => '<span class="w">' + ch + '</span>')
+		el.innerHTML = rpl.join('')
+	}
+}
+window.onload = function () {
+		wrapWobble();
+		wobbled = document.getElementsByClassName("w")
+		setInterval(wobble, 20);
+}
+</script>
+	</head>
+	<body>
+		<h1 class="wobbling">🙃 ACID DECEMBER MC-2020 🙃</h1>
+		<p><span>
+		In the 1950s, British engineers were faced with a unique problem. In order for the remote detonated atomic landmine they were developing to function in cold weather, they needed a long term heating solution. One of the more creative solutions proposed was to fill the mine with live chickens and chicken feed. The chickens would be able to sustain a natural, comfortably warm temperature enclosed inside the mine together with the payload and detonation mechanism. That way, the landmine could reliably detonate in any weather and save Germany from Germany in the event of a German-German invasion.
+		</span></p>
+		<p><span>
+			It was only in the 2000s that we saw a comeback of this level of creative energy, when scientists discovered that in order to make the month of December bearable, they could prescribe a daily dose of <span class="wobbling">ACID</span> to the entire population. After years of study and placebo trials, <span class="wobbling">ACID DECEMBER</span> was born, unlike the atomic landmine before it.
+		</span></p>
+
+		<p><span>
+			This year is special, not only because it's the anniversary of the same date one year earlier, but because <span class="wobbling">PARTYING HAS BEEN CANCELED</span>. Droves of dance-deprived <span class="wobbling">ACID BANDITS</span> and masked <span class="wobbling">ACID HIGHWAYMEN</span> roam the internet, looking for their next fix. Help us help them by submitting your <span class="wobbling">OGG or MP3 encoded tracks</span> to <span class="wobbling">linde.philip@gmail.com</span>. We need at least <span class="wobbling">31 tracks</span> to win this, but December has been known to last longer if more tracks are submitted.
+		</span></p>
+
+		<p><span>
+			<span class="wobbling">DATAPOP.SE</span> has archived some of previous years' <span class="wobbling">ACID DECEMBER</span> <a href="https://acid.datapop.se/">here</a>. We really appreciate it. This has been going on for nearly ten years! Some years are still missing from the archives due to time portals and occurring in alternate histories, but we're working on joining the timelines and undoing the <span class="wobbling">TEMPORAL VANDALISM</span>.
+		</span></p>
+
+		<p><span>
+			We prefer <a class="wobbling" href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a>, but any license that allows us and others to freely share the sounds of your machines for at least non-commercial purposes is acceptable for your submission.
+		</span></p>
+		<h2><span class="wobbling">TRACKS</span></h2>
+
+		<div class="track">
+			<h3>01/12 <a href="Valdo_Tornstrand-Acid_Crush.mp3">Valdo Tornstrand - Acid Crush</a></h3>
+			<p>First out is Valdo's <span class="wobbling">ACID CRUSH!</span> Word on the street is that the name refers to what happens to you if you try to crawl into a space as tight as this mix. Winter is all about crawling up into a ball and getting crushed, so we naturally and unnaturally approve.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Valdo_Tornstrand-Acid_Crush.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>02/12 <a href="Kotten-Ickevalsen.mp3">Kotten - Ickevalsen</a></h3>
+			<p>Another day, another acid. Kotten supposedly devised a mathematical theory that was best explained using this track. It proves <span class="wobbling">¬WALTZ</span>, something long suspected by experts in the field, but until now the proof has always been three steps ahead.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Kotten-Ickevalsen.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>03/12 <a href="jAcid-Blod,_svett_och_syra.mp3">jAcid - Blod, svett och syra</a></h3>
+			<p>Another brilliant track today, this time touching the topic of bodily fluids, which jAcid has brilliantly made sure will include <span class="wobbling">ACID</span> by the end of December.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/jAcid-Blod,_svett_och_syra.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>04/12 <a href="Jazzdoktorn-Dont_do_drugs_unless_you_want_to.ogg">Jazzdoktorn - Dont do drugs unless you want to</a></h3>
+			<p>We cancel today's track to give you an important message from our resident team of medical experts. We can not stress enough the importance of either doing drugs or not depending on your preference. Jazzdoktorn has constructed an <span class="wobbling">AUDIBLE SIGNAL</span> which will effectively program this message into any mind that is exposed to it.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Jazzdoktorn-Dont_do_drugs_unless_you_want_to.ogg" type="audio/ogg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>05/12 <a href="dj_powernap-eternal_factory.mp3">DJ Powernap - Eternal factory</a></h3>
+			<p>We woke DJ Powernap up for this auditory map of a factory that extends in all directions across an infinite plane. The product? <span class="wobbling">SUPERCONDUCTING GLOWSTICKS.</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/dj_powernap-eternal_factory.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>06/12 <a href="readyletsgo-debussyian_acid_xmas.mp3">readyletsgo - Debussyan acid xmas</a></h3>
+			<p>We found a jar of <span class="wobbling">IMPRESSIONIST ACID</span> on our doorstep today, and the name "readyletsgo" crudely spray painted on the door. After listening closely to the jar we can say for sure that consuming its content will lower your pH but possibly exacerbate symptoms of <span class="wobbling">XMAS SPIRIT</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/readyletsgo-debussyian_acid_xmas.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>07/12 <a href="Valdo_Tornstrand-Acid_down_the_chimney.mp3">Valdo Tornstrand - Acid down the chimney</a></h3>
+			<p>Another hard-hitting track from Valdo, serving as a reminder to anyone trying to climb down chimneys (<span class="wobbling">HOODED, BEARDED, OLD AND FAT</span> or not) of the acidic nature of soot.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Valdo_Tornstrand-Acid_down_the_chimney.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>08/12 <a href="Surpiotr-Smatt_surt.mp3">Surpiotr - Smått surt</a></h3>
+			<p>We took a <span class="wobbling">MUCH NEEDED WALK</span> and found Surpiotr under a bridge, hunched over a small machine. Watching and listening from a safe distance, we could see that the sound emanating from the machine would react to small adjustments that Surpiotr seemed to consider in great detail...a knob turned here, a button pressed there. We recorded the session in secrecy.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Surpiotr-Smatt_surt.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>09/12 <a href="Kotten-Batteritorsk_pa_Solgatan.mp3">Kotten - Batteritorsk på Solgatan</a></h3>
+			<p>The working theory: looking for batteries, Kotten instead found this track lodged between the sofa cushions. How a track this <span class="wobbling">W I D E</span> could possibly fit in there, and how it had not melted through the sofa and all the apartments below (leaving holes on each floor like in <span class="wobbling">ALIEN</span>) is left as an exercise for the reader.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Kotten-Batteritorsk_pa_Solgatan.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>10/12 <a href="underwater_resistance-borealis.mp3">Underwater Resistance - Borealis</a></h3>
+			<p>Underwater Resistance has been operating from under the sea for the last few centuries, enjoying the <span class="wobbling">SUPERIOR</span> sound propagation properties of water. One time, while near the surface, they saw the northern lights through their squid-like eyes, refracted by the waves above. This track chronicles the experience in a way that <span class="wobbling">WILL MAKE YOUR GILLS FLAP</span>.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/underwater_resistance-borealis.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>11/12 <a href="readyletsgo-Acid_raga.mp3">readyletsgo - Acid raga</a></h3>
+			<p>Acid takes us <span class="wobbling">AROUND THE WORLD</span>. This day we present to you an <span class="wobbling">ACID RAGA</span> suitable for the morning, midday, afternoon, night or all of the above for two days straight!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/readyletsgo-Acid_raga.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="track">
+			<h3>12/12 <a href="ultrasmisk-bottom_feeder.mp3">Ultrasmisk - Bottom feeder</a></h3>
+			<p>We found ourselves in Ultrasmisk's dungeon with some music gear and <span class="wobbling">UNSHACKLED HIM</span> just out of morbid curiosity. He is now free to pursue his own sick goals, and if you listen you can hear why we <span class="wobbling">REGRET NOTHING!</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/ultrasmisk-bottom_feeder.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>13/12 <a href="Kotten-Coronafragan.mp3">Kotten - Coronafrågan</a></h3>
+			<p>Kotten returns to make an <span class="wobbling">ACID COLLAGE</span> based on current events! It's the song your doctor <span class="wobbling">DOESN'T WANT YOU TO HEAR</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Kotten-Coronafragan.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>14/12 <a href="MOB.F-Vintertid.mp3">MOB.F - Vintertid</a></h3>
+			<p>If there's a compelling argument for saying letters, this is it! Let this hot track melt the post-Lucia snow and <span class="wobbling">SAY LETTERS!</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/MOB.F-Vintertid.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="track">
+			<h3>15/12 <a href="Shike-Acid_said_the_fox.mp3">Shike - Acid said the fox</a></h3>
+			<p>Sweet <span class="wobbling">SLOW MOTION STROBE LIGHT DANCE</span> type track from Shike, with all the elements of a classic. This is also the soundtrack to the <span class="wobbling">MONTAGE SCENE</span> in which the <span class="wobbling">ACID DECEMBER</span> crew is editing this page!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Shike-Acid_said_the_fox.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		<div class="track">
+			<h3>16/12 <a href="S-ingentitel.mp3">S - ingentitel</a></h3>
+			<p>From the depths of an abandoned <span class="wobbling">NUCLEAR SILO</span> comes this heavy beast of a track! We first picked it up on sonar in 1991 but because of the <span class="wobbling">OMNIDIRECTIONAL BASS</span> we couldn't locate it until now.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/S-ingentitel.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>17/12 <a href="Jazzdoktorn-Xmastacy.ogg">Jazzdoktorn - Xmastacy</a></h3>
+			<p>Jazzdoktorn just couldn't stop. This barrel of fun was <span class="wobbling">CLEARLY LABELED WITH A DROP OVER A HAND WITH A HOLE IN IT</span> but in our preliminary trials the only adverse effects we observed in our subjects were <span class="wobbling">SPONTANEOUS LIMB MOVEMENTS</span> that coincided with the <span class="wobbling">MIND ALTERING</span> rhythm of the music!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Jazzdoktorn-Xmastacy.ogg" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>18/12 <a href="Kognitiv_Belastning-Trelleborg.mp3">Kognitiv Belastning - Trelleborg</a></h3>
+			<p>The ferry arrives, originally white, but so covered in the grime of <span class="wobbling">EFFICIENT INDUSTRY AND LOGISTICS</span> that it's taken the same gray tone as the sky above it. You take one last deep breath, inhaling from the cloud of <span class="wobbling">BURNING BUNKER FUEL</span> that surrounds it before you sneak inside its wide open <span class="wobbling">TRUCK-MOUTH</span>...next stop: Trelleborg!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Kognitiv_Belastning-Trelleborg.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>19/12 <a href="2020_project-sjalvbeflackelsesangen.mp3">2020 project (808+606+303+303=2020) - självbefläckelsesången</a></h3>
+			<p>Besides testing our line lengths with its <span class="wobbling">NUMEROLOGICAL SUBTITLE</span>, 2020 project promises to deliver with that line-up of automatic musicians. We listened and were <span class="wobbling">MELTED AWAY</span>, leaving a bunch of dancing bones like in <span class="wobbling">DISNEY'S SKELETON DANCE</span> which will hopefully finally be replacing Kalle Ankas Jul this year.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/2020_project-sjalvbeflackelsesangen.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>20/12 <a href="destructive_element-computers.mp3">Destructive Element - Computers</a></h3>
+			<p>Another day, another <span class="wobbling">ACID HIT</span>. This time from the top secret DJ Destructive Element, who I've heard owns <span class="wobbling">THE MOST TR-707S ON ICELAND</span>. In this song we can hear the power of just <span class="wobbling">ONE...</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/destructive_element-computers.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>21/12 <a href="Von_Oben-Mmmmph...mp3">Von Oben - Mmmmph</a></h3>
+			<p>Incredibly <span class="wobbling">WELL ORGANIZED</span> acid jam from Von Oben that will leave you wondering what <span class="wobbling">DISTANT PLANET</span> their drum machine is from. We know, but we won't tell. Hint: <span class="wobbling">IT'S ROUGHLY SPHERICAL!</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Von_Oben-Mmmmph...mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>22/12 <a href="Erko-Dan_fore_dan_fore_depparedan.mp3">Erko - Dan före dan före depparedan</a></h3>
+			<p>No better way to prepare for <span class="wobbling">CRISPMAS</span> than to enjoy the crisp smattering of springs as <span class="wobbling">REPETITIVE ELECTRONIC SIGNALS</span> pass through them. This is a beauty. In our tests, we've found that if you watch Miami Vice, you can replace all Phil Collins songs in the soundtrack with this smooth hit, with <span class="wobbling">NO LOSS OF INFORMATION</span>, which is a <span class="wobbling">WORLD FIRST</span> for acid!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Erko-Dan_fore_dan_fore_depparedan.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>23/12 <a href="Wicked_Wire-Midnight_Mayhem.mp3">Wicked Wire - Midnight Mayhem</a></h3>
+			<p>Don't let the name fool you! It's not a <span class="wobbling">HEAVY METAL ALBUM!</span> It's another banger from Santa and most of all the <span class="wobbling">ACID GREMLINS</span> that stuff the presents.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Wicked_Wire-Midnight_Mayhem.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		
+		<div class="track">
+			<h3>24/12 <a href="errorrolf-de_303_vise_mannen.mp3">errorrolf - de 303 vise männen</a></h3>
+			<p>It's Christmas. Instead of a lit up christmas tree topped with a star, you have scavenged a huge metal signpost with a spinning, flickering <span class="wobbling">LIDL SIGN</span>. Instead of presents under it, there are rusty barrels of crude oil and large canisters of helium. It's not Santa knocking on the door. It's <span class="wobbling">THE POLICE</span>. There has been a noise complaint. The <span class="wobbling">303 WISE MEN</span> you've invited are causing too much of a ruckus. You excuse yourself and walk back into the apartment to turn on the <span class="wobbling">DIESEL-ELECTRIC ENGINE</span> and this is what comes out. The police have no option but to <span class="wobbling">FORFEIT THEIR WEAPONS</span> and give up. Merry Christmas!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/errorrolf-de_303_vise_mannen.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>25/12 <a href="2020_project-is_here.mp3">2020 project - is here</a></h3>
+			<p>2020 project may not actually be a single artist, but an <span class="wobbling">ASSEMBLY LINE</span> in a chemical production plant; hundreds of people connected by teflon hoses to a machine that extracts hits like <span class="wobbling">IS HERE</span> from otherwise decent, normal people.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/2020_project-is_here.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+		
+		<div class="track">
+			<h3>26/12 <a href="Pakir-Casinoreklam_som_julklapp.mp3">Pakir - Casinoreklam som julklapp</a></h3>
+			<p>Casinoreklam. It's not what we wished for but it's what we <span class="wobbling">DESERVE.</span> At least Pakir is here to give us <span class="wobbling">303 FREE SPINS</span> that we can only assume originates from his <span class="wobbling">IMPOSING MODULAR TOWER!</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Pakir-Casinoreklam_som_julklapp.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>27/12 <a href="Fem_Trelleborg_ar_fler_an_fyra_Rotterdam-DingX3m.mp3">Fem Trelleborg är fler än fyra Rotterdam - DingX3m</a></h3>
+			<p>The relatively high frequency of Trelleborg-themed music can only be explained by the <span class="wobbling">MYSTERIOUS SINKHOLE</span> that appeared there in September, and the strange, small creatures that have been climbing out of it. A team of our <span class="wobbling">INVESTIGATIVE JOURNALISTS</span> walked along the edge of the hole one night and found themselves at a party attended by <span class="wobbling">GRAY, BLACK-EYED PARTYGOERS</span>. This song was playing and was the only one that was successfully identified using Shazam.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Fem_Trelleborg_ar_fler_an_fyra_Rotterdam-DingX3m.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>28/12 <a href="Nodsignal-Can_You_Feel_It.mp3">Nödsignal - Can You Feel It</a></h3>
+			<p>This is not the Mr. Fingers classic acid house anthem. This is a <span class="wobbling">NEW ACID HOUSE ANTHEM!</span> To answer the question, <span class="wobbling">YES WE CAN!</span> It feels like sweating on a dance floor, in the <span class="wobbling">EXACT OPPOSITE</span> time of the year, with people way up in our personal space. The stank, the funk, the sweat!</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Nodsignal-Can_You_Feel_It.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>29/12 <a href="Erko-Scream_piggie_scream.mp3">Erko - Scream piggie scream</a></h3>
+			<p>Erko sent us this wonderful <span class="wobbling">FARM ANIMAL-BASED</span> track...or is it a wild pig? I won't <span class="wobbling">BOAR</span> you with our speculation; suffice to say, our analysts are impressed with this specimen.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Erko-Scream_piggie_scream.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>30/12 <a href="hitmen_without_purpose-hacker_dream.mp3">Hitmen without purpose - Hacker dream</a></h3>
+			<p>Get your <span class="wobbling">SQUARE LASSO</span>. We're going out to herd some <span class="wobbling">ELECTRONIC 4D CATTLE</span> on the polygonal wireframe prarie.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/hitmen_without_purpose-hacker_dream.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>31/12 <a href="Kognitiv_Belastning-Bildkryss.mp3">Kognitiv Belastning - Bildkryss</a></h3>
+			<p>Is there a better way to end this <span class="wobbling">SOLAR REVOLUTION</span> than an acid gabber overture? You tell us. We'll tell you that you're wrong, on the basis that <span class="wobbling">YOU ARE!</span> Good bye 2020 and welcome to subsequent year. Thank you all for you <span class="wobbling">WONDERFUL AND TERRIFYING CONTRIBUTIONS!</span> Let's hope it's a good one, without any <span class="wobbling">WHAM, MARIAH CAREY OR VIRAL PANDEMICS!</span></p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Kognitiv_Belastning-Bildkryss.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+
+		<div class="track">
+			<h3>32/12 <a href="Gustav_Nasa-Aciddec_Ember.mp3">Gustav Nasa - Aciddec Ember</a></h3>
+			<p>Fool you! Isn't it a little bit disappointing to just have 31 songs and nothing to listen to while the year goes out in a cavalcade of <span class="wobbling">EXPLOSIONS AND THE SMELL OF SULPHUR</span>? Gustav Nasa has our backs with this absolute killer track. If you're in Stockholm you'll be pleased to find that the Vasa museum is completely empty. The ship has left and is in orbit, <span class="wobbling">RAMMING THROUGH COMMUNICATION SATTELITES</span> like jellyfish. Manned by a skeleton crew of <span class="wobbling">LITERAL SKELETONS</span>, the envy of all Iron Maiden album covers, this track is echoing across the decks to keep the morale up.</p>
+			<audio controls>
+				<source src="https://storage.googleapis.com/acid-december2012/2020/Gustav_Nasa-Aciddec_Ember.mp3" type="audio/mpeg">
+			</audio>
+		</div>
+	</body>
+</html>
