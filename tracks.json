@@ -230,6 +230,15 @@
     "img": "pratap.jpg",
     "link": "https://www.youtube.com/watch?v=HiLjuZqSZf8",
     "linktext": "youtube"
+},
+{
+    "track": 26,
+    "name": "Sethy Bowoy - Södertälje",
+    "length": "4.27",
+    "file": "https://storage.googleapis.com/acid-december2012/2022/Soedertaelje-Sethy_Bowoy",
+    "img": "photo_5861515514835221166_y.jpg",
+    "link": "",
+    "linktext": ""
 }
 
 ]}
