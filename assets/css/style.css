@@ -295,7 +295,8 @@ dd {
 }
 
 img {
-  background-image: url("/assets/img/wowstar.gif");
+  background-image: url("/assets/img/space_bg.gif");
+  background-size: 100% 100%;
   color: white;
   padding: 12px 20px;
   border: 30px;
@@ -496,10 +497,19 @@ table {
 
 html,
 body {
-  background-repeat: no-repeat;
+  
+    background-color: #8d8b8b;
+    background-image: linear-gradient(to right, #4a7dec 10%, transparent 10%, transparent 50%, #8aa6e3 50%, #b6c6e9 60%, transparent 60%, transparent);
+    background-size: 30px 30px;
+    animation: wave 2s linear infinite;
+  
+  
+  
+  /*  */
+ /*  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url('/assets/img/6O2V.gif');
-  background-size: 100% 100%;
+  background-image: url('/assets/img/coolwaves.gif');
+  background-size: 100% 100%; */
   color: rgb(194, 189, 189);
   /* box-sizing: border-box;
    */@media(min-width:60em) {
@@ -514,6 +524,15 @@ body {
 *:after {
   box-sizing: inherit;
 
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 30px;
+  }
 }
 
 body {

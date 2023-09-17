@@ -1,5 +1,0 @@
-- Thing that scans the acid december mailbox and automatically
- - puts image in the current web root folder
- - correctly encodes audio and puts it in the google storage bucket
- - updates tracks.json
- - updates rss.xml
