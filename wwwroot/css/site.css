@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/MetalMania-Regular.ttf') format('truetype');
+  font-color: rgb(216, 216, 216);
+}
+/* Make the h1 font as wide as the screen */
+h1 {
+  font-family: 'CustomFont', Fallback, sans-serif;
+  font-size: 12vw;
+}
+
+img.logo {
+  width: 50%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: black;
+  background-image: '/img/_1e407906-a344-4d08-a396-3661356570ca.jpeg'
+}
+
+p {
+  color: rgb(159, 159, 159);
+}
+

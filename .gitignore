@@ -1,4 +1,5 @@
-*.swp
-config/songs.php
-busted_sleigh
-*.bak
+bin/
+obj/
+published/
+
+.fake
