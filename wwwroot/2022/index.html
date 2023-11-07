@@ -10,7 +10,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 
     <!--  Jquery code that animates the css background propery background size -->
-   
+
     <script>
         $(document).ready(function () {
             var $bgobj = $('body'); // assigning the object
@@ -24,8 +24,8 @@
                 });
             });
         });
-    
-</script>
+
+    </script>
     <div class="container">
         <div class="column add-bottom">
             <div id="mainwrap">
@@ -38,25 +38,25 @@
                 </div>
                 <div id="audiowrap">
                     <div id="audio0">
-<p>
-                        <a id="btnPrev">
-                            previous track
-                        </a>
-                        <a id="btnNext">
-                            next track
-                        </a>
-                        <a id="btnRnd">
-                            random track
-                        </a>
-                        <a id="btnPause">
-                            pause  
-                        </a>
+                        <p>
+                            <a id="btnPrev">
+                                previous track
+                            </a>
+                            <a id="btnNext">
+                                next track
+                            </a>
+                            <a id="btnRnd">
+                                random track
+                            </a>
+                            <a id="btnPause">
+                                pause
+                            </a>
 
-                        <span class="left" id="npAction">Press an image to play</span>
-                        <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
-                            Audio!</audio>
+                            <span class="left" id="npAction">Press an image to play</span>
+                            <audio preload id="audio1" controls="controls" hidden>Your browser does not support HTML5
+                                Audio!</audio>
                         </p>
-                        </div>
+                    </div>
 
 
 
@@ -67,12 +67,12 @@
 -->
                     <script>
                         $(document).ready(function () {
-                            $.getJSON("/tracks.json", function (i, data) {
+                            $.getJSON("tracks.json", function (i, data) {
                                 var tracks = i.tracks;
                                 var reversedTracks = $(tracks).get().reverse();
                                 $.each(reversedTracks, function (key, val) {
-var html = 
-                                    $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/><p>' + val.name + '' + '</p>' +'<a href="' + val.file + '.mp3">   Download<br><a href="'+ val.link +'">'+ val.linktext + '</a>'+'</div></div></div></li>'));
+                                    var html =
+                                        $('#plList').append($('<li >').html('<div class="plItem"><div class="plNum">' + '</div>' + '<div class="plTitle"><img src="' + val.img + '"/><br/><p>' + val.name + '' + '</p>' + '<a href="' + val.file + '.mp3">   Download<br><a href="' + val.link + '">' + val.linktext + '</a>' + '</div></div></div></li>'));
 
                                 });
 
@@ -169,27 +169,29 @@ var html =
                     </script>
                     <ul id="plList">
                     </ul>
-<p>
-                    
-                    <br>
-                    Thanks so much for everyone participating and to YOU listening right now. Keep being awesome and see you at the summer festivals! </p>
+                    <p>
+
+                        <br>
+                        Thanks so much for everyone participating and to YOU listening right now. Keep being awesome and
+                        see you at the summer festivals!
+                    </p>
                     <br>
 
 
                 </div>
 
 
-                <a href="2021/"><img src="/assets/img/yeah2021.png" /></a>
-                <a href="2020/"><img src="/assets/img/zomg4.jpg" /></a>
-                <a href="2019/"><img src="/assets/img/zomg3.jpg" /></a>
-                <a href="2018/"><img src="/assets/img/zomg2.jpg" /></a>
-                <a href="2015/"><img src="/assets/img/zomg1.jpeg" /></a>
+                <a href="/2021/"><img src="assets/img/yeah2021.png" /></a>
+                <a href="/2020/"><img src="assets/img/zomg4.jpg" /></a>
+                <a href="/2019/"><img src="assets/img/zomg3.jpg" /></a>
+                <a href="/2018/"><img src="assets/img/zomg2.jpg" /></a>
+                <a href="/2015/"><img src="assets/img/zomg1.jpeg" /></a>
                 <!--     <a href="2014/"><img src="zomg.png" /></a><br>
  -->
-                <a href="2013/"><img src="/assets/img/yeah2013.png" /></a>
+                <a href="/2013/"><img src="assets/img/yeah2013.png" /></a>
                 <!--   <a href="2012/"><img src="zomg.png" /></a><br> 
   -->
-                <a href="2011/"><img src="/assets/img/yeah2011.png" /></a>
+                <a href="/2011/"><img src="assets/img/yeah2011.png" /></a>
 
                 <br>
 
