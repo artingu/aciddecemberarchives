@@ -5,15 +5,38 @@ html {
 @font-face {
   font-family: 'CustomFont';
   src: url('/fonts/MetalMania-Regular.ttf') format('truetype');
-  font-color: rgb(216, 216, 216);
+  font-color: rgb(225, 45, 45);
 }
 /* Make the h1 font as wide as the screen */
 h1 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 12vw;
+  color:rgb(255, 252, 252)
 }
 
+h2 {
+  font-family: 'CustomFont', Fallback, sans-serif;
+  font-size: 5vw;
+  color:rgb(255, 252, 252)
+}
 
+h3 {
+  font-family: 'CustomFont', Fallback, sans-serif;
+  font-size: 3vw;
+  color:rgb(255, 252, 252)
+}
+
+h4 {
+  font-family: 'CustomFont', Fallback, sans-serif;
+  font-size: 2vw;
+  color:rgb(255, 252, 252)
+}
+
+p {
+ /*  font-family: 'CustomFont', Fallback, sans-serif;
+   */
+  color:rgb(255, 252, 252)
+}
 
 img {
   width: 200px;
@@ -37,11 +60,10 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-image: '/img/_1e407906-a344-4d08-a396-3661356570ca.jpeg'
+  font-color; rgb(255, 255, 255);
 }
 
 p {
-  color: rgb(159, 159, 159);
-}
 
