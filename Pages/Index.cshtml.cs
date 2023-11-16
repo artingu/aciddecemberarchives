@@ -70,7 +70,7 @@ public class IndexModel : PageModel
                     Artist = "?",
                     Publishdate = documentDictionary["publishdate"].ToString(),
                     ImageLink ="_b4418ac7-6827-4180-844a-e33c1e28308f.jpeg",
-                    Artistlink = "?"
+                    Artistlink = ""
 
                 });
             }

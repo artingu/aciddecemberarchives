@@ -8,27 +8,24 @@
     <h1>ACID DECEMBER</h1>
     <p>It's so dark. Who can help us? You can! Please email acid@datapop.se with your track, name, picture if you want,
         link to your music. <3 </p>
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-      @foreach (var song in Model.Songs)
-    {
-                <p>
-                    <img class="float-start img-thumbnail"
-                        src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
-                <h2>@song.Title</h2>
-                <h3>@song.Artist</h3>
-            @song.Artistlink
-        </p>
-       }
-    </div>
-    <div class="col-sm">
-      
-    </div>
-    <div class="col-sm">
-      
-    </div>
-  </div>
-</div>
-    
+            <div class="container">
 
+                <div class="row">
+            @foreach (var song in Model.Songs)
+            {
+                        <div class="col-6">
+
+                            <p>
+                                <img class="float-start  border-dark"
+                                    src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
+                            <h2>@song.Title</h2>
+                            <h3>@song.Artist</h3>
+                            <h3><a href="@song.Artistlink">More</a></h3>
+        </p>
+
+    </div>
+
+   
+            }
+</div>
+</div>
