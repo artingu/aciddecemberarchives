@@ -34,7 +34,8 @@ public class DetailModel : PageModel
         // get the id from the url
         if (Request.Query["id"].ToString() == null)
         {
-            Response.Redirect("/");
+                  Song = new Song {};
+              
         }
         else
 
@@ -49,15 +50,7 @@ public class DetailModel : PageModel
             QuerySnapshot querysnapshot = await query.GetSnapshotAsync();
             if (querysnapshot.Count == 0)
             {
-                Song = new Song
-                {
-                    Title = "",
-                    Artist = "Nothing here yet",
-                    Publishdate = "",
-                    ImageLink = "_1e407906-a344-4d08-a396-3661356570ca.jpeg",
-                    Artistlink = "",
-                    Tune = "",
-                };
+                  Song = new Song {};
             }
             else
             {
