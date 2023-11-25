@@ -1,16 +1,4 @@
-﻿/* Get tunes from Firestore and display them in a table. */
-
-/* The datamodel of the object song is 
-    * Title: the title of the song
-    * Artist: the artist of the song
-    * Publishdate: the date the song was published
-    * ImageLink: the link to the image of the song
-    * Artistlink: the link to the artist of the song
-
-
- */
-
-using System;
+﻿using System;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;

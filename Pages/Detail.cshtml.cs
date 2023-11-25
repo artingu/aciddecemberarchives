@@ -14,6 +14,8 @@ using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AcidDec.Models;
+using Google.Type;
+
 
 public class DetailModel : PageModel
 {
@@ -40,26 +42,29 @@ public class DetailModel : PageModel
 
             int songid = id;
             // get the firestore document with the id
+            // create a variable from system.datetime with the current time
 
-            Query query = acidDecemberRef.WhereEqualTo("id", songid);
+
+            Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereLessThanOrEqualTo("publishdate", Timestamp.GetCurrentTimestamp());
             QuerySnapshot querysnapshot = await query.GetSnapshotAsync();
             if (querysnapshot.Count == 0)
             {
                 Song = new Song
                 {
-                    Title = "No song found",
-                    Artist = "No song found",
-                    Publishdate = "No song found",
-                    ImageLink = "No song found",
-                    Artistlink = "No song found",
-                    Tune = "No song found",
+                    Title = "",
+                    Artist = "Nothing here yet",
+                    Publishdate = "",
+                    ImageLink = "_1e407906-a344-4d08-a396-3661356570ca.jpeg",
+                    Artistlink = "",
+                    Tune = "",
                 };
             }
             else
             {
                 DocumentSnapshot snapshot = querysnapshot.Documents[0];
                 // get the data from the document
-                
+                // convert from google datetime to system datetime
+
                 Song = new Song
                 {
                     Title = snapshot.GetValue<string>("title") ?? string.Empty,
@@ -69,13 +74,15 @@ public class DetailModel : PageModel
                     Tune = snapshot.GetValue<string>("tune") ?? string.Empty,
                 };
 
-
             }
+
 
         }
 
     }
+
 }
+
 
 
 
