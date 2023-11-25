@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Google.Cloud.Firestore;
+using AcidDec.Models;
 
 
 namespace aciddecemberarchives.Pages;
@@ -38,16 +39,6 @@ public class IndexModel : PageModel
         _logger = logger;
         _db = db;
     }
-
-    public class Song
-    {
-        public string? Title { get; set; }
-        public string? Artist { get; set; }
-        public string? Publishdate { get; set; }
-        public string? ImageLink { get; set; }
-        public string? Artistlink { get; set; }
-    }
-
 
     public async Task OnGetAsync()
     {
@@ -82,7 +73,8 @@ public class IndexModel : PageModel
                     Artist = documentDictionary["artist"].ToString(),
                     Publishdate = documentDictionary["publishdate"].ToString(),
                     ImageLink = documentDictionary["imglink"].ToString(),
-                    Artistlink = documentDictionary["artistlink"].ToString()
+                    Artistlink = documentDictionary["artistlink"].ToString(),
+                    Id = documentDictionary["id"].ToString()
                 });
             }
             

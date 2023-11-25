@@ -3,10 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - aciddecemberarchives</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/aciddecemberarchives.styles.css" asp-append-version="true" />
+
+<!-- To look good on social media -->
+<!-- Standard Meta -->
+    <link rel="canonical" href="https://acid.datapop.se" />
+    <link rel="alternate" hreflang="x-default" href="https://acid.datapop.se" />
+    <meta charset="utf-8" />
+    <meta name="title" content='@ViewData["Title"]' />
+    <meta name="description" content='@ViewData["Description"]' />
+    <!-- Dublin Core basic info -->
+    <meta name="dcterms.Title" content='@ViewData["Title"]' />
+    <meta name="dcterms.Description" content='@ViewData["Description"]' />
+    <!-- Facebook -->
+    <meta property="og:title" content='@ViewData["Title"]' />
+    <meta property="og:locale" content="en" />
+    <meta property="og:description" content='@ViewData["Description"]' />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:url" content="https://acid.datapop.se" />
+    <meta property="og:site_name" content='@ViewData["Title"]' />
+    <meta property="og:image" content='@ViewData["ImageLink"]' />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content='@ViewData["Title"]' />
+    <meta name="twitter:description" content='@ViewData["Description"]' />
+    <meta name="twitter:image" content='@ViewData["ImageLink"]' />
+    <meta name="twitter:creator" content="Acid December">
+
+
 </head>
 <body>
     <header>

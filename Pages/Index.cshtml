@@ -1,7 +1,10 @@
-﻿@page
+﻿@page "/"
 @model IndexModel
 @{
-    ViewData["Title"] = "Acid december";
+    ViewData["Title"] = "Acid december 2023";
+    ViewData["Description"] = "Acid for the month of December and beyond!";
+    ViewData["ImgLink"] = "https://storage.googleapis.com/acid-december2012/2023/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg";
+
 }
 
 <div class="text-center container">
@@ -9,25 +12,38 @@
 
     <div class="container">
 
-        <div class="row">
-            <div class="col-12">
-                <p>Please email acid@datapop.se Attach your audio in the mail with a picture if you want. Download links
-                    are cool if the files are big. Don't forget to write your name and add a link to your web. <3 </p>
-            </div>
+        <div class="row"> 
+            <div class="col-12"> <img class="w-50 p-3" src="https://storage.googleapis.com/acid-december2012/2023/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg" />
 
+                <p>It's so dark! What else can we do but light our candles and start up the silver boxes in obscure half forgotten rituals.</p>
+                <p>Please email acid@datapop.se Attach your audio in the mail with a picture if you want. Download links
+                    are cool if the files are big. Don't forget to write your name and add a link to your web. <3 One song is out early as a teaser, lets gooooo!</p>
+            </div>
+          
             @foreach (var song in Model.Songs)
             {
-                <div class="col-12 padd">
-
+               
+                <div class="col-6">
+<a href="/2023/@song.Id">
                     <p>
                         <img class="float-start  border-dark"
                             src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
                     <h2>@song.Title</h2>
                     <h3>@song.Artist</h3>
-                    <p><a href="@song.Artistlink">More</a></p>
+                    <p><a href="@song.Artistlink">
+                        @if (song.Artistlink == null)
+                            {
+                                
+                            }
+                            else
+                            {
+                                @song.Artistlink
+                            }
+                    </a></p>
                     </p>
-
+ </a>
                 </div>
+               
 
 
             }

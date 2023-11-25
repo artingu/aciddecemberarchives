@@ -1,0 +1,25 @@
+@page "/2023/{id:int}"
+@model DetailModel
+@{
+    var Song = Model.Song;
+    var cdn = "https://storage.googleapis.com/acid-december2012/2023/";
+    ViewData["Title"] = Song?.Title + " by " + Song?.Artist + " on Acid december";
+
+    ViewData["ImageLink"] = $"{cdn}{Song?.ImageLink}";
+
+}
+<!-- Show the details of a song -->
+<div class="text-center container">
+    <h1>ACID DECEMBER</h1>
+
+    <div class="container">
+        <img src="https://storage.googleapis.com/acid-december2012/2023/@Song.ImageLink" alt="A picture for the song">
+        <audio controls>
+            <source src="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune">
+        </audio>
+        <h2>@Song?.Title</h2>
+        <h2>@Song?.Artist</h2>
+        <a href="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune" download>Download this tune</a>
+
+    </div>
+</div>
