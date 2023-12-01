@@ -20,8 +20,7 @@
                 <p>It's so dark! What else can we do but light our candles and start up the silver boxes in obscure half
                     forgotten rituals.</p>
                 <p>Please email acid@datapop.se Attach your audio in the mail with a picture if you want. Download links
-                    are cool if the files are big. Don't forget to write your name and add a link to your web. <3 One
-                        song is out early as a teaser, lets gooooo!</p>
+                    are cool if the files are big. Don't forget to write your name and add a link to your web.</p>
             </div>
 
             @foreach (var song in Model.Songs)
@@ -29,7 +28,7 @@
 
                 <div class="col-6">
                     <a href="/2023/@song.Id">
-                        <p>
+                        <h1>@song.Id</h1><p>
                             <img class="float-start  border-dark"
                                 src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
                             <h2>@song.Title</h2>
