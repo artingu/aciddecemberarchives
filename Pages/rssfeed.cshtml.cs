@@ -15,14 +15,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-public class IndexModel : PageModel
+public class RssModel : PageModel
 {
     private readonly FirestoreDb _db;
-    private readonly ILogger<IndexModel> _logger;
+    private readonly ILogger<RssModel> _logger;
 
     public List<Song>? Songs { get; set; }
+    public List<string>? RssFeed { get; set; }
 
-    public IndexModel(ILogger<IndexModel> logger, FirestoreDb db)
+    public RssModel(ILogger<RssModel> logger, FirestoreDb db)
     {
         _logger = logger;
         _db = db;
@@ -31,33 +32,20 @@ public class IndexModel : PageModel
     public async Task OnGetAsync()
     {
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
-        // get all posts from the database id ascending
-        Query q = acidDecemberRef.OrderBy("id");
-
-        QuerySnapshot snapshot = await q.GetSnapshotAsync();
-
-        //QuerySnapshot snapshot = await acidDecemberRef.GetSnapshotAsync();
+        QuerySnapshot snapshot = await acidDecemberRef.GetSnapshotAsync();
 
         /*      Populate the variable Songs with the data from Firestore. */
         Songs = new List<Song>();
-
+        
         foreach (DocumentSnapshot document in snapshot.Documents)
         {
             Dictionary<string, object> documentDictionary = document.ToDictionary();
 
 
             /* Check if Publishdate is in the future */
-            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) > DateTime.Now)
+            if (DateTime.TryParse(documentDictionary["publishdate"]?.ToString()[10..], out DateTime publishDate) && publishDate > DateTime.Now)
             {
-                Songs.Add(new Song
-                {
-                    Title = "?",
-                    Artist = "?",
-                    Publishdate = documentDictionary["publishdate"].ToString(),
-                    ImageLink = "_b4418ac7-6827-4180-844a-e33c1e28308f.jpeg",
-                    Artistlink = ""
-
-                });
+                continue;
             }
             else
             {
@@ -70,8 +58,9 @@ public class IndexModel : PageModel
                     Artistlink = documentDictionary["artistlink"].ToString(),
                     Id = documentDictionary["id"].ToString()
                 });
+                
             }
-
+            
         }
     }
 }
