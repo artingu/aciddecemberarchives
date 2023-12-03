@@ -12,21 +12,22 @@ html {
 h1 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 12vw;
-  color: rgb(255, 252, 252)
+  color: rgb(255, 252, 252);
 }
 
 h2 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 5vw;
-  color: rgb(255, 252, 252)
-  box-shadow: 2px 2px 2px black;
+  color: black;
+  text-shadow: 2px 2px 4px white;
 
 }
 
 h3 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 3vw;
-  color: rgb(255, 252, 252)
+  color: black;
+  text-shadow: 2px 2px 4px white;
 }
 
 h4 {
