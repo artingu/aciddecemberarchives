@@ -7,40 +7,44 @@ html {
   src: url('/fonts/MetalMania-Regular.ttf') format('truetype');
   font-color: rgb(225, 45, 45);
 }
+
 /* Make the h1 font as wide as the screen */
 h1 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 12vw;
-  color:rgb(255, 252, 252)
+  color: rgb(255, 252, 252)
 }
 
 h2 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 5vw;
-  color:rgb(255, 252, 252)
+  color: rgb(255, 252, 252)
+  box-shadow: 2px 2px 2px black;
+
 }
 
 h3 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 3vw;
-  color:rgb(255, 252, 252)
+  color: rgb(255, 252, 252)
 }
 
 h4 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 2vw;
-  color:rgb(255, 252, 252)
+  color: rgb(255, 252, 252)
 }
 
 p {
- /*  font-family: 'CustomFont', Fallback, sans-serif;
+  /*  font-family: 'CustomFont', Fallback, sans-serif;
    */
-  color:rgb(255, 252, 252)
+  color: rgb(255, 252, 252)
 }
 
 img {
   width: 200px;
   height: auto;
+  border-radius: 50%;
 }
 
 @media (min-width: 768px) {
@@ -49,7 +53,11 @@ img {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
@@ -61,8 +69,9 @@ html {
 body {
   margin-bottom: 60px;
   background-color: rgb(0, 0, 0);
-  background-image: '/img/_1e407906-a344-4d08-a396-3661356570ca.jpeg'
- s
+  background-image: url('/img/371525055_367073175736285_3668511195066064640_n.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {

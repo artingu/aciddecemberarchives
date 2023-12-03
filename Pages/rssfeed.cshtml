@@ -1,16 +1,9 @@
 @page "/rss.xml"
 @model RssModel;
-
-// Create a rss feed of the RssModel items
-
 @{
   Layout = null;
   Response.ContentType = "application/rss+xml";
-  // generate the string rssitem = "<item>" but web safe
-
-
 }
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
@@ -26,13 +19,13 @@
     </image>
     @foreach (var song in Model.Songs)
     {
-      
+    //  @xmlitem
         <title>@song.Title</title>
         <link>https://acid.datapop.se/2023/@song.Id</link>
         <guid>https://acid.datapop.se/2023/@song.Id</guid>
         <pubDate>@song.Publishdate</pubDate>
         <description>@song.Title by @song.Artist on Acid December</description>
-      
+    //  @xmlitemend
     }
 
   </channel>

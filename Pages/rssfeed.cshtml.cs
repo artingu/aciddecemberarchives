@@ -13,7 +13,7 @@ using Microsoft.Extensions.Logging;
 using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Components;
 
 public class RssModel : PageModel
 {
@@ -21,7 +21,6 @@ public class RssModel : PageModel
     private readonly ILogger<RssModel> _logger;
 
     public List<Song>? Songs { get; set; }
-    public List<string>? RssFeed { get; set; }
 
     public RssModel(ILogger<RssModel> logger, FirestoreDb db)
     {
@@ -29,6 +28,8 @@ public class RssModel : PageModel
         _db = db;
     }
 
+    public MarkupString xmlitem = new("<item>");
+    public MarkupString xmlitemend = new("</item>");
     public async Task OnGetAsync()
     {
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
@@ -36,7 +37,7 @@ public class RssModel : PageModel
 
         /*      Populate the variable Songs with the data from Firestore. */
         Songs = new List<Song>();
-        
+
         foreach (DocumentSnapshot document in snapshot.Documents)
         {
             Dictionary<string, object> documentDictionary = document.ToDictionary();
@@ -58,9 +59,9 @@ public class RssModel : PageModel
                     Artistlink = documentDictionary["artistlink"].ToString(),
                     Id = documentDictionary["id"].ToString()
                 });
-                
+
             }
-            
+
         }
     }
 }
