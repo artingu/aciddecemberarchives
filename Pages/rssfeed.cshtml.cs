@@ -34,7 +34,12 @@ public class RssModel : PageModel
     public async Task OnGetAsync()
     {
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
-        QuerySnapshot snapshot = await acidDecemberRef.GetSnapshotAsync();
+        // get all posts from the database id ascending
+        Query q = acidDecemberRef.OrderBy("id");
+
+        QuerySnapshot snapshot = await q.GetSnapshotAsync();
+
+    
 
         /*      Populate the variable Songs with the data from Firestore. */
         Songs = new List<Song>();
