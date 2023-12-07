@@ -14,6 +14,7 @@ using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Html;
 
 public class RssModel : PageModel
 {
@@ -28,8 +29,8 @@ public class RssModel : PageModel
         _db = db;
     }
 
-    public MarkupString xmlitem = new("<item>");
-    public MarkupString xmlitemend = new("</item>");
+    public HtmlString xmlitem = new("<item>");
+    public HtmlString xmlitemend = new("</item>");
     public async Task OnGetAsync()
     {
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
