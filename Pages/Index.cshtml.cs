@@ -61,7 +61,8 @@ public class IndexModel : PageModel
             }
             else
             {
-                Songs.Add(new Song
+               
+               Song s = new Song
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
@@ -69,22 +70,13 @@ public class IndexModel : PageModel
                     ImageLink = documentDictionary["imglink"].ToString(),
                     Artistlink = documentDictionary["artistlink"].ToString(),
                     Id = documentDictionary["id"].ToString()
-                });
+                };
+               
+                Songs.Add(s);
+                SongOfTheDay = s;
             }
    // song of the day
-            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) == (DateTime.Now).Date)
-            {
-                SongOfTheDay = new Song
-                {
-                    Title = documentDictionary["title"].ToString(),
-                    Artist = documentDictionary["artist"].ToString(),
-                    Publishdate = documentDictionary["publishdate"].ToString(),
-                    ImageLink = documentDictionary["imglink"].ToString(),
-                    Artistlink = documentDictionary["artistlink"].ToString(),
-                    Id = documentDictionary["id"].ToString(),
-                    Tune = documentDictionary["tune"].ToString()
-                };
-            }
+     
     
         }
     }
