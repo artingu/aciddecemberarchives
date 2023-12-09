@@ -18,14 +18,14 @@
             @if (Model.SongOfTheDay != null)
             {
                 <div class="col-6">
-                    <h2>Track of the day</h2>
+                   
                 </div>
-                <div class="col-6">
-
+                <div class="col-12">
+ <h2>Track of the day</h2>
                     <h1>@Model.SongOfTheDay.Id</h1>
                     <a href="/2023/@Model.SongOfTheDay.Id">
 
-                        <img class="float-start  border-dark"
+                        <img class="border-dark"
                             src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
                         <h2>@Model.SongOfTheDay.Title</h2>
                         <h3>@Model.SongOfTheDay.Artist</h3>
