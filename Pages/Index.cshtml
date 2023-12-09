@@ -13,8 +13,13 @@
 
     <div class="container">
 
-        <div class="row"><div class="col-6"><h2>Track of the day</h2></div>
-             <div class="col-6">
+        <div class="row">
+            <div class="col-6">
+                <h2>Track of the day</h2>
+            </div>
+            <div class="col-6">
+                @if (Model.SongOfTheDay != null){
+
 
                 <h1>@Model.SongOfTheDay?.Id</h1>
                 <a href="/2023/@Model.SongOfTheDay?.Id">
@@ -27,16 +32,17 @@
                 <audio controls>
                     <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay?.Tune">
                 </audio>
+                }
 
-            </div> 
-            <div class="col-12"> 
-<br>
+            </div>
+            <div class="col-12">
+                <br>
                 <p>It's so dark! What else can we do but light our candles and start up the silver boxes in obscure half
                     forgotten rituals.</p>
                 <p>Please email acid@datapop.se Attach your audio in the mail with a picture if you want. Download links
                     are cool if the files are big. Don't forget to write your name and add a link to your web.</p>
             </div>
-          
+
             @foreach (var song in Model?.Songs)
             {
 
