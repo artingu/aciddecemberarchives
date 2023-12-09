@@ -19,14 +19,17 @@
     </image>
     @foreach (var song in Model.Songs)
     {
+
       @Model.xmlitem
+
       <title>@song.Title</title>
-    <link>
-    https://acid.datapop.se/2023/@song.Id</link>
+    <link>https://acid.datapop.se/2023/@song.Id</link>
       <guid>https://acid.datapop.se/2023/@song.Id</guid>
       <pubDate>@song.Publishdate</pubDate>
-      <description>@song.Title by @song.Artist on Acid December</description>
+      <description>@song.Title by @song.Artist on Acid December</description> 
+
       @Model.xmlitemend
+
     }
 
   </channel>

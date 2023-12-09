@@ -14,7 +14,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-12"> <img class="w-50 p-3"
+            <div class="col-12"> <img class="w-25 p-3"
                     src="https://storage.googleapis.com/acid-december2012/2023/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg" />
 
                 <p>It's so dark! What else can we do but light our candles and start up the silver boxes in obscure half
@@ -22,13 +22,28 @@
                 <p>Please email acid@datapop.se Attach your audio in the mail with a picture if you want. Download links
                     are cool if the files are big. Don't forget to write your name and add a link to your web.</p>
             </div>
+            <div class="container-flex">
 
+                <h1>@Model.SongOfTheDay.Id</h1>
+                <a href="/2023/@Model.SongOfTheDay.Id">
+
+                    <img class="float-start  border-dark"
+                        src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
+                    <h2>@Model.SongOfTheDay.Title</h2>
+                    <h3>@Model.SongOfTheDay.Artist</h3>
+                </a>
+                <audio controls>
+                    <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
+                </audio>
+
+            </div>
             @foreach (var song in Model.Songs)
             {
 
                 <div class="col-6">
                     <a href="/2023/@song.Id">
-                        <h1>@song.Id</h1><p>
+                        <h1>@song.Id</h1>
+                        <p>
                             <img class="float-start  border-dark"
                                 src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
                             <h2>@song.Title</h2>

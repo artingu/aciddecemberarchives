@@ -22,6 +22,9 @@ public class IndexModel : PageModel
 
     public List<Song>? Songs { get; set; }
 
+    // Song of the day
+    public Song? SongOfTheDay { get; set; }
+
     public IndexModel(ILogger<IndexModel> logger, FirestoreDb db)
     {
         _logger = logger;
@@ -35,9 +38,6 @@ public class IndexModel : PageModel
         Query q = acidDecemberRef.OrderBy("id");
 
         QuerySnapshot snapshot = await q.GetSnapshotAsync();
-
-        //QuerySnapshot snapshot = await acidDecemberRef.GetSnapshotAsync();
-
         /*      Populate the variable Songs with the data from Firestore. */
         Songs = new List<Song>();
 
@@ -71,7 +71,21 @@ public class IndexModel : PageModel
                     Id = documentDictionary["id"].ToString()
                 });
             }
-
+   // song of the day
+            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) == (DateTime.Now).Date)
+            {
+                SongOfTheDay = new Song
+                {
+                    Title = documentDictionary["title"].ToString(),
+                    Artist = documentDictionary["artist"].ToString(),
+                    Publishdate = documentDictionary["publishdate"].ToString(),
+                    ImageLink = documentDictionary["imglink"].ToString(),
+                    Artistlink = documentDictionary["artistlink"].ToString(),
+                    Id = documentDictionary["id"].ToString(),
+                    Tune = documentDictionary["tune"].ToString()
+                };
+            }
+    
         }
     }
 }
