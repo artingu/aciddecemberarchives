@@ -16,16 +16,16 @@
         <div class="row"><div class="col-6"><h2>Track of the day</h2></div>
              <div class="col-6">
 
-                <h1>@Model.SongOfTheDay.Id</h1>
-                <a href="/2023/@Model.SongOfTheDay.Id">
+                <h1>@Model.SongOfTheDay?.Id</h1>
+                <a href="/2023/@Model.SongOfTheDay?.Id">
 
                     <img class="float-start  border-dark"
-                        src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
+                        src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay?.ImageLink" />
                     <h2>@Model.SongOfTheDay.Title</h2>
                     <h3>@Model.SongOfTheDay.Artist</h3>
                 </a>
                 <audio controls>
-                    <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
+                    <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay?.Tune">
                 </audio>
 
             </div> 
@@ -37,7 +37,7 @@
                     are cool if the files are big. Don't forget to write your name and add a link to your web.</p>
             </div>
           
-            @foreach (var song in Model.Songs)
+            @foreach (var song in Model?.Songs)
             {
 
                 <div class="col-6">
