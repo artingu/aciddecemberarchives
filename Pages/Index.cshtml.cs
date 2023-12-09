@@ -69,7 +69,8 @@ public class IndexModel : PageModel
                     Publishdate = documentDictionary["publishdate"].ToString(),
                     ImageLink = documentDictionary["imglink"].ToString(),
                     Artistlink = documentDictionary["artistlink"].ToString(),
-                    Id = documentDictionary["id"].ToString()
+                    Id = documentDictionary["id"].ToString(),
+                    Tune = documentDictionary["tune"].ToString(),
                 };
                
                 Songs.Add(s);

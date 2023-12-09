@@ -22,16 +22,16 @@
                 </div>
                 <div class="col-6">
 
-                    <h1>@Model.SongOfTheDay?.Id</h1>
-                    <a href="/2023/@Model.SongOfTheDay?.Id">
+                    <h1>@Model.SongOfTheDay.Id</h1>
+                    <a href="/2023/@Model.SongOfTheDay.Id">
 
                         <img class="float-start  border-dark"
-                            src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay?.ImageLink" />
+                            src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
                         <h2>@Model.SongOfTheDay.Title</h2>
                         <h3>@Model.SongOfTheDay.Artist</h3>
                     </a>
                     <audio controls>
-                        <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay?.Tune">
+                        <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
                     </audio>
                   
 
