@@ -19,8 +19,12 @@
         </audio>
         <h2>@Song?.Title</h2>
         <h2>@Song?.Artist</h2>
-        <a href="https://@Song?.Artistlink">Hear more from @Song?.Artist</a> | 
-        <a href="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune" download>Download this tune</a>
+        @if (Song?.Artistlink !="")
+        {
+         <h3>  <a href="https://@Song?.Artistlink">Hear more from @Song?.Artist</a>  </h3>
+        }
+       
+       <h3> <a href="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune" download>Download this tune</a> </h3>
 
     </div>
 </div>
