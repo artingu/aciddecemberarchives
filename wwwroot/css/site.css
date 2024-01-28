@@ -1,5 +1,7 @@
 html {
   font-size: 14px;
+
+ 
 }
 
 @font-face {
@@ -12,8 +14,42 @@ html {
 h1 {
   font-family: 'CustomFont', Fallback, sans-serif;
   font-size: 12vw;
-  color: rgb(255, 252, 252);
+  
+  color: rgba(225, 225, 225, .01);
+  background-image: url("/img/R.gif");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: animate 15s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+
 }
+  @keyframes animate {
+
+    0%,
+    100% {
+      background-position: left top;
+    }
+
+    25% {
+      background-position: right bottom;
+    }
+
+    50% {
+      background-position: left bottom;
+    }
+
+    75% {
+      background-position: right top;
+    }
+  }
+
+
+
+
+
 
 h2 {
   font-family: 'CustomFont', Fallback, sans-serif;
@@ -66,9 +102,9 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: rgb(0, 0, 0);
-  background-image: url('https://storage.googleapis.com/acid-december2012/2023/00.41.06_7d6085b9.jpg');
-  background-repeat: no-repeat;
+  background-color: rgb(81, 81, 81);
+/*   background-image: url('https://storage.googleapis.com/acid-december2012/2023/00.41.06_7d6085b9.jpg');
+ */  background-repeat: no-repeat;
   background-size: cover;
 }
 
