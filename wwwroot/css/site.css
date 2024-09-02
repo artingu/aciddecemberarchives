@@ -16,7 +16,7 @@ h1 {
   font-size: 12vw;
   
   color: rgba(225, 225, 225, .01);
-  background-image: url("/img/R.gif");
+  background-image: url("/img/ddba22b-2fad9d00-1d3f-4ec8-a65d-199a09dfa4e1.gif");
   background-repeat: repeat;
   -webkit-background-clip: text;
   background-clip: text;
@@ -103,9 +103,10 @@ html {
 body {
   margin-bottom: 60px;
   background-color: rgb(81, 81, 81);
-/*   background-image: url('https://storage.googleapis.com/acid-december2012/2023/00.41.06_7d6085b9.jpg');
- */  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('/img/HD-Nyan-Cat-Wallpapers.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: resize;
 }
 
 a {
