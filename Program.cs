@@ -2,6 +2,7 @@ using Google.Cloud.Firestore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMemoryCache();
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton(FirestoreDb.Create("seismic-ground-286510"));
 var app = builder.Build();

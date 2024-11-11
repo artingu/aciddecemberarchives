@@ -46,10 +46,10 @@ public class IndexModel : PageModel
             Dictionary<string, object> documentDictionary = document.ToDictionary();
 
 
-            /* Check if Publishdate is in the future */
-            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) > DateTime.Now)
+            /* Check if Publishdate is 2024, if not, skip the song. */
+            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) != DateTime.Parse("2024-12-01"))
             {
-                Songs.Add(new Song
+               /*  Songs.Add(new Song
                 {
                     Title = "?",
                     Artist = "?",
@@ -57,7 +57,7 @@ public class IndexModel : PageModel
                     ImageLink = "_b4418ac7-6827-4180-844a-e33c1e28308f.jpeg",
                     Artistlink = ""
 
-                });
+                }); */
             }
             else
             {
