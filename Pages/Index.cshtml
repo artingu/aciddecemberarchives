@@ -46,44 +46,42 @@
                 <p>Get the acid in your Fediverse-feed, follow: <a
                         href="https://v.basspistol.org/a/acid_december/videos"
                         rel="me">@@acid_december@v.basspistol.org</a></p>
-                <div id="app" style="height: 100vh">
+            <!--  I want this div to be floating on top and 50 pixels down and to the right from top left corner -->
+            
+                <div id="app" style="position: absolute; top: 300px; left: 150px; z-index: 1000;">
                     <!-- Webamp will attempt to center itself within this div -->
                 </div>
 
                 <script src="/js/webamp.bundle.min.js"></script>
                 <script>
+                    var initialTracks = @Html.Raw(Model.InitialTracksJson);
                     const Webamp = window.Webamp;
                     const webamp = new Webamp({
-                        /**
-                         * Here we list three tracks. Note that the `metaData` fields and
-                         * duration are required to populate the playlist.  If any of those
-                         * fields are omitted, Webamp will download at least part of each file
-                         * on initial page load in order to determine the missing information.
-                         */
-                        initialTracks: [
+                        availableSkins: [
                             {
-                                metaData:
-                                {
-                                    artist: "Shike",
-                                    title: "Relentless",
-                                    album: "Acid December 2023"
-                                },
-                                // NOTE: Your audio file must be served from the same domain as your HTML
-                                // file, or served with permissive CORS HTTP headers:
-                                // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-                                url: "https://storage.googleapis.com/acid-december2012/2023/AcidDecember231218_2.mp3",
-                                duration: 5.322286,
+                                url: "https://archive.org/cors/winampskin_Green-Dimension-V2/Green-Dimension-V2.wsz",
+                                name: "Green Dimension V2",
                             },
-                        ],
-                    
+                            {
+                                url: "https://archive.org/cors/winampskin_mac_os_x_1_5-aqua/mac_os_x_1_5-aqua.wsz",
+                                name: "Mac OSX v1.5 (Aqua)",
+                            },
+                        ],enableDoubleSizeMode: true,
+                                initialTracks: initialTracks
+                            });
+        
+                            // Returns a promise indicating when it's done loading.
+                            webamp.renderWhenReady(document.getElementById("app"));
+                        </script>
+                    </div>
+
+                        
                     });
 
-                    // Returns a promise indicating when it's done loading.
-                    webamp.renderWhenReady(document.getElementById("app"));
                 </script>
             </div>
 
-            @foreach (var song in Model?.Songs)
+            @* @foreach (var song in Model?.Songs)
             {
                 <div class="col-6">
                     <a href="/2023/@song.Id">
@@ -97,6 +95,6 @@
                         </p>
                     </a>
                 </div>
-            }
+            } *@
         </div>
     </div>

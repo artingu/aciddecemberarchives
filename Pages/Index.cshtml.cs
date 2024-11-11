@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 
 public class IndexModel : PageModel
@@ -30,6 +31,8 @@ public class IndexModel : PageModel
         _logger = logger;
         _db = db;
     }
+    public string InitialTracksJson { get; set; }
+
 
     public async Task OnGetAsync()
     {
@@ -46,23 +49,23 @@ public class IndexModel : PageModel
             Dictionary<string, object> documentDictionary = document.ToDictionary();
 
 
-            /* Check if Publishdate is 2024, if not, skip the song. */
-            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) != DateTime.Parse("2024-12-01"))
+            /* Check if Publishdate is 2024, if it is, skip the song. */
+            if (DateTime.Parse(documentDictionary["publishdate"].ToString().Substring(10)) > DateTime.Parse("2024-01-01"))
             {
-               /*  Songs.Add(new Song
-                {
-                    Title = "?",
-                    Artist = "?",
-                    Publishdate = documentDictionary["publishdate"].ToString(),
-                    ImageLink = "_b4418ac7-6827-4180-844a-e33c1e28308f.jpeg",
-                    Artistlink = ""
+                /*  Songs.Add(new Song
+                 {
+                     Title = "?",
+                     Artist = "?",
+                     Publishdate = documentDictionary["publishdate"].ToString(),
+                     ImageLink = "_b4418ac7-6827-4180-844a-e33c1e28308f.jpeg",
+                     Artistlink = ""
 
-                }); */
+                 }); */
             }
             else
             {
-               
-               Song s = new Song
+
+                Song s = new Song
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
@@ -72,13 +75,26 @@ public class IndexModel : PageModel
                     Id = documentDictionary["id"].ToString(),
                     Tune = documentDictionary["tune"].ToString(),
                 };
-               
+
                 Songs.Add(s);
                 SongOfTheDay = s;
             }
-   // song of the day
-     
-    
+            // Populate winamp playlist
+            var tracks = Songs.Select(song => new
+            {
+                metaData = new
+                {
+                    artist = song.Artist,
+                    title = song.Title,
+                    album = "Acid December 2023"
+                },
+                url = $"https://storage.googleapis.com/acid-december2012/2023/{song.Tune}",
+                duration = 5.322286 // Replace with actual duration if available
+            });
+
+            InitialTracksJson = JsonConvert.SerializeObject(tracks);
+
+
         }
     }
 }
