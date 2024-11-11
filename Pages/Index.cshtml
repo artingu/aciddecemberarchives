@@ -46,6 +46,41 @@
                 <p>Get the acid in your Fediverse-feed, follow: <a
                         href="https://v.basspistol.org/a/acid_december/videos"
                         rel="me">@@acid_december@v.basspistol.org</a></p>
+                <div id="app" style="height: 100vh">
+                    <!-- Webamp will attempt to center itself within this div -->
+                </div>
+
+                <script src="/js/webamp.bundle.min.js"></script>
+                <script>
+                    const Webamp = window.Webamp;
+                    const webamp = new Webamp({
+                        /**
+                         * Here we list three tracks. Note that the `metaData` fields and
+                         * duration are required to populate the playlist.  If any of those
+                         * fields are omitted, Webamp will download at least part of each file
+                         * on initial page load in order to determine the missing information.
+                         */
+                        initialTracks: [
+                            {
+                                metaData:
+                                {
+                                    artist: "Shike",
+                                    title: "Relentless",
+                                    album: "Acid December 2023"
+                                },
+                                // NOTE: Your audio file must be served from the same domain as your HTML
+                                // file, or served with permissive CORS HTTP headers:
+                                // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+                                url: "https://storage.googleapis.com/acid-december2012/2023/AcidDecember231218_2.mp3",
+                                duration: 5.322286,
+                            },
+                        ],
+                    
+                    });
+
+                    // Returns a promise indicating when it's done loading.
+                    webamp.renderWhenReady(document.getElementById("app"));
+                </script>
             </div>
 
             @foreach (var song in Model?.Songs)
@@ -56,7 +91,7 @@
                         <p>
                             <img class="float-start  border-dark"
                                 src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
-                            <h2>@song.Title</h2>
+                            <h2></h2>
                             <h3>@song.Artist</h3>
 
                         </p>
