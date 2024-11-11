@@ -18,47 +18,50 @@
             @if (Model.SongOfTheDay != null)
             {
                 <div class="col-6">
-                   
+
                 </div>
                 <div class="col-12">
-                   
-@*  <h2>Track of the day</h2>
-                    <h1>@Model.SongOfTheDay.Id</h1>
-                    <a href="/2023/@Model.SongOfTheDay.Id">
 
-                        <img class="border-dark"
-                            src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
-                        <h2>@Model.SongOfTheDay.Title</h2>
-                        <h3>@Model.SongOfTheDay.Artist</h3>
-                    </a>
-                    <audio controls>
-                        <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
-                    </audio>
-                   *@
+                    @* <h2>Track of the day</h2>
+                <h1>@Model.SongOfTheDay.Id</h1>
+                <a href="/2023/@Model.SongOfTheDay.Id">
 
-                </div>  }
-                <div class="col-12">
-                    <br>
-                    <h2>Acid December 2024</h2>
-<p>To participate send your most bespoke tracks to acid@datapop.se</p>
+                <img class="border-dark"
+                src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
+                <h2>@Model.SongOfTheDay.Title</h2>
+                <h3>@Model.SongOfTheDay.Artist</h3>
+                </a>
+                <audio controls>
+                <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
+                </audio>
+                *@
 
-<p>Get the acid in your Fediverse-feed, follow: <a href="https://v.basspistol.org/a/acid_december/videos" rel="me">@acid_december@v.basspistol.org</a/><p/>
-                        </div>
+                </div>
+            }
+            <div class="col-12">
+                <br>
+                <h2>Acid December 2024</h2>
+                <p>To participate send your most bespoke tracks to acid@datapop.se</p>
 
-                @foreach (var song in Model?.Songs)
-                {
-                    <div class="col-6">
-                        <a href="/2023/@song.Id">
-                            <h1>@song.Id</h1>
-                            <p>
-                                <img class="float-start  border-dark"
-                                    src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
-                                <h2>@song.Title</h2>
-                                <h3>@song.Artist</h3>
-
-                            </p>
-                        </a>
-                    </div>
-                }
+                <p>Get the acid in your Fediverse-feed, follow: <a
+                        href="https://v.basspistol.org/a/acid_december/videos"
+                        rel="me">@@acid_december@v.basspistol.org</a></p>
             </div>
+
+            @foreach (var song in Model?.Songs)
+            {
+                <div class="col-6">
+                    <a href="/2023/@song.Id">
+                        <h1>@song.Id</h1>
+                        <p>
+                            <img class="float-start  border-dark"
+                                src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
+                            <h2>@song.Title</h2>
+                            <h3>@song.Artist</h3>
+
+                        </p>
+                    </a>
+                </div>
+            }
         </div>
+    </div>
