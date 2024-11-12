@@ -92,6 +92,11 @@ public class IndexModel : PageModel
                 duration = 5.322286 // Replace with actual duration if available
             });
 
+            // randomize the order of the tracks, except for the first one
+            var random = new Random();
+            tracks = tracks.OrderBy(x => random.Next()).ToList();
+            
+
             ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
 
 

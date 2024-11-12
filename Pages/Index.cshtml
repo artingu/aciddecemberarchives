@@ -46,37 +46,7 @@
                 <p>Get the acid in your Fediverse-feed, follow: <a
                         href="https://v.basspistol.org/a/acid_december/videos"
                         rel="me">@@acid_december@v.basspistol.org</a></p>
-            <!--  I want this div to be floating on top and 50 pixels down and to the right from top left corner -->
-            
-            
-
-                <script src="/js/webamp.bundle.min.js"></script>
-                <script>
-                    var initialTracks = @Html.Raw(Model.InitialTracksJson);
-                    const Webamp = window.Webamp;
-                    const webamp = new Webamp({
-                        availableSkins: [
-                            {
-                                url: "https://archive.org/cors/winampskin_Green-Dimension-V2/Green-Dimension-V2.wsz",
-                                name: "Green Dimension V2",
-                            },
-                            {
-                                url: "https://archive.org/cors/winampskin_mac_os_x_1_5-aqua/mac_os_x_1_5-aqua.wsz",
-                                name: "Mac OSX v1.5 (Aqua)",
-                            },
-                        ],enableDoubleSizeMode: true,
-                                initialTracks: initialTracks
-                            });
-        
-                            // Returns a promise indicating when it's done loading.
-                            webamp.renderWhenReady(document.getElementById("app"));
-                        </script>
-                    </div>
-
-                        
-                    });
-
-                </script>
+          
             </div>
 
             @* @foreach (var song in Model?.Songs)

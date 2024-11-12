@@ -97,34 +97,34 @@
     <div style="max-width: 1300px;">
         <main role="main" class="pb-3">
             @RenderBody()
-            
-                
-                <div id="app" style="height: 300px; align-items: center;">
-                    <!-- Webamp will attempt to center itself within this div -->
-                </div>
 
-                <script src="/js/webamp.bundle.min.js"></script>
-                <script>
-                        var initialTracks = @Html.Raw(ViewData["InitialTracks"] ?? "[]");
+
+            <div id="app" style="height: 300px; align-items: center;">
+                <!-- Webamp will attempt to center itself within this div -->
+            </div>
+
+            <script src="/js/webamp.bundle.min.js"></script>
+            <script>
+                var initialTracks = @Html.Raw(ViewData["InitialTracks"] ?? "[]");
 
                     const Webamp = window.Webamp;
-                    const webamp = new Webamp({
-                       
-         
-                                initialTracks: initialTracks
-                            });
-        
-                            // Returns a promise indicating when it's done loading.
-                            webamp.renderWhenReady(document.getElementById("app"));
-                        </script>
-                    </div>
+                const webamp = new Webamp({
 
-                        
-                    });
 
-                </script>
-            </div>
-        </main>
+                    initialTracks: initialTracks
+                });
+
+                // Returns a promise indicating when it's done loading.
+                webamp.renderWhenReady(document.getElementById("app"));
+            </script>
+    </div>
+
+
+    });
+
+    </script>
+    </div>
+    </main>
     </div>
 
     <footer class="text-muted">
