@@ -92,7 +92,7 @@ public class IndexModel : PageModel
                 duration = 5.322286 // Replace with actual duration if available
             });
 
-            InitialTracksJson = JsonConvert.SerializeObject(tracks);
+            ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
 
 
         }
