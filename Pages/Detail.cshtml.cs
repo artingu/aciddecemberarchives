@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AcidDec.Models;
 using Google.Type;
-
+using Newtonsoft.Json;
 
 public class DetailModel : PageModel
 {
@@ -66,6 +66,24 @@ public class DetailModel : PageModel
                     Artistlink = snapshot.GetValue<string>("artistlink") ?? string.Empty,
                     Tune = snapshot.GetValue<string>("tune") ?? string.Empty,
                 };
+
+                  var tracks = new List<Song> { Song }.Select(song => new
+                {
+                    metaData = new
+                    {
+                        artist = song.Artist,
+                        title = song.Title,
+                        album = "Acid December" 
+                    },
+                    url = $"https://storage.googleapis.com/acid-december2012/2023/{song.Tune}",
+                    duration = 5.322286 // Replace with actual duration if available
+                });
+
+                // randomize the order of the tracks, except for the first one
+                
+
+
+                ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
 
             }
 
