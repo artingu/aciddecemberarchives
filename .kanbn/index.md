@@ -9,10 +9,10 @@ completedColumns:
 
 ## Backlog
 
-- [admin-page](tasks/admin-page.md)
-
 ## Todo
 
 ## In Progress
+
+- [admin-page](tasks/admin-page.md)
 
 ## Done

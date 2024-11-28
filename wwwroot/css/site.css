@@ -16,7 +16,7 @@ h1 {
   font-size: 12vw;
 
   color: rgba(225, 225, 225, .01);
-    background-image: url("/img/e1f44c4fe24f9379319ac22987067d5e.gif"); 
+    background-image: url("/img/2c46b362f1e73850ae343993b3ce839a.gif"); 
   background-color: rgb(108, 108, 108);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -78,6 +78,11 @@ p {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */
   color: rgb(255, 252, 252)
+}
+ul {
+  color: aliceblue;
+  list-style-type: none;
+  
 }
 
 img {

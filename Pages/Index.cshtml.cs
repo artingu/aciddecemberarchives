@@ -24,6 +24,8 @@ public class IndexModel : PageModel
 
     public List<Song>? Songs { get; set; }
 
+    public bool IsRootPage { get; set; }
+
     // Song of the day
     public Song? SongOfTheDay { get; set; }
 
@@ -44,7 +46,7 @@ public class IndexModel : PageModel
         System.DateTime filterdatestart;
         System.DateTime filterdateend;
         System.DateTime publishdatetime = System.DateTime.Now;
-
+        IsRootPage = string.IsNullOrEmpty(year);
         String urlyear = year ?? "2024";
         if (urlyear == "2024")
         {
