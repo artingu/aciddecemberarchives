@@ -1,11 +1,11 @@
-﻿@page "/{year:int?}"
+﻿@page "/{urlyear:int?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Acid december";
     ViewData["Description"] = "Acid for the month of December and beyond!";
     ViewData["ImageLink"] =
     "https://storage.googleapis.com/acid-december2012/2023/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg";
-
+    var year = (string)RouteData.Values["urlyear"] ?? "2024";
 }
 
 <div class="text-center container">
@@ -42,23 +42,34 @@
             <div class="col-12">
                 <br>
                 <h2>Acid December</h2>
-<h2>We are having some technical problems atm, but we'be right with you</h2>
+         @*        <p>Root page: @Model.IsRootPage</p>
+                <p>Year: @Model.Year</p>
+                <p>Route year: @year</p> *@
+
                 @if (Model.IsRootPage)
                 {
-                    <p>ACID DECEMBEER 2024!
-                        No time to rest! You are cordially invited to slide into our inbox and accentuate your best / worst
+                    <p>ACID DECEMBEER @year!
+                        No time to rest! You are cordially invited to <em>slide</em> into our inbox and accentuate your best / worst
                         / loveliest / rudest beat.
 
                         You can send us your tune in pretty much any way you want, but consider sharing with us:
                     </p>
                     <ul>
-                        <li><h4>artist name</h4></li>
-                        <li><h4>track name</h4></li>
-                        <li><h4>picture if you want</h4></li>
-                        <li><h4>a link where your new followers can hear more of your stuff!</h4></li>
+                        <li>
+                            <h2>artist name</h2>
+                        </li>
+                        <li>
+                            <h2>track name</h2>
+                        </li>
+                        <li>
+                            <h2>picture if you want</h2>
+                        </li>
+                        <li>
+                            <h2>a link where your new followers can hear more of your stuff!</h2>
+                        </li>
                     </ul>
-                   <p> This page is all non-profit and all material is licensed as: CC BY-NC-SA
-                    let's light up December!!! send all tracks to acid@datapop.se
+                    <p> This page is all non-profit and all material is licensed as: CC BY-NC-SA
+                        let's light up December!!! send all tracks to acid@datapop.se
                     </p>
 
 
@@ -72,15 +83,20 @@
 
             @foreach (var song in Model?.Songs)
             {
+              
+                
+                   
+                        
                 <div class="col-6">
-                    <a href="/2023/@song.Id">
+                    <a href="/@Model.Year/@song.Id">
                         <h1>@song.Id</h1>
                         <p>
-                            <img class="float-start  border-dark"
-                                src="https://storage.googleapis.com/acid-december2012/2023/@song.ImageLink" />
+                        @if (song.ImageLink != null)  {    <img class="float-start  border-dark"
+                                src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" /> }
                             <h2></h2>
                             <h3>@song.Artist</h3>
-
+                            <h3>@song.Title</h3>
+                          
                         </p>
                     </a>
                 </div>

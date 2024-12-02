@@ -26,6 +26,7 @@ public class IndexModel : PageModel
 
     public bool IsRootPage { get; set; }
 
+
     // Song of the day
     public Song? SongOfTheDay { get; set; }
 
@@ -37,37 +38,38 @@ public class IndexModel : PageModel
     }
 
     public string InitialTracksJson { get; set; }
-
+    public string Year { get; set; }
     // Get the year from the URL
 
 
-    public async Task OnGetAsync(string year)
+    public async Task OnGetAsync(string urlyear)
     {
         System.DateTime filterdatestart;
         System.DateTime filterdateend;
         System.DateTime publishdatetime = System.DateTime.Now;
-        IsRootPage = string.IsNullOrEmpty(year);
-        String urlyear = year ?? "2024";
-        if (urlyear == "2024")
+        IsRootPage = string.IsNullOrEmpty(urlyear);
+        Year = urlyear ?? "2024";
+        if (Year == "2024")
         {
-            // this year
-            year = "2024";
-
-            // set to todays date
-            filterdatestart = System.DateTime.Now;
+         
+            // start of month
+            filterdatestart = System.DateTime.Parse("2024-11-01"); 
             // today plus 6 months
-            filterdateend = filterdatestart.AddMonths(6);
+            // today
+            filterdateend = System.DateTime.Now;
+            //filterdateend = filterdatestart.AddMonths(6);
         }
         else
         {
             // every other year
             // a range of dates from the 30th of November to the 30th of January the following year
-
-            filterdatestart = System.DateTime.Parse(urlyear + "-11-30"); // 30th of November 2023
+// set model.Year to the year in the URL
+         
+            filterdatestart = System.DateTime.Parse(Year + "-11-30"); // 30th of November 
             filterdateend = System.DateTime.Parse("2024-01-30"); // 30th of January 2024
 
         }
-        ViewData["Year"] = urlyear;
+  
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
         // get all posts from the database id ascending
         Query q = acidDecemberRef.OrderBy("id");
@@ -86,16 +88,16 @@ public class IndexModel : PageModel
 
 
             // add songs have a publishhdate between filterdatestart and filterdateend
-            if (publishdatetime > filterdatestart && publishdatetime < filterdateend)
-            //  if (false)
+            if (publishdatetime >= filterdatestart && publishdatetime <= filterdateend)
+        // if (true)
             {
+                
                 Song s = new Song
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
                     Publishdate = documentDictionary["publishdate"].ToString(),
-                    ImageLink = documentDictionary["imglink"].ToString(),
-                    Artistlink = documentDictionary["artistlink"].ToString(),
+                    ImageLink = documentDictionary["imglink"].ToString() ?? "Designer.png",
                     Id = documentDictionary["id"].ToString(),
                     Tune = documentDictionary["tune"].ToString(),
                 };
@@ -109,7 +111,6 @@ public class IndexModel : PageModel
         }
 
 
-        // to be continued...  i want every track to be added to the playlist..
         foreach (DocumentSnapshot document in snapshot.Documents)
         {
             // Populate winamp playlist
@@ -119,9 +120,9 @@ public class IndexModel : PageModel
                 {
                     artist = song.Artist,
                     title = song.Title,
-                    album = "Acid December " + year
+                    album = "Acid December " + Year
                 },
-                url = $"https://storage.googleapis.com/acid-december2012/2023/{song.Tune}",
+                url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
                 duration = 5.322286 // Replace with actual duration if available
             });
 

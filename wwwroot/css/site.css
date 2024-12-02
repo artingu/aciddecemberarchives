@@ -16,8 +16,8 @@ h1 {
   font-size: 12vw;
 
   color: rgba(225, 225, 225, .01);
-    background-image: url("/img/2c46b362f1e73850ae343993b3ce839a.gif"); 
-  background-color: rgb(108, 108, 108);
+  background-image: url("/img/2c46b362f1e73850ae343993b3ce839a.gif");  
+  background-color: rgb(221, 227, 51);
   background-repeat: repeat;
   -webkit-background-clip: text;
   background-clip: text;
@@ -62,14 +62,14 @@ h2 {
 }
 
 h3 {
-  font-family: 'CustomFont', Fallback, sans-serif;
+  /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 3vw;
   color: black;
   text-shadow: 2px 2px 4px white;
 }
 
 h4 {
-  font-family: 'CustomFont', Fallback, sans-serif;
+  /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 2vw;
   color: rgb(255, 252, 252)
 }
@@ -110,7 +110,7 @@ html {
 body {
   margin-bottom: 60px;
   background-color: rgb(50, 50, 50);
-  background-image: url('/img/371525055_367073175736285_3668511195066064640_n.jpg');
+ background-image: url('/img/371525055_367073175736285_3668511195066064640_n.jpg'); 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

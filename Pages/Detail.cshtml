@@ -1,4 +1,4 @@
-@page "/2023/{id:int}"
+@page "/{urlyear:int?}/{id:int}"
 @model DetailModel
 @{
     var Song = Model.Song;
@@ -13,7 +13,7 @@
     <h1>ACID DECEMBER</h1>
 
     <div class="container">
-        <img src="https://storage.googleapis.com/acid-december2012/2023/@Song.ImageLink" alt="A picture for the song">
+        <img src="https://storage.googleapis.com/acid-december2012/@Model.Year/@Song.ImageLink" alt="A picture for the song">
       @*   <audio controls>
             <source src="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune">
         </audio> *@
@@ -24,7 +24,7 @@
          <h3>  <a href="https://@Song?.Artistlink">Hear more from @Song?.Artist</a>  </h3>
         }
        
-       <h3> <a href="https://storage.googleapis.com/acid-december2012/2023/@Song.Tune" download>Download this tune</a> </h3>
+       <h3> <a href="https://storage.googleapis.com/acid-december2012/@Model.Year/@Song.Tune" download>Download this tune</a> </h3>
 
     </div>
 </div>
