@@ -42,9 +42,9 @@
             <div class="col-12">
                 <br>
                 <h2>Acid December</h2>
-                <p>Root page: @Model.IsRootPage</p>
+         @*        <p>Root page: @Model.IsRootPage</p>
                 <p>Year: @Model.Year</p>
-                <p>Route year: @year</p>
+                <p>Route year: @year</p> *@
 
                 @if (Model.IsRootPage)
                 {
@@ -56,16 +56,16 @@
                     </p>
                     <ul>
                         <li>
-                            <h4>artist name</h4>
+                            <h2>artist name</h2>
                         </li>
                         <li>
-                            <h4>track name</h4>
+                            <h2>track name</h2>
                         </li>
                         <li>
-                            <h4>picture if you want</h4>
+                            <h2>picture if you want</h2>
                         </li>
                         <li>
-                            <h4>a link where your new followers can hear more of your stuff!</h4>
+                            <h2>a link where your new followers can hear more of your stuff!</h2>
                         </li>
                     </ul>
                     <p> This page is all non-profit and all material is licensed as: CC BY-NC-SA
@@ -82,16 +82,20 @@
 
             @foreach (var song in Model?.Songs)
             {
+              
+                
+                   
+                        
                 <div class="col-6">
                     <a href="/@Model.Year/@song.Id">
                         <h1>@song.Id</h1>
                         <p>
-                            <img class="float-start  border-dark"
-                                src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" />
+                        @if (song.ImageLink != null)  {    <img class="float-start  border-dark"
+                                src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" /> }
                             <h2></h2>
                             <h3>@song.Artist</h3>
                             <h3>@song.Title</h3>
-                           <p>Published on: @song.Publishdate</p> 
+                          
                         </p>
                     </a>
                 </div>

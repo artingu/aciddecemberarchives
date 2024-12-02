@@ -15,6 +15,6 @@ completedColumns:
 
 ## In Progress
 
-- [support-for-multiple-years](tasks/support-for-multiple-years.md)
-
 ## Done
+
+- [support-for-multiple-years](tasks/support-for-multiple-years.md)

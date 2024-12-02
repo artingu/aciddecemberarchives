@@ -31,7 +31,7 @@ public class DetailModel : PageModel
     public async Task OnGetAsync(string urlyear, int id)
     {
         Year = urlyear;
-    
+
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
         // get the id from the url
         if (Request.Query["id"].ToString() == null)
@@ -48,7 +48,11 @@ public class DetailModel : PageModel
             // create a variable from system.datetime with the current time
 
 
-            Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereLessThanOrEqualTo("publishdate", Timestamp.GetCurrentTimestamp());
+            // rewrite the query so it only gets the song with the id that is november of urlyear, to january of urlyear + 1
+          
+            System.DateTime novemberyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear), 11, 1), DateTimeKind.Utc);
+            System.DateTime januaryyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear) + 1, 1, 1), DateTimeKind.Utc);
+            Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereGreaterThanOrEqualTo("publishdate", novemberyear).WhereLessThanOrEqualTo("publishdate", januaryyear);
             QuerySnapshot querysnapshot = await query.GetSnapshotAsync();
             if (querysnapshot.Count == 0)
             {
@@ -77,13 +81,9 @@ public class DetailModel : PageModel
                         title = song.Title,
                         album = "Acid December"
                     },
-                    url = $"https://storage.googleapis.com/acid-december2012/2023/{song.Tune}",
-                    duration = 5.322286 // Replace with actual duration if available
+                    url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
+                    duration = 5.322286 // This means nothing, it gets overwritten by the actual duration
                 });
-
-                // randomize the order of the tracks, except for the first one
-
-
 
                 ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
 
@@ -95,8 +95,3 @@ public class DetailModel : PageModel
     }
 
 }
-
-
-
-
-

@@ -55,7 +55,9 @@ public class IndexModel : PageModel
             // start of month
             filterdatestart = System.DateTime.Parse("2024-11-01"); 
             // today plus 6 months
-            filterdateend = filterdatestart.AddMonths(6);
+            // today
+            filterdateend = System.DateTime.Now;
+            //filterdateend = filterdatestart.AddMonths(6);
         }
         else
         {
@@ -89,13 +91,13 @@ public class IndexModel : PageModel
             if (publishdatetime >= filterdatestart && publishdatetime <= filterdateend)
         // if (true)
             {
+                
                 Song s = new Song
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
                     Publishdate = documentDictionary["publishdate"].ToString(),
-                    ImageLink = documentDictionary["imglink"].ToString(),
-                    Artistlink = documentDictionary["artistlink"].ToString(),
+                    ImageLink = documentDictionary["imglink"].ToString() ?? "Designer.png",
                     Id = documentDictionary["id"].ToString(),
                     Tune = documentDictionary["tune"].ToString(),
                 };
