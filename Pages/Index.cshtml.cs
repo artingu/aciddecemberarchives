@@ -51,9 +51,9 @@ public class IndexModel : PageModel
         Year = urlyear ?? "2024";
         if (Year == "2024")
         {
-         
+
             // start of month
-            filterdatestart = System.DateTime.Parse("2024-11-01"); 
+            filterdatestart = System.DateTime.Parse("2024-11-01");
             // today plus 6 months
             // today
             filterdateend = System.DateTime.Now;
@@ -63,13 +63,13 @@ public class IndexModel : PageModel
         {
             // every other year
             // a range of dates from the 30th of November to the 30th of January the following year
-// set model.Year to the year in the URL
-         
+            // set model.Year to the year in the URL
+
             filterdatestart = System.DateTime.Parse(Year + "-11-30"); // 30th of November 
             filterdateend = System.DateTime.Parse("2024-01-30"); // 30th of January 2024
 
         }
-  
+
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
         // get all posts from the database id ascending
         Query q = acidDecemberRef.OrderBy("id");
@@ -89,9 +89,9 @@ public class IndexModel : PageModel
 
             // add songs have a publishhdate between filterdatestart and filterdateend
             if (publishdatetime >= filterdatestart && publishdatetime <= filterdateend)
-        // if (true)
+            // if (true)
             {
-                
+
                 Song s = new Song
                 {
                     Title = documentDictionary["title"].ToString(),
@@ -126,11 +126,16 @@ public class IndexModel : PageModel
                 duration = 5.322286 // Replace with actual duration if available
             });
 
-            // randomize the order of the tracks, except for the first one
-            var random = new Random();
-            tracks = tracks.OrderBy(x => random.Next()).ToList();
+            // no random order for the root page
 
+            if (!IsRootPage)
+            {
+                var random = new Random();
+                tracks = tracks.OrderBy(x => random.Next()).ToList();
 
+            }
+
+            // Stream a json object to webamp with the tracks (how cool is that?)
             ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
         }
     }
