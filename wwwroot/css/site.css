@@ -62,6 +62,7 @@ h2 {
 }
 
 h3 {
+  font-family: "Rubik Spray Paint", system-ui;
   /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 3vw;
   color: black;
