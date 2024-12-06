@@ -133,6 +133,9 @@ public class IndexModel : PageModel
                 var random = new Random();
                 tracks = tracks.OrderBy(x => random.Next()).ToList();
 
+            } else {
+                // reverse the order of the tracks
+                tracks = tracks.Reverse().ToList();
             }
 
             // Stream a json object to webamp with the tracks (how cool is that?)
