@@ -56,8 +56,8 @@ h1 {
 h2 {
   font-family: "Rubik Spray Paint", system-ui;
   font-size: 5vw;
-  color: black;
-  text-shadow: 2px 2px 4px white;
+  color: rgb(228, 228, 12);
+  text-shadow: 2px 2px 4px rgb(140, 125, 125);
 
 }
 
