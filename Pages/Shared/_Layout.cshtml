@@ -53,10 +53,10 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                          <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-dark" href="/2024">2024</a>
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-dark" href="/2023">2023</a>
                         </li>
                         <li class="nav-item">
@@ -113,10 +113,12 @@
             <script>
                 var initialTracks = @Html.Raw(ViewData["InitialTracks"] ?? "[]");
 
-                    const Webamp = window.Webamp;
+                const Webamp = window.Webamp;
                 const webamp = new Webamp({
 
-
+                    initialSkin: {
+                        url: "/lib/webampskins/LunarStorm.wsz",
+                    },
                     initialTracks: initialTracks
                 });
 

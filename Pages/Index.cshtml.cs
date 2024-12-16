@@ -1,12 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using Google.Cloud.Firestore;
-using AcidDec.Models;
-
-
-namespace aciddecemberarchives.Pages;
+﻿namespace aciddecemberarchives.Pages;
 
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -14,8 +6,8 @@ using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
+using AcidDec.Models;
+using Google.Type;
 
 public class IndexModel : PageModel
 {
@@ -35,6 +27,7 @@ public class IndexModel : PageModel
         InitialTracksJson = string.Empty;
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _db = db ?? throw new ArgumentNullException(nameof(db));
+        Year = "2024";
     }
 
     public string InitialTracksJson { get; set; }
@@ -48,7 +41,7 @@ public class IndexModel : PageModel
         System.DateTime filterdateend;
         System.DateTime publishdatetime = System.DateTime.Now;
         IsRootPage = string.IsNullOrEmpty(urlyear);
-        Year = urlyear ?? "2024";
+        Year = urlyear;
         if (Year == "2024")
         {
 
