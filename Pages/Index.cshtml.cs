@@ -41,7 +41,7 @@ public class IndexModel : PageModel
         System.DateTime filterdateend;
         System.DateTime publishdatetime = System.DateTime.Now;
         IsRootPage = string.IsNullOrEmpty(urlyear);
-        Year = urlyear;
+        Year = urlyear ?? "2024";
         if (Year == "2024")
         {
 
