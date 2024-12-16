@@ -27,7 +27,7 @@ public class IndexModel : PageModel
         InitialTracksJson = string.Empty;
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _db = db ?? throw new ArgumentNullException(nameof(db));
-        Year = "2024";
+       /*  Year = "2024"; */
     }
 
     public string InitialTracksJson { get; set; }
