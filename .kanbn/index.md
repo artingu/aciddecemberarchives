@@ -11,9 +11,9 @@ completedColumns:
 
 ## Todo
 
-- [admin-page](tasks/admin-page.md)
-
 ## In Progress
+
+- [admin-page](tasks/admin-page.md)
 
 ## Done
 

@@ -1,0 +1,123 @@
+@page
+@model SubmitModel
+@{
+    ViewData["Title"] = "Submit a New Song";
+}
+<div class="container">
+    <h2>Files</h2>
+
+    @if (ViewData["SaveSuccess"] != null)
+    {
+        <div class="alert alert-success">
+            @ViewData["SaveSuccess"]
+        </div>
+
+    }
+
+
+    <h3>Files in 2024 Bucket</h3>
+    <p>
+      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Filename</th>
+                    <th>Size</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var obj in Model.BucketObjects)
+                    {
+                    <tr>
+                        <td>@obj.Name</td>
+                        <td>@obj.Size</td>
+                    </tr>
+                    }
+            </tbody>
+       
+            </p>
+   @*          <h3>Upload File</h3>
+            <form method="post" enctype="multipart/form-data" asp-page-handler="UploadFile">
+                <div class="form-group">
+                    <label asp-for="FileUpload.File"></label>
+                    <input type="file" asp-for="FileUpload.File" class="form-control" />
+                    <span asp-validation-for="FileUpload.File" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Upload File</button>
+            </form> *@
+
+            <h2>Submit a New Song</h2>
+            <form method="post" asp-page-handler="SaveSong">
+                <div class="form-group">
+                    <h3>Id-number</h3>
+                    <label asp-for="SongDetails.Id"></label>
+                    <input asp-for="SongDetails.Id" type="number" class="form-control" />
+                    <span asp-validation-for="SongDetails.Id" class="text-danger"></span>
+                </div>
+                <div class="form-group" ->
+                    <h3>Publishdate</h3>
+                    <label asp-for="SongDetails.PublishDate"></label>
+                    <input asp-for="SongDetails.PublishDate" type="date" class="form-control" />
+                    <span asp-validation-for="SongDetails.PublishDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <h3>Title</h3>
+                    <label asp-for="SongDetails.Title"></label>
+                    <input asp-for="SongDetails.Title" class="form-control" />
+                    <span asp-validation-for="SongDetails.Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <h3>Artist</h3>
+                    <label asp-for="SongDetails.Artist"></label>
+                    <input asp-for="SongDetails.Artist" class="form-control" />
+                    <span asp-validation-for="SongDetails.Artist" class="text-danger"></span>
+                </div>
+
+                <!-- Drop down list with bucketobjects for the image -->
+                <div class="form-group">
+                    <h3>Image</h3>
+                    <label asp-for="SongDetails.ImageLink"></label>
+                    <select asp-for="SongDetails.ImageLink" class="form-control">
+                        <option value="">Select an image</option>
+                        @foreach (var obj in Model.BucketObjects)
+                        {
+                            <option value="@obj.Name">@obj.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="SongDetails.ImageLink" class="text-danger"></span>
+
+                </div>
+                <div class="form-group">
+                    <h3>Artist Link</h3>
+                    <label asp-for="SongDetails.ArtistLink"></label>
+                    <input asp-for="SongDetails.ArtistLink" class="form-control" />
+                    <span asp-validation-for="SongDetails.ArtistLink" class="text-danger"></span>
+
+
+                </div>
+                <!-- dropdown list with bucketobjects for the tune field-->
+                <div class="form-group">
+                    <h3>Tune</h3>
+                    <label asp-for="SongDetails.Tune"></label>
+                    <select asp-for="SongDetails.Tune" class="form-control">
+                        <option value="">Select a tune</option>
+                        @foreach (var obj in Model.BucketObjects)
+                        {
+                            <option value="@obj.Name">@obj.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="SongDetails.Tune" class="text-danger"></span>
+
+                    <button type="submit" class="btn btn-primary">Submit Song Details</button>
+            </form>
+
+
+            @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+            }
+
+    </div>
