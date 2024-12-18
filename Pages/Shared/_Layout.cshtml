@@ -113,6 +113,8 @@
                 <!-- Webamp will attempt to center itself within this div -->
             </div>
 
+@if (ViewData["InitialTracks"] != null)
+{
             <script src="/js/webamp.bundle.min.js"></script>
             <script>
                 var initialTracks = @Html.Raw(ViewData["InitialTracks"] ?? "[]");
@@ -129,6 +131,7 @@
                 // Returns a promise indicating when it's done loading.
                 webamp.renderWhenReady(document.getElementById("app"));
             </script>
+            }
     </div>
 
 
