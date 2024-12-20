@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMemoryCache();
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton(FirestoreDb.Create("seismic-ground-286510"));
+// Add after FirestoreDb registration
+builder.Services.AddSingleton<TrackService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

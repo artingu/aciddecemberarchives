@@ -96,9 +96,9 @@ public class IndexModel : PageModel
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
-                    Publishdate = documentDictionary["publishdate"].ToString(),
+                    Publishdate = documentDictionary["publishdate"] as Timestamp?,
                     ImageLink = documentDictionary["imglink"].ToString() ?? "Designer.png",
-                    Id = documentDictionary["id"].ToString(),
+                    Id = documentDictionary["id"] as int?,
                     Tune = documentDictionary["tune"].ToString(),
                 };
 

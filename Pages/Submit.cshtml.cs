@@ -1,14 +1,5 @@
-using System;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using Google.Cloud.Firestore;
-using AcidDec.Models;
-using Google.Cloud.Storage.V1;
-
-
 namespace aciddecemberarchives.Pages;
-
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Google.Cloud.Firestore;
@@ -18,6 +9,9 @@ using Newtonsoft.Json;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel.DataAnnotations;
+using AcidDec.Models;
+using Google.Cloud.Storage.V1;
+
 
 // allows for the submission of new songs
 public class SongDetailsModel
@@ -38,6 +32,7 @@ public class SongDetailsModel
     public string ArtistLink { get; set; } = string.Empty;
     [Required]
     public string Tune { get; set; } = string.Empty;
+
 }
 
 /* public class FileUploadModel
@@ -51,23 +46,22 @@ public class SubmitModel : PageModel
     private readonly FirestoreDb _db;
     private readonly ILogger<SubmitModel> _logger;
 
+    private readonly TrackService _trackService;
+
+    public List<Song> Songs => _trackService.Songs;
     public SubmitModel(ILogger<SubmitModel> logger, FirestoreDb db)
     {
         _logger = logger;
         _db = db;
         SongDetails = new SongDetailsModel();
-        /*    FileUpload = new FileUploadModel(); */
         BucketObjects = new List<Google.Apis.Storage.v1.Data.Object>();
+        _trackService = new TrackService(db);
     }
 
     // Bind the song details form
     [BindProperty(Name = "SongDetails")]
     public SongDetailsModel SongDetails { get; set; }
 
-    // Bind the file upload form
-    /*   [BindProperty(Name = "FileUpload")]
-      public FileUploadModel FileUpload { get; set; }
-   */
     // Property to hold the list of bucket objects
     public List<Google.Apis.Storage.v1.Data.Object> BucketObjects { get; set; }
 
@@ -90,17 +84,21 @@ public class SubmitModel : PageModel
         {
             // Remove the prefix from the object name
             storageObject.Name = storageObject.Name.Replace(prefix, "");
+            storageObject.MediaLink = storageObject.MediaLink.Replace(prefix, "");
             BucketObjects.Add(storageObject);
+
         }
     }
     public async Task OnGetAsync()
     {
-
+        await _trackService.LoadTracksAsync();
+        // sort the songs by id
+        Songs.Sort((a, b) => a.Id.Value.CompareTo(b.Id.Value));
 
         await LoadBucketObjectsAsync();
     }
 
-    // Handler for the song details form
+    // Handler for the song details forme4bc4fc9-eed8-42d4-9917-cbdc22d64eb4
     public async Task<IActionResult> OnPostSaveSongAsync()
     {
         if (!TryValidateModel(SongDetails, nameof(SongDetails)))
@@ -129,31 +127,4 @@ public class SubmitModel : PageModel
         await LoadBucketObjectsAsync();
         return Page();
     }
-
-    // Handler for the file upload form
-    /*   public async Task<IActionResult> OnPostUploadFileAsync()
-      {
-          if (!TryValidateModel(FileUpload, nameof(FileUpload)))
-          {
-              return Page();
-          }
-
-          // Upload the file to Google Cloud Storage
-          string bucketName = "your-bucket-name";
-          string objectName = $"uploads/{Guid.NewGuid()}_{FileUpload.File.FileName}";
-
-          using (var stream = FileUpload.File.OpenReadStream())
-          {
-              var storage = await StorageClient.CreateAsync();
-              await storage.UploadObjectAsync(bucketName, objectName, null, stream);
-          }
-          // After processing, reload the bucket objects
-          await LoadBucketObjectsAsync();
-          // Store the uploaded file info in TempData
-          TempData["UploadedFileName"] = objectName;
-
-          ViewData["UploadSuccess"] = "File uploaded successfully!";
-          return Page();
-      } */
-
 }
