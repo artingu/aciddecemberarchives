@@ -1,0 +1,42 @@
+@page
+
+@{
+    Layout = null;
+}
+
+@section Styles {
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #000;
+        }
+    </style>
+}
+
+<video id="splashVideo" width="100%" height="100%" controls background="black" style="object-fit: cover;"
+    border="0">
+    <source src="https://storage.googleapis.com/acid-december2012/2024/Aci2web.mp4" type="video/mp4" />
+    <!-- This is A acid house video -->
+</video>
+
+@section Scripts {
+    <script>
+        const vid = document.getElementById("splashVideo");
+        vid.addEventListener("ended", function () {
+            window.location.href = "/"; // Adjust path as needed
+        });
+    </script>
+}
