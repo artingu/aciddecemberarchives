@@ -27,7 +27,7 @@ public class IndexModel : PageModel
         InitialTracksJson = string.Empty;
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _db = db ?? throw new ArgumentNullException(nameof(db));
-       /*  Year = "2024"; */
+        /*  Year = "2024"; */
     }
 
     public string InitialTracksJson { get; set; }
@@ -119,18 +119,22 @@ public class IndexModel : PageModel
                 duration = 5.322286 // Replace with actual duration if available
             });
 
-            // no random order for the root page
+          
 
-            if (!IsRootPage)
-            {
-                var random = new Random();
-                tracks = tracks.OrderBy(x => random.Next()).ToList();
+            tracks = tracks.Reverse().ToList();
 
-            } else {
-                // reverse the order of the tracks
-                tracks = tracks.Reverse().ToList();
-            }
+            // random order of the tracks, enable after the season is done
 
+            /*     if (!IsRootPage)
+                {
+                    var random = new Random();
+                    tracks = tracks.OrderBy(x => random.Next()).ToList();
+
+                } else {
+                    // reverse the order of the tracks
+                    tracks = tracks.Reverse().ToList();
+                }
+     */
             // Stream a json object to webamp with the tracks (how cool is that?)
             ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
         }
