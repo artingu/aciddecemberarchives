@@ -7,6 +7,16 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton(FirestoreDb.Create("seismic-ground-286510"));
 // Add after FirestoreDb registration
 builder.Services.AddSingleton<TrackService>();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,7 +30,13 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
-
+app.UseWhen(context =>
+    context.Request.Path.StartsWithSegments("/FileUpload", StringComparison.OrdinalIgnoreCase), // or "/SpecialArea"
+    subApp =>
+    {
+        subApp.UseSession();
+    }
+);
 app.UseRouting();
 
 app.UseAuthorization();

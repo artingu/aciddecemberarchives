@@ -6,11 +6,10 @@ using Google.Cloud.Firestore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel.DataAnnotations;
 using AcidDec.Models;
 using Google.Cloud.Storage.V1;
+using System.Runtime.InteropServices;
 
 
 // allows for the submission of new songs
@@ -29,17 +28,12 @@ public class SongDetailsModel
 
     public string ImageLink { get; set; } = string.Empty;
 
-    public string ArtistLink { get; set; } = string.Empty;
+    public string? ArtistLink { get; set; } = string.Empty;
+
     [Required]
     public string Tune { get; set; } = string.Empty;
 
 }
-
-/* public class FileUploadModel
-{
-    [Required]
-    public IFormFile File { get; set; } = null!;
-} */
 
 public class SubmitModel : PageModel
 {
@@ -98,11 +92,15 @@ public class SubmitModel : PageModel
         await LoadBucketObjectsAsync();
     }
 
-    // Handler for the song details forme4bc4fc9-eed8-42d4-9917-cbdc22d64eb4
+    // Handler for the song details
     public async Task<IActionResult> OnPostSaveSongAsync()
     {
         if (!TryValidateModel(SongDetails, nameof(SongDetails)))
         {
+            // i want to return the page with the form filled out with the previous values
+
+
+
             return Page();
         }
 
