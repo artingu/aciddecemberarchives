@@ -60,10 +60,10 @@ public class RssModel : PageModel
                 {
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
-                    Publishdate = documentDictionary["publishdate"].ToString(),
+                    Publishdate = documentDictionary["publishdate"] as Google.Cloud.Firestore.Timestamp?,
                     ImageLink = documentDictionary["imglink"].ToString(),
                     Artistlink = documentDictionary["artistlink"].ToString(),
-                    Id = documentDictionary["id"].ToString()
+                    Id = documentDictionary["id"] as int?,
                 });
 
             }

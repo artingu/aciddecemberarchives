@@ -102,7 +102,9 @@ mediumrare {
   max-width: 1220px;
 }
 
-
+tr {
+  color: rgb(255, 252, 252);
+}
 html {
   position: relative;
   min-height: 100%;
