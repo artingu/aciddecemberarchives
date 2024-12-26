@@ -1,0 +1,42 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<h2>Login</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p>
+            @ViewData["HashedPassword"] <br />
+            @ViewData["UnhashedPassword"]
+             @if (ViewData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-error">
+            @ViewData["ErrorMessage"]
+        </div>
+
+    }
+                <div class="form-group">
+                    <form method="post">
+                        <div>
+                            <label asp-for="UserName"></label>
+                            <input asp-for="UserName" />
+                        </div>
+                        <div>
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" type="password" />
+                        </div>
+                        <button type="submit">Log in</button>
+                    </form>
+
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="text-danger">@Model.ErrorMessage</div>
+                    }
+</p>
+                </div>
+                
+        </div>

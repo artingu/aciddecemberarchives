@@ -32,6 +32,7 @@ public class IndexModel : PageModel
 
     public IndexModel(ILogger<IndexModel> logger, FirestoreDb db)
     {
+        Year = string.Empty;
         InitialTracksJson = string.Empty;
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _db = db ?? throw new ArgumentNullException(nameof(db));

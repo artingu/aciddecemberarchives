@@ -1,4 +1,6 @@
 using Google.Cloud.Firestore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,16 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Services
+    .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        // This path is where unauthenticated users are redirected to sign in
+        options.LoginPath = "/Login";
+        // Optional: specify logout path, access denied path, etc.
+        options.LogoutPath = "/Logout";
+        options.AccessDeniedPath = "/Error";
+    });
 
 
 var app = builder.Build();
@@ -27,20 +39,25 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Conditionally apply session AND authentication only for certain paths
+app.UseWhen(context =>
+    context.Request.Path.StartsWithSegments("/FileUpload", StringComparison.OrdinalIgnoreCase)
+    || context.Request.Path.StartsWithSegments("/Submit", StringComparison.OrdinalIgnoreCase),
+    subApp =>
+    {
+        // Enable session
+        subApp.UseSession();
+
+        // Enable cookie authentication only for these paths
+        subApp.UseAuthentication();
+        subApp.UseAuthorization();
+    }
+);
+
 app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseWhen(context =>
-    context.Request.Path.StartsWithSegments("/FileUpload", StringComparison.OrdinalIgnoreCase), // or "/SpecialArea"
-    subApp =>
-    {
-        subApp.UseSession();
-    }
-);
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapRazorPages();
-
 app.Run();

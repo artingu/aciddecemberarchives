@@ -10,6 +10,7 @@ using System.ComponentModel.DataAnnotations;
 using AcidDec.Models;
 using Google.Cloud.Storage.V1;
 using System.Runtime.InteropServices;
+using Microsoft.AspNetCore.Authorization;
 
 
 // allows for the submission of new songs
@@ -34,7 +35,7 @@ public class SongDetailsModel
     public string Tune { get; set; } = string.Empty;
 
 }
-
+[Authorize]
 public class SubmitModel : PageModel
 {
     private readonly FirestoreDb _db;
@@ -87,7 +88,7 @@ public class SubmitModel : PageModel
     {
         await _trackService.LoadTracksAsync();
         // sort the songs by id
-        Songs.Sort((a, b) => a.Id.Value.CompareTo(b.Id.Value));
+        Songs.Sort((a, b) => (a.Id ?? 0).CompareTo(b.Id ?? 0));
 
         await LoadBucketObjectsAsync();
     }
@@ -111,7 +112,7 @@ public class SubmitModel : PageModel
             {"artist", SongDetails.Artist},
             {"publishdate", Timestamp.FromDateTime(SongDetails.PublishDate.ToUniversalTime())},
             {"imglink", SongDetails.ImageLink},
-            {"artistlink", SongDetails.ArtistLink},
+            {"artistlink", SongDetails.ArtistLink ?? string.Empty},
             {"tune", SongDetails.Tune},
             {"id", SongDetails.Id}
         };

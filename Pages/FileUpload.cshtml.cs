@@ -12,8 +12,9 @@ using Newtonsoft.Json;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
-
+[Authorize]
 public class FileUploadModel : PageModel
 {
     [BindProperty]
