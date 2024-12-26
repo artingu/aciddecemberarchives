@@ -1,23 +1,23 @@
-@page
+@page "/login"
 @model LoginModel
 @{
     ViewData["Title"] = "Login";
 }
 
 
-<h2>Login</h2>
-<div class="container">
-    <div class="row">
+
+<div class="container"><h2>Login</h2>
+    <div class="text center container">
         <div class="col-12">
             <p>
-            @ViewData["HashedPassword"] <br />
-            @ViewData["UnhashedPassword"]
+           
              @if (ViewData["ErrorMessage"] != null)
     {
+         <h2 class="text-danger">
         <div class="alert alert-error">
             @ViewData["ErrorMessage"]
         </div>
-
+</h2>
     }
                 <div class="form-group">
                     <form method="post">

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Google.Cloud.Firestore;
 using BCrypt.Net;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 
 [AllowAnonymous]
@@ -22,9 +23,11 @@ public class LoginModel : PageModel
         _db = db;
     }
     [BindProperty]
+    [Required]
     public string UserName { get; set; }
 
     [BindProperty]
+    [Required]
     public string Password { get; set; }
 
     public string ErrorMessage { get; set; }
@@ -42,14 +45,18 @@ public class LoginModel : PageModel
 
     public async Task<IActionResult> OnPostAsync(string userName, string password)
     {
+        // validate form input  
+        if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+
         var userDoc = await _db.Collection("acidlogins").Document(UserName).GetSnapshotAsync();
 
-// hash the password using BCrypt
+        // hash the password using BCrypt
         var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
         // decrypt again with BCrypt.Verify(Password, hashedPassword)
         var unhashedPassword = BCrypt.Net.BCrypt.Verify(Password, hashedPassword);
-        ViewData["HashedPassword"] = "Hashed " + hashedPassword;
-        ViewData["UnhashedPassword"] = "Unhashed " + unhashedPassword;
         if (userDoc.Exists)
         {
             var storedPasswordHash = userDoc.GetValue<string>("passwordHash");
@@ -66,12 +73,14 @@ public class LoginModel : PageModel
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
 
                 return RedirectToPage("/FileUpload"); // or wherever
-            } else { ViewData["ErrorMessage"] = "Wrong password"; return Page(); }
-            
-
-        } else { ViewData["ErrorMessage"] = "User not found"; return Page(); }
+            }
+            else { ViewData["ErrorMessage"] = "Wrong password"; return Page(); }
 
 
-        
+        }
+        else { ViewData["ErrorMessage"] = "User not found"; return Page(); }
+
+
+
     }
 }

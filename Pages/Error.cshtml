@@ -3,16 +3,16 @@
 @{
     ViewData["Title"] = "Error";
 }
+<div class="text-center">
+    <h2 class="text-danger">Error.</h2>
+    <p class="lead">Sorry, seems we had an acident and this is the end of the road for now.</p>
+    <p>While you wait you can always go take a look at <a href="https://jodi.org">jodi.org</a>, or why not play some <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>. Pick up a deck of cards and learn the dutch shuffle. Ok thats enough ideas from us. Good Luck, you can do this!</p>
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+</div>
 
-<h1 class="text-danger">Error.</h1>
-<p>Sorry, seems we had an acident and this is the end of the road for now.</p>
-<p>While you wait you can always go take a look at <a href="https://jodi.org">jodi.org</a>, or why not play some <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>. Pick up a deck of cards and learn the dutch shuffle. Ok thats enough ideas from us. Good Luck, you can do this!</p>
 
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
-}
-
-<

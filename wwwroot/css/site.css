@@ -75,10 +75,11 @@ h4 {
   color: rgb(255, 252, 252)
 }
 
-p {
+p, label {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */
   color: rgb(255, 252, 252)
+  
 }
 ul {
   color: aliceblue;

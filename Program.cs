@@ -26,6 +26,8 @@ builder.Services
         // Optional: specify logout path, access denied path, etc.
         options.LogoutPath = "/Logout";
         options.AccessDeniedPath = "/Error";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(1440);
+        options.SlidingExpiration = true;
     });
 
 
