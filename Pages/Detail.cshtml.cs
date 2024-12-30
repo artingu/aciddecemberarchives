@@ -66,7 +66,7 @@ public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageMode
                     ImageLink = snapshot.GetValue<string>("imglink") ?? "_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg",
                     Artistlink = snapshot.GetValue<string>("artistlink") ?? string.Empty,
                     Tune = snapshot.GetValue<string>("tune") ?? string.Empty,
-                    Html = snapshot.GetValue<string>("html") ?? string.Empty,
+                    Html = snapshot.TryGetValue<string>("html", out string? html) ? html : string.Empty,
                 };
 
                 if (Song.Tune != "") { 
