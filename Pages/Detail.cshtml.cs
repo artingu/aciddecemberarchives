@@ -17,17 +17,12 @@ using AcidDec.Models;
 using Google.Type;
 using Newtonsoft.Json;
 
-public class DetailModel : PageModel
+public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageModel
 {
-    private readonly FirestoreDb _db;
-    private readonly ILogger<DetailModel> _logger;
+    private readonly ILogger<DetailModel> _logger = logger;
+    private readonly FirestoreDb _db = db;
     public Song? Song { get; set; }
-    public string Year { get; set; }
-    public DetailModel(ILogger<DetailModel> logger, FirestoreDb db)
-    {
-        _logger = logger;
-        _db = db;
-    }
+    public string Year { get; set; } = string.Empty;
     public async Task OnGetAsync(string urlyear, int id)
     {
         Year = urlyear;
@@ -49,7 +44,7 @@ public class DetailModel : PageModel
 
 
             // rewrite the query so it only gets the song with the id that is november of urlyear, to january of urlyear + 1
-          
+
             System.DateTime novemberyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear), 11, 1), DateTimeKind.Utc);
             System.DateTime januaryyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear) + 1, 1, 1), DateTimeKind.Utc);
             Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereGreaterThanOrEqualTo("publishdate", novemberyear).WhereLessThanOrEqualTo("publishdate", januaryyear);
@@ -71,8 +66,10 @@ public class DetailModel : PageModel
                     ImageLink = snapshot.GetValue<string>("imglink") ?? "_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg",
                     Artistlink = snapshot.GetValue<string>("artistlink") ?? string.Empty,
                     Tune = snapshot.GetValue<string>("tune") ?? string.Empty,
+                    Html = snapshot.GetValue<string>("html") ?? string.Empty,
                 };
 
+                if (Song.Tune != "") { 
                 var tracks = new List<Song> { Song }.Select(song => new
                 {
                     metaData = new
@@ -86,12 +83,12 @@ public class DetailModel : PageModel
                 });
 
                 ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
-
             }
-
-
         }
 
+
     }
+
+}
 
 }

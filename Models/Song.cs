@@ -18,5 +18,7 @@ namespace AcidDec.Models
         public string? Tune { get; set; }
         [FirestoreProperty("id")]
         public long? Id { get; set; }
+        [FirestoreProperty("html")]
+        public string? Html { get; set; }
     }
 }

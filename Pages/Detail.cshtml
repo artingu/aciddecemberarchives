@@ -24,7 +24,13 @@
          <h3>  <a href="https://@Song?.Artistlink">Hear more from @Song?.Artist</a>  </h3>
         }
        
+       @if (Song?.Html !="")
+        {
+            <h3>@Html.Raw(Song?.Html)</h3>
+        }
+    
+    @if (Song?.Tune !=""){
        <h3> <a href="https://storage.googleapis.com/acid-december2012/@Model.Year/@Song.Tune" download>Download this tune</a> </h3>
-
+}
     </div>
 </div>
