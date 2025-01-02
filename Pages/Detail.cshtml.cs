@@ -46,9 +46,16 @@ public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageMode
             // rewrite the query so it only gets the song with the id that is november of urlyear, to january of urlyear + 1
 
             System.DateTime novemberyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear), 11, 1), DateTimeKind.Utc);
-            System.DateTime januaryyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear) + 1, 1, 1), DateTimeKind.Utc);
+            System.DateTime januaryyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear) + 1, 1, 31), DateTimeKind.Utc);
+
+          
+
+
             Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereGreaterThanOrEqualTo("publishdate", novemberyear).WhereLessThanOrEqualTo("publishdate", januaryyear);
             QuerySnapshot querysnapshot = await query.GetSnapshotAsync();
+            
+        
+            
             if (querysnapshot.Count == 0)
             {
                 Song = new Song { };
