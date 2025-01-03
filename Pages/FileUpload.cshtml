@@ -12,6 +12,12 @@
             @ViewData["UploadSuccess"]
         </div>
     }
+    @if (ViewData["UploadError"] != null)
+    {
+        <div class="alert alert-danger">
+            @ViewData["UploadError"]
+        </div>
+    }
 
 
     <h3>Files in 2024 Bucket</h3>
@@ -38,6 +44,10 @@
        
             </p>
              <h3>Upload File</h3>
+             <p>How to post a track
+1.- Upload the files with this page. 2.- go to <a href="\submit">submit</a> 
+
+             </p>
             <form method="post" enctype="multipart/form-data" asp-page-handler="UploadFile">
                 <div class="form-group">
                     <label asp-for="File"></label>

@@ -20,7 +20,6 @@ public class FileUploadModel : PageModel
     [BindProperty]
     [Required]
     public new IFormFile File { get; set; } = null!;
-    private readonly FirestoreDb? _db;
     private readonly ILogger<FileUploadModel> _logger;
 
 
@@ -80,11 +79,20 @@ public class FileUploadModel : PageModel
 
         string objectName = $"2024/{File.FileName}";
 
+try {
         using (var stream = File.OpenReadStream())
         {
             var storage = await StorageClient.CreateAsync();
             await storage.UploadObjectAsync(bucketName, objectName, null, stream);
         }
+     } catch (Exception ex) {
+
+        // log the error
+        _logger.LogError(ex, "Error uploading file");
+
+        ViewData["UploadError"] = "Error uploading file: " + ex.Message;
+
+     }
         // After processing, reload the bucket objects
         await LoadBucketObjectsAsync();
         // Store the uploaded file info in TempData
