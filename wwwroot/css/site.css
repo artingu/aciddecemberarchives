@@ -16,9 +16,10 @@ h1 {
   font-size: 12vw;
 
   color: rgba(225, 225, 225, .01);
-  background-image: url("/img/fireworks.gif");  
+  background-image: url("/img/sound-sound-waves.gif");  
   background-color: rgb(221, 227, 51);
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
+  background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
   /* animation: animate 15s ease-in-out infinite; */
