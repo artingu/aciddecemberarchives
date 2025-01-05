@@ -90,6 +90,8 @@ public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageMode
                 });
 
                 ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
+                ViewData["ImageLink"] = Song.ImageLink;
+                ViewData["Description"] = Song.Title + " by " + Song.Artist;
             }
         }
 
