@@ -62,4 +62,5 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
+app.MapFallbackToPage("/splash");
 app.Run();
