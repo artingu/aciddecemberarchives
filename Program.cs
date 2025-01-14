@@ -1,5 +1,8 @@
 using Google.Cloud.Firestore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,16 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Services.AddRateLimiter(_ => _
+    .AddFixedWindowLimiter(policyName: "fixed", options =>
+    {
+        options.PermitLimit = 4;
+        options.Window = TimeSpan.FromSeconds(12);
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+        options.QueueLimit = 2;
+    }));
+
+
 builder.Services
     .AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -33,6 +46,12 @@ builder.Services
 
 var app = builder.Build();
 
+
+app.UseRateLimiter();
+
+static string GetTicks() => (DateTime.Now.Ticks & 0x11111).ToString("00000");
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -40,6 +59,10 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+
+app.MapGet("/", () => Results.Ok($"Hello {GetTicks()}"))
+                           .RequireRateLimiting("fixed");
 
 // Conditionally apply session AND authentication only for certain paths
 app.UseWhen(context =>
