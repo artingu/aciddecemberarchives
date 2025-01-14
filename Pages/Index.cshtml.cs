@@ -139,6 +139,7 @@ public class IndexModel : PageModel
      */
             // Stream a json object to webamp with the tracks (how cool is that?)
             ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
+            ViewData["Year"] = Year;
         }
     }
 }

@@ -10,7 +10,7 @@
 
 <div class="text-center container">
     <h1>ACID DECEMBER</h1>
-
+    <h2>@year</h2>
     <div class="container">
 
         <div class="row">
@@ -41,35 +41,39 @@
             }
             <div class="col-12">
                 <br>
-                
-    
+
+
 
                 @if (Model.IsRootPage)
                 {
-               
+
                 }
-                <p>Get the acid in your Fediverse-feed, follow: <h3><a
-                        href="https://v.basspistol.org/a/acid_december/videos"
-                        rel="me">@@acid_december@v.basspistol.org</a></h3></p>
+                <p>Get the acid in your Fediverse-feed, follow:
+                <h3><a href="https://v.basspistol.org/a/acid_december/videos"
+                        rel="me">@@acid_december@v.basspistol.org</a></h3>
+                </p>
                 <br><br><br>
             </div>
 
             @foreach (var song in Model?.Songs)
             {
-              
-                
-                   
-                        
+
+
+
+
                 <div class="col-6">
                     <a href="/@Model.Year/@song.Id">
                         <h2>@song.Id</h2>
                         <p>
-                        @if (song.ImageLink != null)  {    <img class="float-start  border-dark"
-                                src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" /> }
+                            @if (song.ImageLink != null)
+                            {
+                                <img class="float-start  border-dark"
+                                    src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" />
+                            }
                             <h2></h2>
                             <h3>@song.Artist</h3>
                             <h3>@song.Title</h3>
-                          
+
                         </p>
                     </a>
                 </div>
