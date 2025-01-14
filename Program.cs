@@ -61,9 +61,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 
-app.MapGet("/", () => Results.Ok($"Hello {GetTicks()}"))
+/* app.MapGet("/", () => Results.Ok($"Hello {GetTicks()}"))
                            .RequireRateLimiting("fixed");
-
+ */
 // Conditionally apply session AND authentication only for certain paths
 app.UseWhen(context =>
     context.Request.Path.StartsWithSegments("/FileUpload", StringComparison.OrdinalIgnoreCase)
