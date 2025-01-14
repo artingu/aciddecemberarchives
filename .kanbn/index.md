@@ -9,6 +9,10 @@ completedColumns:
 
 ## Backlog
 
+- [auto-tagger-of-mp3s](tasks/auto-tagger-of-mp3s.md)
+- [post-new-entries-to-fediverse](tasks/post-new-entries-to-fediverse.md)
+- [integration-with-nostr](tasks/integration-with-nostr.md)
+
 ## Todo
 
 ## In Progress

@@ -2,7 +2,7 @@
 @model DetailModel
 @{
     var Song = Model.Song;
-    var cdn = "https://storage.googleapis.com/acid-december2012/2023/";
+    var cdn = "https://storage.googleapis.com/acid-december2012/"+Model.Year+"/";
     ViewData["Title"] = Song?.Title + " by " + Song?.Artist + " on Acid december";
 
     ViewData["ImageLink"] = $"{cdn}{Song?.ImageLink}";
