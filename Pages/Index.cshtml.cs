@@ -60,7 +60,8 @@ public class IndexModel : PageModel
             // set model.Year to the year in the URL
 
             filterdatestart = System.DateTime.Parse(Year + "-11-30"); // 30th of November 
-            filterdateend = System.DateTime.Parse("2024-01-30"); // 30th of January 2024
+            var Yearplus = (int.Parse(Year) + 1).ToString();
+            filterdateend = System.DateTime.Parse(Yearplus + "-01-30"); // 30th of January 2024
 
         }
 

@@ -100,6 +100,9 @@
                     <td>
                         @song.Tune
                     </td>
+                    <td>
+                        @song.Html
+                    </td>
                 </tr>
             }
         </tbody>
@@ -155,9 +158,16 @@
             <label asp-for="SongDetails.ArtistLink"></label>
             <input asp-for="SongDetails.ArtistLink" class="form-control" />
             <span asp-validation-for="SongDetails.ArtistLink" class="text-danger"></span>
+        </div>
+           <div class="form-group">
+            <h3>Html</h3>
+            <label asp-for="SongDetails.Html"></label>
+            <input asp-for="SongDetails.Html" class="form-control" />
+            <span asp-validation-for="SongDetails.Html" class="text-danger"></span>
 
 
         </div>
+
         <!-- dropdown list with bucketobjects for the tune field-->
         <div class="form-group">
             <h3>Tune</h3>
@@ -171,6 +181,7 @@
                 }
             </select>
             <span asp-validation-for="SongDetails.Tune" class="text-danger"></span>
+        
 
             <button type="submit" class="btn btn-primary">Submit Song Details</button>
     </form>

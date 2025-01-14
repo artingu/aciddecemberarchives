@@ -31,8 +31,10 @@ public class SongDetailsModel
 
     public string? ArtistLink { get; set; } = string.Empty;
 
-    [Required]
+    
     public string Tune { get; set; } = string.Empty;
+
+    public string Html { get; set; } = string.Empty;
 
 }
 [Authorize]
@@ -67,7 +69,7 @@ public class SubmitModel : PageModel
 
         // Specify the bucket name and prefix
         string bucketName = "acid-december2012";
-        string prefix = "2024/";
+        string prefix = "2012/";
 
         // List the objects in the bucket
         var objects = storage.ListObjectsAsync(bucketName, prefix);
@@ -114,6 +116,7 @@ public class SubmitModel : PageModel
             {"imglink", SongDetails.ImageLink},
             {"artistlink", SongDetails.ArtistLink ?? string.Empty},
             {"tune", SongDetails.Tune},
+            {"html", SongDetails.Html},
             {"id", SongDetails.Id}
         };
 

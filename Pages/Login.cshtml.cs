@@ -8,20 +8,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Google.Cloud.Firestore;
 using BCrypt.Net;
-using System.ComponentModel;
+using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
 
-
+[ValidateAntiForgeryToken]
 [AllowAnonymous]
 public class LoginModel : PageModel
 {
-
     private readonly FirestoreDb _db;
+    private readonly ILogger<LoginModel> _logger;
 
-    public LoginModel(FirestoreDb db)
+    public LoginModel(FirestoreDb db, ILogger<LoginModel> logger)
     {
         _db = db;
+        _logger = logger;
     }
+
     [BindProperty]
     [Required]
     public string UserName { get; set; }
@@ -36,14 +38,9 @@ public class LoginModel : PageModel
     {
         return Page();
     }
-    // Hardcoded list of username/password pairs
-    /*     private readonly Dictionary<string, string> _userStore = new()
-        {
-            { "alice", "password1" },
-            { "bob", "secret2" }
-        }; */
 
-    public async Task<IActionResult> OnPostAsync(string userName, string password)
+
+    public async Task<IActionResult> OnPostAsync()
     {
         // validate form input  
         if (!ModelState.IsValid)
@@ -53,34 +50,36 @@ public class LoginModel : PageModel
 
         var userDoc = await _db.Collection("acidlogins").Document(UserName).GetSnapshotAsync();
 
-        // hash the password using BCrypt
-        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
-        // decrypt again with BCrypt.Verify(Password, hashedPassword)
-        var unhashedPassword = BCrypt.Net.BCrypt.Verify(Password, hashedPassword);
         if (userDoc.Exists)
         {
             var storedPasswordHash = userDoc.GetValue<string>("passwordHash");
 
-            if (BCrypt.Net.BCrypt.Verify(Password, storedPasswordHash))
+            if (!string.IsNullOrEmpty(storedPasswordHash) && BCrypt.Net.BCrypt.Verify(Password, storedPasswordHash))
             {
+                _logger.LogInformation("User {UserName} successfully logged in.", UserName);
 
-                // Validate user. If valid, issue cookie:
                 var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, userName)
-        };
+                {
+                    new Claim(ClaimTypes.Name, UserName)
+                };
+
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
 
-                return RedirectToPage("/FileUpload"); // or wherever
+                return RedirectToPage("/submit");
             }
-            else { ViewData["ErrorMessage"] = "Wrong password"; return Page(); }
-
-
+            else
+            {
+                _logger.LogWarning("Invalid password for user: {UserName}", UserName);
+                ErrorMessage = "Invalid credentials";
+            }
         }
-        else { ViewData["ErrorMessage"] = "User not found"; return Page(); }
+        else
+        {
+            _logger.LogWarning("User not found: {UserName}", UserName);
+            ErrorMessage = "Invalid credentials";
+        }
 
-
-
+        return Page();
     }
 }

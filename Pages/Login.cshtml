@@ -10,17 +10,18 @@
     <div class="text center container">
         <div class="col-12">
             <p>
-           
-             @if (ViewData["ErrorMessage"] != null)
-    {
-         <h2 class="text-danger">
-        <div class="alert alert-error">
-            @ViewData["ErrorMessage"]
-        </div>
-</h2>
-    }
+                @ViewData["hashedPassword"]    
+                @if (ViewData["ErrorMessage"] != null)
+                {
+             <h2 class="text-danger">
+            <div class="alert alert-error">
+                            @ViewData["ErrorMessage"]
+            </div>
+    </h2>
+                }
                 <div class="form-group">
-                    <form method="post">
+                    <form method="post" asp-antiforgery="true">
+                        @Html.AntiForgeryToken()
                         <div>
                             <label asp-for="UserName"></label>
                             <input asp-for="UserName" />
@@ -34,9 +35,9 @@
 
                     @if (!string.IsNullOrEmpty(Model.ErrorMessage))
                     {
-                        <div class="text-danger">@Model.ErrorMessage</div>
+                            <div class="text-danger">@Model.ErrorMessage</div>
                     }
 </p>
                 </div>
-                
+
         </div>
