@@ -23,10 +23,10 @@ builder.Services.AddSession(options =>
 builder.Services.AddRateLimiter(_ => _
     .AddFixedWindowLimiter(policyName: "fixed", options =>
     {
-        options.PermitLimit = 4;
+        options.PermitLimit = 40;
         options.Window = TimeSpan.FromSeconds(12);
         options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
-        options.QueueLimit = 2;
+        options.QueueLimit = 20;
     }));
 
 
