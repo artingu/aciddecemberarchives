@@ -48,17 +48,18 @@ public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageMode
             System.DateTime novemberyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear), 11, 1), DateTimeKind.Utc);
             System.DateTime januaryyear = System.DateTime.SpecifyKind(new(int.Parse(urlyear) + 1, 1, 31), DateTimeKind.Utc);
 
-          
+
 
 
             Query query = acidDecemberRef.WhereEqualTo("id", songid).WhereGreaterThanOrEqualTo("publishdate", novemberyear).WhereLessThanOrEqualTo("publishdate", januaryyear);
             QuerySnapshot querysnapshot = await query.GetSnapshotAsync();
-            
-        
-            
+
+
+
             if (querysnapshot.Count == 0)
             {
                 Song = new Song { };
+                Response.Redirect("/404");
             }
             else
             {
@@ -76,28 +77,29 @@ public class DetailModel(ILogger<DetailModel> logger, FirestoreDb db) : PageMode
                     Html = snapshot.TryGetValue<string>("html", out string? html) ? html : string.Empty,
                 };
 
-                if (Song.Tune != "") { 
-                var tracks = new List<Song> { Song }.Select(song => new
+                if (Song.Tune != "")
                 {
-                    metaData = new
+                    var tracks = new List<Song> { Song }.Select(song => new
                     {
-                        artist = song.Artist,
-                        title = song.Title,
-                        album = "Acid December"
-                    },
-                    url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
-                    duration = 5.322286 // This means nothing, it gets overwritten by the actual duration
-                });
-
-                ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
-                ViewData["ImageLink"] = Song.ImageLink;
-                ViewData["Description"] = Song.Title + " by " + Song.Artist;
+                        metaData = new
+                        {
+                            artist = song.Artist,
+                            title = song.Title,
+                            album = "Acid December"
+                        },
+                        url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
+                        duration = 5.322286 // This means nothing, it gets overwritten by the actual duration
+                    });
+                 
+                    ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
+                    ViewData["ImageLink"] = Song.ImageLink;
+                    ViewData["Description"] = Song.Title + " by " + Song.Artist;
+                }
             }
+
+
         }
 
-
     }
-
-}
 
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using AcidDec.Models;
 using Google.Type;
+using System.Text.RegularExpressions;
 
 public class IndexModel : PageModel
 {
@@ -41,6 +42,10 @@ public class IndexModel : PageModel
         System.DateTime filterdatestart;
         System.DateTime filterdateend;
         System.DateTime publishdatetime = System.DateTime.Now;
+        // validate urlyear is a valid year
+        // what does the \ mean?
+        // a: 
+
         IsRootPage = string.IsNullOrEmpty(urlyear);
         Year = urlyear ?? "2024";
         if (Year == "2024")
@@ -105,7 +110,6 @@ public class IndexModel : PageModel
 
         }
 
-
         foreach (DocumentSnapshot document in snapshot.Documents)
         {
             // Populate winamp playlist
@@ -121,7 +125,12 @@ public class IndexModel : PageModel
                 duration = 5.322286 // Replace with actual duration if available
             });
 
-          
+            if (Songs.Count == 0)
+            {
+                // no songs found
+                // redirect to the root page
+                Response.Redirect("/404");
+            }
 
             tracks = tracks.Reverse().ToList();
 
