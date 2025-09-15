@@ -1,0 +1,22 @@
+{
+  "name": "AciidDec Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "GoogleCloudTools.cloudcode"
+      ]
+    }
+  },
+  "remoteUser": "root",
+  "mounts": [
+    "source=${localEnv:HOME}/.gcloud/google-creds.json,target=/workspace/google-creds.json,type=bind,consistency=cached"
+  ],
+  "containerEnv": {
+    "GOOGLE_APPLICATION_CREDENTIALS": "/workspace/google-creds.json"
+  }
+}
