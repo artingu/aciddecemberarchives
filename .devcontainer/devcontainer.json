@@ -1,5 +1,5 @@
 {
-  "name": "AciidDec Dev Container",
+  "name": "Acid December",
   "build": {
     "dockerfile": "Dockerfile"
   },
