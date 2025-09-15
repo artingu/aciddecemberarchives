@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ES:wght@400;900&display=swap');
+
 html {
   font-size: 14px;
 
 
+}
+.playwrite-es-heavy {
+  font-family: "Playwrite ES", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
@@ -12,11 +20,11 @@ html {
 
 /* Make the h1 font as wide as the screen */
 h1 {
-  font-family: "Rubik Spray Paint", system-ui;
+  font-family: "Playwrite ES", system-ui;
   font-size: 9vw;
 
   color: rgba(225, 225, 225, .01);
-  background-image: url("/img/e1f44c4fe24f9379319ac22987067d5e.gif");  
+  background-image: url("/img/tumblr_nrzcp9gWwD1sk87juo1_500.gif");
   background-color: rgb(221, 227, 51);
   /* background-repeat: repeat; */
   background-size: cover;
@@ -24,10 +32,31 @@ h1 {
   background-clip: text;
   animation: animate 150s ease-in-out infinite;
   text-align: center;
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
   font-weight: 900;
 
 }
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  background-image: url("/img/tapet.gif");
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex
+;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.8);
+     /*  Rounded corners please */
+   border-radius: 0.5rem;
+   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+
+
+
 
 @keyframes animate {
 
@@ -49,24 +78,16 @@ h1 {
   }
 }
 
-
-
-
-
-
 h2 {
-  font-family: "Rubik Spray Paint", system-ui;
-  font-size: 5vw;
-  color: rgb(228, 228, 12);
-  text-shadow: 2px 2px 4px rgb(140, 125, 125);
-
+ font-family: "Playwrite ES", system-ui;
+  font-size: 7vw;
 }
 
 h3 {
-  font-family: "Rubik Spray Paint", system-ui;
+  font-family: "Playwrite ES", system-ui;
   /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 3vw;
-  color: rgb(237, 34, 34);
+  color: rgb(231, 231, 231);
   text-shadow: 2px 2px 4px rgb(15, 15, 15);
 }
 
@@ -76,16 +97,19 @@ h4 {
   color: rgb(255, 252, 252)
 }
 
-p, label {
+p,
+label {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */
-  color: rgb(255, 252, 252)
-  
+  color: rgb(255, 252, 252);
+  font-size: 5.2rem;
+  font-family: "Playwrite ES", cursive;
 }
+
 ul {
   color: aliceblue;
   list-style-type: none;
-  
+
 }
 
 img {
@@ -107,6 +131,7 @@ mediumrare {
 tr {
   color: rgb(255, 252, 252);
 }
+
 html {
   position: relative;
   min-height: 100%;
@@ -114,8 +139,8 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: rgb(50, 50, 50);
- background-image: url('/img/371525055_367073175736285_3668511195066064640_n.jpg'); 
+  background-color: rgb(7, 105, 25);
+  background-image: url('/img/SjzWsXn.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
