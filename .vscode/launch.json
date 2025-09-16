@@ -11,7 +11,7 @@
             "type": "msedge",
             "webRoot": "${workspaceFolder}"
         },
-        §
+        
         {
             "type": "msedge",
             "request": "launch",

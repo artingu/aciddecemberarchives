@@ -89,7 +89,7 @@ h2 {
   font-size: 7vw;
 }
 
-h3 {
+h3,p {
   font-family: "Playwrite ES", system-ui;
   /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 3vw;
@@ -103,7 +103,7 @@ h4 {
   color: rgb(255, 252, 252)
 }
 
-p,
+
 label {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */

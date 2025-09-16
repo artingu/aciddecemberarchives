@@ -1,5 +1,5 @@
 @page "/splash"
-
+@model SplashModel
 <div class="text-center container">
     <h1>Acid December</h1>
 
@@ -19,7 +19,17 @@
             });
         </script>
     }
- *@
+ *@/
 
- <h4>Soon</h4>
+  
+
+<h3>
+  @foreach (var song in Model?.Songs)
+  {
+    <div class="col-12">
+      @song.Artist
+    </div>
+  }
+</h3>
+
 </div>
