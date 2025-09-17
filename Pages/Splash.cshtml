@@ -28,11 +28,24 @@
 {
     <div class="col-12">
       <h3>
+      
         <div class="artist-entry">
-        @artist.Artist
-        @* Show or hide the songentries when i click the artist name *@
-</div>
-        <div class="song-entries">
+          <span class="artist-name">@artist.Artist</span>
+        
+        </div>
+        <div class="song-entries" style="display:none;">
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          document.querySelectorAll(".artist-name").forEach(function (artistNameElem, idx) {
+            artistNameElem.addEventListener("click", function () {
+        const songEntries = artistNameElem.closest(".artist-entry").nextElementSibling;
+        if (songEntries && songEntries.classList.contains("song-entries")) {
+          songEntries.style.display = songEntries.style.display === "none" ? "block" : "none";
+        }
+            });
+          });
+        });
+      </script>
         @foreach (AcidDec.Models.Song song in Model?.Songs)
         {
           @if (song.Artist == artist.Artist)
