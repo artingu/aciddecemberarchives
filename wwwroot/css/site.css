@@ -95,15 +95,28 @@ h3,p {
   font-size: 3vw;
   color: rgb(231, 231, 231);
   text-shadow: 2px 2px 4px rgb(15, 15, 15);
+  margin-bottom: 30px;
 }
 
 h4 {
-  /* font-family: 'CustomFont', Fallback, sans-serif; */
-  font-size: 2vw;
-  color: rgb(255, 252, 252)
+font-family: "Playwrite ES", system-ui;  /* font-size: 2vw; */
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
 }
 
 
+.col-12 {
+  margin-bottom: 50px;
+}
+
+.song-entry {
+  margin-bottom: 20px;
+  text-align: center;
+/*   background-image: url("/img/leaf.png");
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: left; */
+}
 label {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */

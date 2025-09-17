@@ -1,7 +1,7 @@
 @page "/splash"
 @model SplashModel
 <div class="text-center container">
-    <h1>Acid December</h1>
+  <h1>Acid December</h1>
 
 @*     <div class="video-container">
         <video id="splashVideo" width="1200px" height="670px" controls background="black" style="object-fit: cover;"
@@ -21,15 +21,48 @@
     }
  *@/
 
-  
 
-<h3>
-  @foreach (var song in Model?.Songs)
-  {
+
+
+@foreach (AcidDec.Models.Song artist in Model?.Artists)
+{
     <div class="col-12">
-      @song.Artist
-    </div>
-  }
-</h3>
-
+      <h3>
+        <div class="artist-entry">
+        @artist.Artist
+        @* Show or hide the songentries when i click the artist name *@
 </div>
+        <div class="song-entries">
+        @foreach (AcidDec.Models.Song song in Model?.Songs)
+        {
+          @if (song.Artist == artist.Artist)
+          {
+        <h4>
+          <div class="song-entry" style="display: box;">
+            <div>
+          <strong>@song.Title</strong>
+          <br />
+           @song.Publishdate?.ToDateTime().ToString("yyyy")
+            </div>
+            <div>
+          <audio id="audio-@song.Id" src="@song.Tune"></audio>
+          <button onclick="document.getElementById('audio-@song.Id').play()">Play</button>
+          @if (!string.IsNullOrEmpty(artist.Artistlink))
+          {
+            <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
+          }
+            </div>
+          </div>
+
+          <br />
+        </h4>
+          }
+        }
+        </div>
+        </div>
+}   </h3>
+  
+  <div class="col-12">
+ 
+
+  </div>
