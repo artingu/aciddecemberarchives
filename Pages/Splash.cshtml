@@ -50,25 +50,18 @@
         {
           @if (song.Artist == artist.Artist)
           {
-        <h4>
-          <div class="song-entry" style="display: box;">
-            <div>
-          <strong>@song.Title</strong>
-          <br />
-           @song.Publishdate?.ToDateTime().ToString("yyyy")
+            <div class="song-entry">
+              <strong>@song.Title</strong>
+              <br />
+              @song.Publishdate?.ToDateTime().ToString("yyyy")
+              <br />
+              <audio id="audio-@song.Id" src="@song.Tune"></audio>
+              <button type="button" class="play-btn" data-audio="audio-@song.Id">Play</button>
+              @if (!string.IsNullOrEmpty(artist.Artistlink))
+              {
+                <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
+              }
             </div>
-            <div>
-          <audio id="audio-@song.Id" src="@song.Tune"></audio>
-          <button onclick="document.getElementById('audio-@song.Id').play()">Play</button>
-          @if (!string.IsNullOrEmpty(artist.Artistlink))
-          {
-            <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
-          }
-            </div>
-          </div>
-
-          <br />
-        </h4>
           }
         }
         </div>
@@ -79,3 +72,22 @@
  
 
   </div>
+
+@section Scripts {
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".play-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const audio = document.getElementById(btn.getAttribute("data-audio"));
+          if (audio.paused) {
+            audio.play();
+            btn.textContent = "Stop";
+          } else {
+            audio.pause();
+            btn.textContent = "Play";
+          }
+        });
+      });
+    });
+  </script>
+}
