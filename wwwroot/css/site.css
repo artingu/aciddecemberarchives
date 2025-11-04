@@ -92,7 +92,7 @@ h2 {
   font-size: 7vw;
 }
 
-h3,p {
+h3 {
   font-family: "Playwrite ES", system-ui;
   /* font-family: 'CustomFont', Fallback, sans-serif; */
   font-size: 3vw;
@@ -101,8 +101,11 @@ h3,p {
   margin-bottom: 30px;
 }
 
-h4 {
-font-family: "Playwrite ES", system-ui;  /* font-size: 2vw; */
+p {
+  font-size: 2.5vw;
+}
+h4,p {
+font-family: "Roboto", system-ui;  /* font-size: 2vw; */
   color: rgba(255, 255, 255, 0.541);
   margin-bottom: 20px;
 }
