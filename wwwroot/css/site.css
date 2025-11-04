@@ -103,7 +103,7 @@ h3,p {
 
 h4 {
 font-family: "Playwrite ES", system-ui;  /* font-size: 2vw; */
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.541);
   margin-bottom: 20px;
 }
 
