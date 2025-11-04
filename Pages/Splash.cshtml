@@ -21,10 +21,6 @@
     }
  *@/
 
-
-@foreach (AcidDec.Models.Song artist in Model?.Artists)
-{
-    <div class="col-12">
     <p>The Æther is Humming. Acid December Approaches.<br /><br />
 
 Greetings, Time-Travelers, Circuit-Benders, and Sonic Alchemists!<br />
@@ -49,6 +45,10 @@ The Timeline:
 <br /><br />
 Do not resist the call. The future-past of music depends on you. Add your name to the list below and let's make this millennium the best one yet.
       </p>
+@foreach (AcidDec.Models.Song artist in Model?.Artists)
+{
+    <div class="col-12">
+
       
         <div class="artist-entry">
           <span class="artist-name">@artist.Artist</span>
