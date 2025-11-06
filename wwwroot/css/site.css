@@ -91,9 +91,9 @@ h1 {
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(270deg, red, green, blue, indigo, violet);
   background-size: 1400% 1400%;
-  animation: rainbowWave 20s ease infinite;
+  animation: rainbowWave 200s ease infinite;
 }
 
 @keyframes rainbowWave {
@@ -128,7 +128,7 @@ h3 {
 h4,
 p {
   font-family: "Roboto", system-ui;
-  font-size: 2vw;
+  font-size: clamp(14px, 4.0vw, 18px);
   color: rgba(255, 255, 255, 0.926);
   margin-bottom: 20px;
 }
