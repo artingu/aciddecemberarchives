@@ -87,6 +87,29 @@ h1 {
   }
 }
 
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 1400% 1400%;
+  animation: rainbowWave 20s ease infinite;
+}
+
+@keyframes rainbowWave {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 h2 {
   font-family: "Playwrite ES", system-ui;
   font-size: 7vw;
@@ -101,12 +124,12 @@ h3 {
   margin-bottom: 30px;
 }
 
+
+h4,
 p {
-  font-size: 2.5vw;
-}
-h4,p {
-font-family: "Roboto", system-ui;  /* font-size: 2vw; */
-  color: rgba(255, 255, 255, 0.541);
+  font-family: "Roboto", system-ui;
+  font-size: 2vw;
+  color: rgba(255, 255, 255, 0.926);
   margin-bottom: 20px;
 }
 
@@ -118,11 +141,12 @@ font-family: "Roboto", system-ui;  /* font-size: 2vw; */
 .song-entry {
   margin-bottom: 20px;
   text-align: center;
-/*   background-image: url("/img/leaf.png");
+  /*   background-image: url("/img/leaf.png");
   background-size: 10%;
   background-repeat: no-repeat;
   background-position: left; */
 }
+
 label {
   /*  font-family: 'CustomFont', Fallback, sans-serif;
    */
@@ -163,14 +187,14 @@ html {
   min-height: 100%;
 }
 
-body {
+/* body {
   margin-bottom: 60px;
   background-color: rgb(163, 112, 112);
- /*  background-image: url('/img/SjzWsXn.jpg'); */
+   background-image: url('/img/SjzWsXn.jpg'); 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
+} */
 
 a {
   text-decoration: none;
