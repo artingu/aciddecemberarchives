@@ -31,7 +31,7 @@ h1 {
   background-size: cover;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: animate 150s ease-in-out infinite;
+  animation: animate 300s ease-in-out infinite;
   text-align: center;
   /*   text-transform: uppercase; */
   font-weight: 900;
