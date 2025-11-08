@@ -51,6 +51,11 @@ public class SplashModel : PageModel
             Dictionary<string, object> documentDictionary = document.ToDictionary();
             var publishTimestamp = documentDictionary["publishdate"] as Google.Cloud.Firestore.Timestamp?;
             var year = publishTimestamp?.ToDateTime().Year.ToString() ?? "unknown";
+            var urlYear = year;
+            if (publishTimestamp?.ToDateTime().Month < 12)
+            {
+                urlYear = (publishTimestamp?.ToDateTime().Year - 1).ToString();
+            }
             Songs.Add(new Song
             {
                 Id = Convert.ToInt32(documentDictionary["id"]),
@@ -58,7 +63,7 @@ public class SplashModel : PageModel
                 Artist = documentDictionary["artist"]?.ToString(),
                 Artistlink = documentDictionary["artistlink"]?.ToString(),
                 Publishdate = publishTimestamp,
-                Tune = $"https://storage.googleapis.com/acid-december2012/{year}/{documentDictionary["tune"]?.ToString()}"
+                Tune = $"https://storage.googleapis.com/acid-december2012/{urlYear}/{documentDictionary["tune"]?.ToString()}"
             });
         }
         // remove duplicates from Songs based on Artist and sort alphabetically

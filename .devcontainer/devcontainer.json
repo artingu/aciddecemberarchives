@@ -1,8 +1,6 @@
 {
   "name": "Acid December",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "image": "bookworm",
   "customizations": {
     "vscode": {
       "extensions": [
