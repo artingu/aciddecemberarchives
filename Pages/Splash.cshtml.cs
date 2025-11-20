@@ -42,7 +42,7 @@ public class SplashModel : PageModel
 
 
 
-        /*      Get every artist */
+        /*Get every artist */
         Songs = new List<Song>();
         Artists = new List<Song>();
 
@@ -51,10 +51,10 @@ public class SplashModel : PageModel
             Dictionary<string, object> documentDictionary = document.ToDictionary();
             var publishTimestamp = documentDictionary["publishdate"] as Google.Cloud.Firestore.Timestamp?;
             var year = publishTimestamp?.ToDateTime().Year.ToString() ?? "unknown";
-            var urlYear = year;
-            if (publishTimestamp?.ToDateTime().Month < 12)
+            if (publishTimestamp?.ToDateTime().Month < 11)
             {
-                urlYear = (publishTimestamp?.ToDateTime().Year - 1).ToString();
+                year = (publishTimestamp?.ToDateTime().Year - 1).ToString();
+                publishTimestamp = Google.Cloud.Firestore.Timestamp.FromDateTime(new DateTime((int)(publishTimestamp?.ToDateTime().Year - 1), 11, publishTimestamp?.ToDateTime().Day ?? 1, publishTimestamp?.ToDateTime().Hour ?? 0, publishTimestamp?.ToDateTime().Minute ?? 0, publishTimestamp?.ToDateTime().Second ?? 0, DateTimeKind.Utc));
             }
             Songs.Add(new Song
             {
@@ -63,7 +63,7 @@ public class SplashModel : PageModel
                 Artist = documentDictionary["artist"]?.ToString(),
                 Artistlink = documentDictionary["artistlink"]?.ToString(),
                 Publishdate = publishTimestamp,
-                Tune = $"https://storage.googleapis.com/acid-december2012/{urlYear}/{documentDictionary["tune"]?.ToString()}"
+                Tune = $"https://storage.googleapis.com/acid-december2012/{year}/{documentDictionary["tune"]?.ToString()}"
             });
         }
         // remove duplicates from Songs based on Artist and sort alphabetically

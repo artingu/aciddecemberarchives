@@ -3,7 +3,7 @@
 <div class="text-center container">
   <h1>Acid December</h1>
 
-@*     <div class="video-container">
+  @*     <div class="video-container">
         <video id="splashVideo" width="1200px" height="670px" controls background="black" style="object-fit: cover;"
             border="0">
             <source src="https://storage.googleapis.com/acid-december2012/2024/Aci2web.mp4" type="video/mp4" />
@@ -21,83 +21,82 @@
     }
  *@/
 
-    <h2>The Æther is Humming. Acid December Approaches.</h2>
+  <h2>The Æther is Humming. Acid December Approaches.</h2>
 
- 
-<p>Greetings, Time-Travelers, Circuit-Benders, and Sonic Alchemists!<br />
 
-The ancient digital calendar is ticking. The cosmic compulsion is setting in. You feel it, don't you? That primal urge to forge a track in the searing crucible of ACID and cast it into the datastream.
-<br /><br />
-Acid December is upon us.
-<br /><br />
-This thousand-year-old tradition demands your submission. We are assembling the annual sonic grimoire, a track-a-day ritual that will carry us through the liminal space and into the 36th of December.
-<br /><br />
-The Portal is Open: Transmit all audio files to the secure terminal over email to <b>acid@datapop.se</b>. The email shall contain a downloadable track, a title, an artist name, an image and a link to your interwebz
-<br /><br />
-Send us your squelching basslines, your hypnotic sequences, your glitched-out dreams. Send us the sound of a robot weeping in a rainstorm. Send us the pulse of a forgotten satellite. Send us acid.
-<br /><br />
-The Timeline:
-<br /><br />
+  <p>Greetings, Time-Travelers, Circuit-Benders, and Sonic Alchemists!<br />
+
+    The ancient digital calendar is ticking. The cosmic compulsion is setting in. You feel it, don't you? That primal
+    urge to forge a track in the searing crucible of ACID and cast it into the datastream.
+    <br /><br />
+    Acid December is upon us.
+    <br /><br />
+    This thousand-year-old tradition demands your submission. We are assembling the annual sonic grimoire, a track-a-day
+    ritual that will carry us through the liminal space and into the 36th of December.
+    <br /><br />
+    The Portal is Open: Transmit all audio files to the secure terminal over email to <b>acid@datapop.se</b>. The email
+    shall contain a downloadable track, a title, an artist name, an image and a link to your interwebz
+    <br /><br />
+    Send us your squelching basslines, your hypnotic sequences, your glitched-out dreams. Send us the sound of a robot
+    weeping in a rainstorm. Send us the pulse of a forgotten satellite. Send us acid.
+    <br /><br />
+    The Timeline:
+    <br /><br />
     <b>NOW:</b> Start rendering. Start twisting knobs. The compulsion is real.
-<br /><br />
+    <br /><br />
     <b>December 1st:</b> The first track drops, and the ritual begins.
-<br /><br />
+    <br /><br />
     <b>December 31st 00:00 UTC:</b> We achieve temporal lift-off. Probably.
-<br /><br />
-Do not resist the call. The future-past of music depends on you. Add your name to the list below and let's make this millennium the best one yet.
-      </p>
+    <br /><br />
+    Do not resist the call. The future-past of music depends on you. Add your name to the list below and let's make this
+    millennium the best one yet.
+  </p>
 
 
-     <div class="col-12">
-@foreach (AcidDec.Models.Song artist in Model?.Artists)
-{
-    <div class="col-12">
-<h3>
-      
-        <div class="artist-entry">
-          <span class="artist-name">@artist.Artist</span>
-        
-        </div>
-        <div class="song-entries" style="display:none;">
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          document.querySelectorAll(".artist-name").forEach(function (artistNameElem, idx) {
-            artistNameElem.addEventListener("click", function () {
-        const songEntries = artistNameElem.closest(".artist-entry").nextElementSibling;
-        if (songEntries && songEntries.classList.contains("song-entries")) {
-          songEntries.style.display = songEntries.style.display === "none" ? "block" : "none";
-        }
-            });
-          });
-        });
-      </script>
-        @foreach (AcidDec.Models.Song song in Model?.Songs)
-        {
-          @if (song.Artist == artist.Artist)
-          {
-            <div class="song-entry">
-              <strong>@song.Title</strong>
-              <br />
-              @song.Publishdate?.ToDateTime().ToString("yyyy")
-              <br />
-              <audio id="audio-@song.Id" src="@song.Tune"></audio>
-              <button type="button" class="play-btn" data-audio="audio-@song.Id">Play</button>
-              @if (!string.IsNullOrEmpty(artist.Artistlink))
-              {
-                <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
-              }
-            </div>
-          }
-        }
-        </div>
-        </div>
-}   </h3>
-  
   <div class="col-12">
- 
+    @foreach (AcidDec.Models.Song artist in Model?.Artists)
+    {
+      var artistKey = artist.Artist.Replace(" ", "_").Replace("\"", "").Replace("'", "");
+      <div class="col-12">
+        <h3>
+
+          <div class="artist-entry">
+            <span class="artist-name" data-artist="@artistKey">@artist.Artist</span>
+
+          </div>
+          <div class="song-entries" data-artist="@artistKey" style="display:none;">
+            @foreach (AcidDec.Models.Song song in Model?.Songs ?? new List<AcidDec.Models.Song>())
+            {
+              @if (song.Artist == artist.Artist)
+              {
+                <div class="song-entry">
+                  <strong>@song.Title</strong>
+                  <br />
+                  @song.Publishdate?.ToDateTime().ToString("yyyy")
+                  <br />
+                  <audio id="audio-@song.Id" src="@song.Tune"></audio>
+                  <button type="button" class="play-btn" data-audio="audio-@song.Id">Play</button>
+                  @if (!string.IsNullOrEmpty(artist.Artistlink))
+                  {
+                    <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
+                  }
+                </div>
+              }
+            }
+          </div>
+      </div>
+    }
+    </h3>
+
+    <div class="col-12">
+
+
+    </div>
 
   </div>
 
+  <!-- do not load any audio before the play button is pressed -->
+</div>
 @section Scripts {
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -110,6 +109,22 @@ Do not resist the call. The future-past of music depends on you. Add your name t
           } else {
             audio.pause();
             btn.textContent = "Play";
+          }
+        });
+      });
+    });
+  </script>
+  <!-- Toggle artist songs display -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".artist-name").forEach(function (artistElem) {
+        artistElem.addEventListener("click", function () {
+          const artistKey = artistElem.getAttribute("data-artist");
+          const songEntries = document.querySelector(`.song-entries[data-artist='${artistKey}']`);
+          if (songEntries.style.display === "none") {
+            songEntries.style.display = "block";
+          } else {
+            songEntries.style.display = "none";
           }
         });
       });
