@@ -83,6 +83,21 @@ h1 {
     flex-basis: content;
     flex-direction: column;
     align-items: center;
+    background-image: url(/img/60339bf1426af3fcb6068df108c8ecf0_w200.gif);
+    background-size: cover;
+    background-blend-mode: darken;
+    opacity: 0.9;
+    animation: sinewave 300s linear infinite;
+     /* Fade edges with a gradient mask */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: cover;
+
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 @keyframes animate2 {
@@ -168,6 +183,21 @@ body::before {
       url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M20 38 C 10 30, 5 20, 10 12 C 15 4, 20 8, 20 15 C 20 8, 25 4, 30 12 C 35 20, 30 30, 20 38 Z' fill='none' stroke='%2300FF00' stroke-width='2'/></svg>");
   }
 }
+
+@keyframes sinewave {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 /* ensure the texture sits over the background but under interactive content if needed */
 /* If the texture hides content, increase opacity to 0.02–0.08 or adjust mix-blend-mode. */
