@@ -66,7 +66,7 @@ public class SplashModel : PageModel
                 Tune = $"https://storage.googleapis.com/acid-december2012/{year}/{documentDictionary["tune"]?.ToString()}"
             });
         }
-        // remove duplicates from Songs based on Artist and sort alphabetically
-        Artists = [.. Songs.GroupBy(s => s.Artist).Select(g => g.First()).OrderBy(a => a.Artist)];
+        // remove duplicates from Songs based on Artist and put in random order
+        Artists = Songs.GroupBy(s => s.Artist).Select(g => g.First()).OrderBy(a => Guid.NewGuid()).ToList();
     }
 }
