@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://acid.datapop.se/2024</loc>
+    <lastmod>2025-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+   <url>
+    <loc>https://acid.datapop.se/2023</loc>
+    <lastmod>2024-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://acid.datapop.se/2023</loc>
+    <lastmod>2024-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+    <url>
+    <loc>https://acid.datapop.se/2022</loc>
+    <lastmod>2023-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://acid.datapop.se/2021</loc>
+    <lastmod>2022-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+    <url>
+    <loc>https://acid.datapop.se/2020</loc>
+    <lastmod>2021-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+<url>
+    <loc>https://acid.datapop.se/2019</loc>
+    <lastmod>2020-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+<url>
+    <loc>https://acid.datapop.se/2018</loc>
+    <lastmod>2019-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://acid.datapop.se/2017</loc>
+    <lastmod>2018-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+<url>
+    <loc>https://acid.datapop.se/2015</loc>
+    <lastmod>2016-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://acid.datapop.se/2014</loc>
+    <lastmod>2015-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+<url>
+    <loc>https://acid.datapop.se/2013</loc>
+    <lastmod>2014-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://acid.datapop.se/2012</loc>
+    <lastmod>2013-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://acid.datapop.se/2011</loc>
+    <lastmod>2012-2-01</lastmod>
+    <changefreq>never</changefreq>
+    <priority>1.0</priority>
+  </url>
+    <url>
+        <loc>https://acid.datapop.se/about</loc>
+        <lastmod>2025-2-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>1.0</priority>
+</urlset>

@@ -204,7 +204,7 @@ body::before {
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(270deg, red, green, blue, indigo, violet,  rgba(253, 249, 7, 0.39),black);
+  background: linear-gradient(270deg, red, green, blue, indigo, violet,  rgba(253, 249, 7, 0.39),rgb(235, 101, 6));
   background-size: 1400% 1400%;
   animation: rainbowWave 200s ease infinite;
 }

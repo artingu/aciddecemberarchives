@@ -1,2 +1,17 @@
+User-agent: sqlmap
+Disallow: /
+
+User-agent: Acunetix
+Disallow: /
+
+User-agent: Nmap
+Disallow: /
+
+User-agent: Nikto
+Disallow: /
+
+User-agent: w3af
+Disallow: /
+
 User-agent: *
-Disallow: 
+Disallow: /login/
