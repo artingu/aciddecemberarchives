@@ -21,7 +21,7 @@
     }
  *@/
 
-  <h2>The Æther is Humming. Acid December Approaches.</h2>
+  <h2>The Æther is Humming.</h2>
 
 
   <p>Greetings, Time-Travelers, Circuit-Benders, and Sonic Alchemists!<br />
@@ -40,17 +40,12 @@
     Send us your squelching basslines, your hypnotic sequences, your glitched-out dreams. Send us the sound of a robot
     weeping in a rainstorm. Send us the pulse of a forgotten satellite. Send us acid.
     <br /><br />
-    The Timeline:
-    <br /><br />
-    <b>NOW:</b> Start rendering. Start twisting knobs. The compulsion is real.
-    <br /><br />
-    <b>December 1st:</b> The first track drops, and the ritual begins.
-    <br /><br />
-    <b>December 31st 00:00 UTC:</b> We achieve temporal lift-off. Probably.
-    <br /><br />
     Do not resist the call. The future-past of music depends on you. Add your name to the list below and let's make this
     millennium the best one yet.
   </p>
+  <h2>1 Dec</h2>
+  <img src="/img/hardware_jams.png" alt="Hardware Jams Logo" style="width:200px;height:200px;" />
+  <p>We are kicking this year off with a cross-collab with Hardware Jams! An hours long streaming event that starts December 1st 8pm UK time. <a href="http://youtube.com/post/Ugkxv91SdpxqwwBOdtA4w5s5bM9Q-NATHHjd?"> Click here for details on how to join the jam!</a> Hardware jammers, see above on how to get your very own day of infamy on these pages, welcome welcome and thrice welcome!</p>
 
 <h2>Tools</h2>
 <p>But how to create the acid tracks, you ask? Fear not, for we have compiled a list of tools to help you on your journey into the depths of sonic alchemy:
@@ -78,81 +73,9 @@
 
 
 
-<div class="col-12">
-  @foreach (AcidDec.Models.Song artist in Model?.Artists)
-  {
-    var artistKey = artist.Artist.Replace(" ", "_").Replace("\"", "").Replace("'", "");
-    <div class="col-12">
-      <h3>
-
-        <div class="artist-entry">
-          <span class="artist-name" data-artist="@artistKey">@artist.Artist</span>
-
-        </div>
-        <div class="song-entries" data-artist="@artistKey" style="display:none;">
-          @foreach (AcidDec.Models.Song song in Model?.Songs ?? new List<AcidDec.Models.Song>())
-          {
-            @if (song.Artist == artist.Artist)
-            {
-              <div class="song-entry" data-publishdate='@song.Publishdate?.ToDateTime().ToString("dd.MM.yyyy")'>
-                <strong>@song.Title</strong>
-                <br />
-                @song.Publishdate?.ToDateTime().ToString("yyyy")
-                <br />
-                <audio id="audio-@song.Id" src="@song.Tune"></audio>
-                <button type="button" class="play-btn" data-audio="audio-@song.Id">Play</button>
-                @if (!string.IsNullOrEmpty(artist.Artistlink))
-                {
-                  <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
-                }
-              </div>
-            }
-          }
-        </div>
-    </div>
-  }
-  </h3>
-
-  <div class="col-12">
-    <div id="control" style="display:none;">
-      <!-- show current song info -->
-      <audio id="music">
-        <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
-      </audio>
-
-      <div id="audioplayer">
-        @*  <button id="pButton" class="play"></button> *@
-        <div id="timeline">
-          <div id="playhead"></div>
-        </div>
-      </div>
-      <div id="current-track" style="margin-top:12px;" show>
-        <h3>Now Playing:
-          <strong id="current-title"></strong>
-          by
-          <span id="current-artist"></span>
-          from
-          <span id="current-publishdate"></span>
-        </h3>
-      </div>
-      <div class="skip">
-        @*   <button id="prev" class="skipbtn">Prev</button>
-        <button id="next" class="skipbtn">Next</button>
- *@
-      </div>
-
-      <div id="random_posts"> </div>
-
-
-    </div>
-
-
-  </div>
-
-</div>
 
 <!-- do not load any audio before the play button is pressed -->
-</div>
+
 @section Scripts {
   <script>
     document.addEventListener("DOMContentLoaded", function () {
