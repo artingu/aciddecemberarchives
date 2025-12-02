@@ -5,7 +5,7 @@
     ViewData["Description"] = "Acid for the month of December and beyond!";
     ViewData["ImageLink"] =
     "https://storage.googleapis.com/acid-december2012/2023/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg";
-    var year = (string)RouteData.Values["urlyear"] ?? "2024";
+    var year = RouteData?.Values["urlyear"]?.ToString() ?? "2024";
 }
 
 <div class="text-center container">
@@ -23,39 +23,29 @@
                 </div>
                 <div class="col-12">
 
-                    @* <h2>Track of the day</h2>
+                     <h2>Track of the day</h2>
                 <h1>@Model.SongOfTheDay.Id</h1>
-                <a href="/2023/@Model.SongOfTheDay.Id">
+                <a href="/2025/@Model.SongOfTheDay.Id">
 
                 <img class="border-dark"
-                src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.ImageLink" />
+                src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.ImageLink" />
                 <h2>@Model.SongOfTheDay.Title</h2>
                 <h3>@Model.SongOfTheDay.Artist</h3>
                 </a>
                 <audio controls>
-                <source src="https://storage.googleapis.com/acid-december2012/2023/@Model.SongOfTheDay.Tune">
+                <source src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.Tune">
                 </audio>
-                *@
+                
 
                 </div>
             }
             <div class="col-12">
                 <br>
 
-
-
-                @if (Model.IsRootPage)
-                {
-
-                }
-        
             </div>
 
             @foreach (var song in Model?.Songs)
             {
-
-
-
 
                 <div class="song">
                     <a href="/@Model.Year/@song.Id">
@@ -72,9 +62,7 @@
 
                         </p>
                     </a>
-                  
-                </div>  <img class="leaf" 
-                        src="/img/leaf.png" alt="leaf" />
+                </div>  
             }
         </div>
     </div>

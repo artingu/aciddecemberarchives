@@ -35,39 +35,45 @@ public class IndexModel : PageModel
     public string InitialTracksJson { get; set; }
     public string Year { get; set; }
     // Get the year from the URL
+    
+    /// <summary>
+    /// Determines the "Acid December" year for a given date.
+    /// An Acid December year starts in November. For example, January 2025 belongs to the 2024 season.
+    /// </summary>
+    /// <param name="date">The date to check.</param>
+    /// <returns>The corresponding Acid December year.</returns>
+    private int GetAcidDecemberYear(System.DateTime date)
+    {
+        return date.Month < 11 ? date.Year - 1 : date.Year;
+    }
 
 
-    public async Task OnGetAsync(string urlyear)
+    public async Task OnGetAsync(int? urlyear)
     {
         System.DateTime filterdatestart;
         System.DateTime filterdateend;
-        System.DateTime publishdatetime = System.DateTime.Now;
-        // validate urlyear is a valid year
-        // what does the \ mean?
-        // a: 
+        System.DateTime? publishdatetime = null;
 
-        IsRootPage = string.IsNullOrEmpty(urlyear);
-        Year = urlyear ?? "2024";
-        if (Year == "2024")
+        IsRootPage = !urlyear.HasValue;
+        // If no year is specified in the URL, we want to show the current "Acid December" season.
+        // For example, in January 2025, the current season is still 2024.
+        var yearToQuery = urlyear ?? GetAcidDecemberYear(System.DateTime.UtcNow);
+
+        Year = yearToQuery.ToString();
+
+        if (IsRootPage) // For the "current" year, which is the root page
         {
-
-            // start of month
-            filterdatestart = System.DateTime.Parse("2024-11-01");
-            // today plus 6 months
-            // today
-            filterdateend = System.DateTime.Now;
-            //filterdateend = filterdatestart.AddMonths(6);
+            // The season starts in November.
+            filterdatestart = new System.DateTime(yearToQuery, 11, 1);
+            // And it can go into the next year.
+            filterdateend = filterdatestart.AddMonths(3);
         }
         else
         {
             // every other year
             // a range of dates from the 30th of November to the 30th of January the following year
-            // set model.Year to the year in the URL
-
-            filterdatestart = System.DateTime.Parse(Year + "-11-30"); // 30th of November 
-            var Yearplus = (int.Parse(Year) + 1).ToString();
-            filterdateend = System.DateTime.Parse(Yearplus + "-01-30"); // 30th of January 2024
-
+            filterdatestart = new System.DateTime(yearToQuery, 11, 1);
+            filterdateend = new System.DateTime(yearToQuery + 1, 2, 1);
         }
 
         CollectionReference acidDecemberRef = _db.Collection("aciddecember");
@@ -88,8 +94,7 @@ public class IndexModel : PageModel
 
 
             // add songs have a publishhdate between filterdatestart and filterdateend
-            if (publishdatetime >= filterdatestart && publishdatetime <= filterdateend)
-            // if (true)
+            if (publishdatetime.HasValue && publishdatetime.Value >= filterdatestart && publishdatetime.Value < filterdateend)
             {
 
                 Song s = new Song
@@ -97,61 +102,50 @@ public class IndexModel : PageModel
                     Title = documentDictionary["title"].ToString(),
                     Artist = documentDictionary["artist"].ToString(),
                     Publishdate = documentDictionary["publishdate"] as Timestamp?,
-                    ImageLink = documentDictionary["imglink"].ToString() ?? "Designer.png",
+                    ImageLink = documentDictionary.ContainsKey("imglink") && documentDictionary["imglink"] != null ? documentDictionary["imglink"].ToString() : "Designer.png",
                     Id = documentDictionary["id"] as long?,
                     Tune = documentDictionary["tune"].ToString(),
                 };
 
                 Songs.Add(s);
-                SongOfTheDay = s;
-
-
-            }
-
-        }
-
-        foreach (DocumentSnapshot document in snapshot.Documents)
-        {
-            // Populate winamp playlist
-            var tracks = Songs.Select(song => new
-            {
-                metaData = new
+                if (IsRootPage)
                 {
-                    artist = song.Artist,
-                    title = song.Title,
-                    album = "Acid December " + Year
-                },
-                url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
-                duration = 5.322286 // Replace with actual duration if available
-            });
-
-            if (Songs.Count == 0)
-            {
-                // no songs found
-                // redirect to the root page
-                Response.Redirect("/404");
-            }
-
-            tracks = tracks.Reverse().ToList();
-
-            // random order of the tracks, enable after the season is done
-
-            /*     if (!IsRootPage)
-                {
-                    var random = new Random();
-                    tracks = tracks.OrderBy(x => random.Next()).ToList();
-
-                } else {
-                    // reverse the order of the tracks
-                    tracks = tracks.Reverse().ToList();
+                    SongOfTheDay = s;
                 }
-     */
-            // Stream a json object to webamp with the tracks (how cool is that?)
-            ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks);
-            ViewData["Year"] = Year;
+
+            }
+
         }
+
+        if (Songs.Count == 0)
+        {
+            // no songs found
+            // redirect to the 404 page
+            Response.Redirect("/404");
+            return;
+        }
+
+        // Populate winamp playlist
+        var tracks = Songs.Select(song => new
+        {
+            metaData = new
+            {
+                artist = song.Artist,
+                title = song.Title,
+                album = "Acid December " + Year
+            },
+            url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
+            duration = 5.322286 // This is a placeholder, it gets overwritten by the player.
+        });
+
+        // For past years, randomize the playlist. For the current year, show newest first.
+        if (!IsRootPage)
+        {
+            var random = new Random();
+            tracks = tracks.OrderBy(x => random.Next());
+        }
+
+        ViewData["InitialTracks"] = JsonConvert.SerializeObject(tracks.Reverse());
+        ViewData["Year"] = Year;
     }
 }
-
-
-
