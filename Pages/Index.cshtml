@@ -23,25 +23,35 @@
                 </div>
                 <div class="col-12">
 
-                     <h2>Track of the day</h2>
-                <h1>@Model.SongOfTheDay.Id</h1>
-                <a href="/2025/@Model.SongOfTheDay.Id">
-<!-- make this image as wide as the container -->
-                <img class="img-fluid"
-                src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.ImageLink" />
-                <h2>@Model.SongOfTheDay.Title</h2>
-                <h3>@Model.SongOfTheDay.Artist</h3>
-                </a>
-                <audio controls>
-                <source src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.Tune">
-                </audio>
-                
+                    <h2>Track of the day</h2>
+                    <h1>@Model.SongOfTheDay.Id</h1>
+                    <a href="/2025/@Model.SongOfTheDay.Id">
+                        <!-- make this image as wide as the container -->
+                        <img class="img-fluid"
+                            src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.ImageLink" />
+                        <h2>@Model.SongOfTheDay.Title</h2>
+                        <h3>@Model.SongOfTheDay.Artist</h3>
+                    </a>
+                    <audio controls>
+                        <source src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.Tune">
+                    </audio>
+
 
                 </div>
             }
             <div class="col-12">
-                <br>
-
+            <h3>Let us hear your sounds!</h3>
+                <p> <br /><br />
+                    The Portal is Open: Transmit all audio files to the secure terminal over email to
+                    <b>acid@datapop.se</b>. The email
+                    shall contain a downloadable track, a title, an artist name, an image and a link to your interwebz
+                    <br /><br />
+                    Send us your squelching basslines, your hypnotic sequences, your glitched-out dreams. Send us the
+                    sound
+                    of a robot
+                    weeping in a rainstorm. Send us the pulse of a forgotten satellite. Send us acid.
+                    <br /><br />
+                </p>
             </div>
 
             @foreach (var song in Model?.Songs)
@@ -62,7 +72,7 @@
 
                         </p>
                     </a>
-                </div>  
+                </div>
             }
         </div>
     </div>
