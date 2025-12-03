@@ -278,8 +278,13 @@ ul {
 
 }
 
+.img-thumbnail {
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 5%;
+}
+
 img {
-  width: 200px;
+ /*  width: 200px; */
   height: auto;
   border-radius: 5%;
   border-width: 2px;
