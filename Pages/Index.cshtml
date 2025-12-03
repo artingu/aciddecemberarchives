@@ -26,8 +26,8 @@
                      <h2>Track of the day</h2>
                 <h1>@Model.SongOfTheDay.Id</h1>
                 <a href="/2025/@Model.SongOfTheDay.Id">
-
-                <img class="border-dark"
+<!-- make this image as wide as the container -->
+                <img class="img-fluid"
                 src="https://storage.googleapis.com/acid-december2012/2025/@Model.SongOfTheDay.ImageLink" />
                 <h2>@Model.SongOfTheDay.Title</h2>
                 <h3>@Model.SongOfTheDay.Artist</h3>
@@ -53,7 +53,7 @@
                         <p>
                             @if (song.ImageLink != null)
                             {
-                                <img class="float-start  border-dark"
+                                <img class="float-start  border-dark img-thumbnail"
                                     src="https://storage.googleapis.com/acid-december2012/@Model.Year/@song.ImageLink" />
                             }
                             <h2></h2>
