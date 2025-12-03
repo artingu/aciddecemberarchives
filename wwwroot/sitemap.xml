@@ -3,18 +3,18 @@
 
   <!-- Homepage -->
   <url>
+    <loc>https://acid.datapop.se/</loc>
+    <lastmod>2025-2-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://acid.datapop.se/2024</loc>
     <lastmod>2025-2-01</lastmod>
     <changefreq>never</changefreq>
     <priority>1.0</priority>
   </url>
 
-   <url>
-    <loc>https://acid.datapop.se/2023</loc>
-    <lastmod>2024-2-01</lastmod>
-    <changefreq>never</changefreq>
-    <priority>1.0</priority>
-  </url>
 
   <url>
     <loc>https://acid.datapop.se/2023</loc>
