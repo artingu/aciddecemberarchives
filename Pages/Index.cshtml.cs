@@ -105,6 +105,7 @@ public class IndexModel : PageModel
                     ImageLink = documentDictionary.ContainsKey("imglink") && documentDictionary["imglink"] != null ? documentDictionary["imglink"].ToString() : "Designer.png",
                     Id = documentDictionary["id"] as long?,
                     Tune = documentDictionary["tune"].ToString(),
+                    Artistlink = documentDictionary.ContainsKey("artistlink") && documentDictionary["artistlink"] != null ? documentDictionary["artistlink"].ToString() : string.Empty,
                 };
 
                 Songs.Add(s);
@@ -132,7 +133,8 @@ public class IndexModel : PageModel
             {
                 artist = song.Artist,
                 title = song.Title,
-                album = "Acid December " + Year
+                album = "Acid December " + Year,
+                ArtistLink = song.Artistlink ?? string.Empty
             },
             url = $"https://storage.googleapis.com/acid-december2012/{Year}/{song.Tune}",
             duration = 5.322286 // This is a placeholder, it gets overwritten by the player.
