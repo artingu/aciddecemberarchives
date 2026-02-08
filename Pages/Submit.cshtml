@@ -5,7 +5,8 @@
 }
 <div class="container">
     <h2>Tunes</h2>
-    <p>Here you can submit a new song to the database. You can also view all the songs that are currently in the database.</p>
+    <p>Here you can submit a new song to the database. You can also view all the songs that are currently in the
+        database.</p>
     <script>
         function show2024() {
             var table = document.getElementById("songsTable");
@@ -37,7 +38,7 @@
         }
     </script>
     <p>Only Show posts from <a href="javascript:show2024()">2024</a> | <a href="javascript:show2023()">2023</a></p>
-    
+
 
     @if (ViewData["SaveSuccess"] != null)
     {
@@ -52,6 +53,9 @@
     <table id="songsTable" class="table">
         <thead>
             <tr>
+                <th>
+                    Actions
+                </th>
                 <th onclick="sortTable(0)">
                     Id
                 </th>
@@ -73,12 +77,19 @@
                 <th>
                     Tune
                 </th>
+
             </tr>
         </thead>
         <tbody>
             @foreach (var song in Model.Songs)
             {
                 <tr>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm"
+                            onclick="editSong(@song.Id, '@song.Title', '@song.Artist', '@song.Publishdate', '@song.ImageLink', '@song.Artistlink', '@song.Tune')">
+                            Edit
+                        </button>
+                    </td>
                     <td>
                         @song.Id
                     </td>
@@ -100,9 +111,7 @@
                     <td>
                         @song.Tune
                     </td>
-                    <td>
-                        @song.Html
-                    </td>
+
                 </tr>
             }
         </tbody>
@@ -159,7 +168,7 @@
             <input asp-for="SongDetails.ArtistLink" class="form-control" />
             <span asp-validation-for="SongDetails.ArtistLink" class="text-danger"></span>
         </div>
-           <div class="form-group">
+        <div class="form-group">
             <h3>Html</h3>
             <label asp-for="SongDetails.Html"></label>
             <input asp-for="SongDetails.Html" class="form-control" />
@@ -181,7 +190,7 @@
                 }
             </select>
             <span asp-validation-for="SongDetails.Tune" class="text-danger"></span>
-        
+
 
             <button type="submit" class="btn btn-primary">Submit Song Details</button>
     </form>
@@ -211,7 +220,84 @@
                 }
             }
         }
+
+        function editSong(id, title, artist, publishDate, imageLink, artistLink, tune) {
+            document.getElementById('editId').value = id;
+            document.getElementById('editTitle').value = title;
+            document.getElementById('editArtist').value = artist;
+            document.getElementById('editPublishDate').value = publishDate.split('T')[0];
+            document.getElementById('editImageLink').value = imageLink;
+            document.getElementById('editArtistLink').value = artistLink;
+            document.getElementById('editTune').value = tune;
+            $('#editModal').modal('show');
+        }
+
+        function submitEdit() {
+            document.getElementById('editForm').submit();
+        }
     </script>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit Song</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" method="post" asp-page-handler="UpdateSong">
+                        <input type="hidden" id="editId" name="Id" />
+                        <div class="form-group">
+                            <label for="editTitle">Title</label>
+                            <input type="text" class="form-control" id="editTitle" name="Title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editArtist">Artist</label>
+                            <input type="text" class="form-control" id="editArtist" name="Artist" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editPublishDate">Publish Date</label>
+                            <input type="date" class="form-control" id="editPublishDate" name="PublishDate"
+                                   onchange="document.getElementById('editPublishDateHidden').value = this.value" />
+                            <input type="hidden" id="editPublishDateHidden" name="Publishdate" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editImageLink">Image Link</label>
+                            <select class="form-control" id="editImageLink" name="ImageLink">
+                                <option value="">Select an image</option>
+                                @foreach (var obj in Model.BucketObjects)
+                                {
+                                    <option value="@obj.Name">@obj.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editArtistLink">Artist Link</label>
+                            <input type="text" class="form-control" id="editArtistLink" name="ArtistLink" />
+                        </div>
+                        <div class="form-group">
+                            <label for="editTune">Tune</label>
+                            <select class="form-control" id="editTune" name="Tune">
+                                <option value="">Select a tune</option>
+                                @foreach (var obj in Model.BucketObjects)
+                                {
+                                    <option value="@obj.Name">@obj.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="submitEdit()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     @section Scripts {
         <partial name="_ValidationScriptsPartial" />

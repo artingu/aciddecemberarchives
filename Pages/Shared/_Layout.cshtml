@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Google.Type
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -111,6 +112,9 @@
                             <a class="nav-link text-dark" href="/2011">2011</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" href="/tools">Tools</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" href="/about">About</a>
                         </li>
 
@@ -152,7 +156,7 @@
     </div>
 
 
-    });
+
 
     </script>
     </div>
@@ -163,7 +167,7 @@
         <div class="container">
             @* <img src="~/img/_57b26574-11c6-4b6a-84d7-de0789a3c33a.jpeg" class="logo" /> *@
 
-            &copy; 2025 - Acid December - CC BY-NC-SA
+            &copy; @System.DateTime.Now.Year - Acid December - CC BY-NC-SA
         </div>
     </footer>
 

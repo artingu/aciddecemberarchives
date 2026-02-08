@@ -1,0 +1,75 @@
+
+<div class="col-12">
+  <!-- sort Models.Song alphabetically by Artist -->
+  
+  @foreach (AcidDec.Models.Song artist in Model?.Artists)
+  {
+    var artistKey = artist.Artist.Replace(" ", "_").Replace("\"", "").Replace("'", "");
+    <div class="col-12">
+      <h3>
+
+        <div class="artist-entry">
+          <span class="artist-name" data-artist="@artistKey">@artist.Artist</span>
+
+        </div>
+        <div class="song-entries" data-artist="@artistKey" style="display:none;">
+          @foreach (AcidDec.Models.Song song in Model?.Songs ?? new List<AcidDec.Models.Song>())
+          {
+            @if (song.Artist == artist.Artist)
+            {
+              <div class="song-entry" data-publishdate='@song.Publishdate?.ToDateTime().ToString("dd.MM.yyyy")'>
+                <strong>@song.Title</strong>
+                <br />
+                @song.Publishdate?.ToDateTime().ToString("yyyy")
+                <br />
+                <audio id="audio-@song.Id" src="@song.Tune"></audio>
+                <button type="button" class="play-btn" data-audio="audio-@song.Id">Play</button>
+                @if (!string.IsNullOrEmpty(artist.Artistlink))
+                {
+                  <button onclick="window.open('https://@artist.Artistlink', '_blank')">More</button>
+                }
+              </div>
+            }
+          }
+        </div>
+    </div>
+  }
+  </h3>
+
+  <div class="col-12">
+    <div id="control" style="display:none;">
+      <!-- show current song info -->
+      <audio id="music">
+        <h1>Your browser isn't ready for so much hotness. Use the download-link instead.</h1>.
+      </audio>
+
+      <div id="audioplayer">
+        @*  <button id="pButton" class="play"></button> *@
+        <div id="timeline">
+          <div id="playhead"></div>
+        </div>
+      </div>
+      <div id="current-track" style="margin-top:12px;" show>
+        <h3>Now Playing:
+          <strong id="current-title"></strong>
+          by
+          <span id="current-artist"></span>
+          from
+          <span id="current-publishdate"></span>
+        </h3>
+      </div>
+      <div class="skip">
+        @*   <button id="prev" class="skipbtn">Prev</button>
+        <button id="next" class="skipbtn">Next</button>
+ *@
+      </div>
+
+      <div id="random_posts"> </div>
+
+
+    </div>
+
+
+  </div>
+
+</div>

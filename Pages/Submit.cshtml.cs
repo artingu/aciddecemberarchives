@@ -1,4 +1,5 @@
 namespace aciddecemberarchives.Pages;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -19,6 +20,9 @@ public class SongDetailsModel
     [Required]
     public int Id { get; set; }
 
+    // Add property to hold the Firestore document id (not the numeric "id" field)
+    public string DocumentId { get; set; } = string.Empty;
+
     [Required]
     public string Title { get; set; } = string.Empty;
 
@@ -31,7 +35,7 @@ public class SongDetailsModel
 
     public string? ArtistLink { get; set; } = string.Empty;
 
-    
+
     public string Tune { get; set; } = string.Empty;
 
     public string Html { get; set; } = string.Empty;
@@ -86,6 +90,17 @@ public class SubmitModel : PageModel
 
         }
     }
+
+    public async Task uploadObjectAsync(string localPath, string objectName)
+    {
+        var storage = await StorageClient.CreateAsync();
+        string bucketName = "acid-december2012";
+
+        using var fileStream = System.IO.File.OpenRead(localPath);
+        await storage.UploadObjectAsync(bucketName, objectName, null, fileStream);
+        _logger.LogInformation($"Uploaded {objectName} to bucket {bucketName}.");
+    }
+
     public async Task OnGetAsync()
     {
         await _trackService.LoadTracksAsync();
@@ -128,5 +143,33 @@ public class SubmitModel : PageModel
         // After processing, reload the bucket objects
         await LoadBucketObjectsAsync();
         return Page();
+    }
+
+    public async Task<IActionResult> OnPostUpdateSongAsync(string docId, string title, string artist,
+    DateTime publishDate, string imageLink, string artistLink, string tune)
+    {
+        if (string.IsNullOrEmpty(docId))
+        {
+            ModelState.AddModelError(string.Empty, "Missing document id for update.");
+            await LoadBucketObjectsAsync();
+            return Page();
+        }
+
+        var docRef = _db.Collection("aciddecember").Document(docId);
+
+        Dictionary<string, object> updates = new()
+        {
+            { "title", title },
+            { "artist", artist },
+            { "publishdate", Timestamp.FromDateTime(publishDate.ToUniversalTime()) },
+            // use the same field name used when creating new documents
+            { "imglink", imageLink },
+            { "artistlink", artistLink },
+            { "tune", tune }
+        };
+
+        await docRef.UpdateAsync(updates);
+        ViewData["SaveSuccess"] = "Song updated successfully!";
+        return RedirectToPage("/Submit");
     }
 }

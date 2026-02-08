@@ -85,5 +85,5 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 app.MapRazorPages();
-app.MapFallbackToPage("/Index"); 
+app.MapFallbackToPage("/Splash"); 
 app.Run();
